@@ -34,10 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTDC = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtGC = new System.Windows.Forms.TextBox();
             this.btSave = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,7 +56,7 @@
             this.txtTNT.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTNT.Location = new System.Drawing.Point(18, 80);
             this.txtTNT.Name = "txtTNT";
-            this.txtTNT.Size = new System.Drawing.Size(543, 39);
+            this.txtTNT.Size = new System.Drawing.Size(531, 39);
             this.txtTNT.TabIndex = 1;
             // 
             // label2
@@ -93,19 +94,9 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(12, 269);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 32);
+            this.label4.Size = new System.Drawing.Size(362, 32);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Ghi chú:";
-            // 
-            // txtGC
-            // 
-            this.txtGC.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGC.Location = new System.Drawing.Point(18, 318);
-            this.txtGC.Multiline = true;
-            this.txtGC.Name = "txtGC";
-            this.txtGC.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtGC.Size = new System.Drawing.Size(543, 104);
-            this.txtGC.TabIndex = 1;
+            this.label4.Text = "Danh sách người đang thuê:";
             // 
             // btSave
             // 
@@ -142,16 +133,24 @@
             this.dateTimePicker1.TabIndex = 4;
             this.dateTimePicker1.Value = new System.DateTime(2017, 3, 15, 0, 0, 0, 0);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 305);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(531, 117);
+            this.dataGridView1.TabIndex = 5;
+            // 
             // frmHireRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 482);
+            this.ClientSize = new System.Drawing.Size(565, 482);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSave);
             this.Controls.Add(this.txtTDC);
-            this.Controls.Add(this.txtGC);
             this.Controls.Add(this.txtTNT);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -162,6 +161,7 @@
             this.Name = "frmHireRoom";
             this.Text = "Thuê phòng mới";
             this.Load += new System.EventHandler(this.frmHireRoom_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,9 +175,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTDC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtGC;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
