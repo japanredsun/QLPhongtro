@@ -36,7 +36,7 @@ namespace MotelRoomManagement
             if (e.RowIndex > -1)
             {
                 string command = dataGridView1.Columns[e.ColumnIndex].Name;
-                if (command == "Chothue") 
+                if (command == "ThuePhong") 
                 {
                     frmHireRoom frn1 = new frmHireRoom();
                     frn1.Show();
