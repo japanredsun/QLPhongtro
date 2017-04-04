@@ -77,6 +77,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRoomInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomInformation.Designer.cs">
+      <DependentUpon>frmRoomInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmHireRoom.resx">
