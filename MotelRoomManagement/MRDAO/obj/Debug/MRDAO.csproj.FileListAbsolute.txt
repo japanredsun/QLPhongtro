@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDAO.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDAO.pdb
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.pdb
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.pdb

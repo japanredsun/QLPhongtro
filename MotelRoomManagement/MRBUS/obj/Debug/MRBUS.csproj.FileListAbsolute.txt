@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRBUS.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRBUS.pdb
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDAO.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDTO.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDAO.pdb
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDTO.pdb
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.dll
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.pdb
