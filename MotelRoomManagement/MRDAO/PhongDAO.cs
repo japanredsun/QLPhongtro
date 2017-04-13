@@ -18,10 +18,10 @@ namespace MRDAO
         {
             dp = new DataProvider();
         }
-        public List<Phong> GetPhong(String sql)
+        public List<Phong> GetPhong(string sql)
         {
             List<Phong> list = new List<Phong>();
-            string id, kind, day, trangthai;
+            string id, kind, khuvuc, day, trangthai;
             int phongso;
             dp.Connect();
             try
@@ -31,11 +31,12 @@ namespace MRDAO
                 {
                     id = dr.GetString(0);
                     kind = dr.GetString(1);
-                    day = dr.GetString(2);
-                    phongso = dr.GetInt32(3);
-                    trangthai = dr.GetString(4);
+                    khuvuc = dr.GetString(2);
+                    day = dr.GetString(3);
+                    phongso = dr.GetInt32(4);
+                    trangthai = dr.GetString(5);
 
-                    Phong pro = new Phong(id, kind, day, phongso, trangthai);
+                    Phong pro = new Phong(id, kind,khuvuc, day, phongso, trangthai);
                     list.Add(pro);
                 }
                 return list;
@@ -49,5 +50,7 @@ namespace MRDAO
                 dp.Disconnect();
             }
         }
+
+      
     }
 }

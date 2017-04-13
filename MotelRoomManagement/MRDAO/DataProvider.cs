@@ -49,5 +49,45 @@ namespace MRDAO
                 throw ex;
             }
         }
+
+        //Data TreeView
+
+        public DataTable GetData(string sql)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            da.Fill(dt);
+            return dt;
+        }
+
+        //Thêm, sửa ,xóa
+        public int executeNonQuery(string sql)
+        {
+            int result = 0;
+            if (cn.State == ConnectionState.Closed)
+                cn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+            result = cmd.ExecuteNonQuery();
+            return result;
+        }
+
+        //Trả về một đối tượng nào đó
+
+        public object exeCuteScalarQuery(string sql)
+        {
+            object result = 0;
+            if (cn.State == ConnectionState.Closed)
+                cn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+            result = cmd.ExecuteScalar();
+            return result;
+        }
+
     }
 }
