@@ -22,7 +22,6 @@ namespace MotelRoomManagement
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            //string a, b;
             string sql = "SELECT * FROM GhiNho";
             List<GhiNho> tmp = new PhongBUS().getGN(sql);
             txtLogin.DataBindings.Add("Text", tmp, "ID");

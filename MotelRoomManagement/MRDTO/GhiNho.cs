@@ -9,12 +9,10 @@ namespace MRDTO
     {
         public string ID { get; set; }
         public string pass { get; set; }
-        public int aa { get; set; }
-        public GhiNho(string ID, string pass, int aa)
+        public GhiNho(string ID, string pass)
         {
             this.ID = ID;
             this.pass = pass;
-            this.aa = aa;
         }
     }
 }
