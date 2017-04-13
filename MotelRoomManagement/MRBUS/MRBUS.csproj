@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="PhongBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Room.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MRDAO\MRDAO.csproj">

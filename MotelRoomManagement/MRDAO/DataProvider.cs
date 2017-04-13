@@ -44,68 +44,50 @@ namespace MRDAO
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 return (cmd.ExecuteReader());
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
         }
-        //public void ExecuteScalar(string sql)
-        //{
-        //    try
-        //    {
-        //        SqlCommand cmd = new SqlCommand(sql, cn);
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-        public int ExecuteNonQuery(string sql, CommandType type, List<SqlParameter> paras)
-        {
-            Connect();
-            try
-            {
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = type;
-                if (paras != null)
-                {
-                    foreach (SqlParameter para in paras)
-                    {
-                        cmd.Parameters.Add(para);
-                    }
-                }
-                cmd.ExecuteNonQuery();
-                return 1;
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
-            finally
-            {
-                Disconnect();
-            }
-        }
-        public int DExecuteNonQuery(string sql, CommandType type)
-        {
-            Connect();
-            try
-            {
-                SqlCommand cmd = new SqlCommand(sql, cn);
-                cmd.CommandType = type;
-                cmd.ExecuteNonQuery();
-                return 1;
-            }
-            catch (Exception)
-            {
+        //Data TreeView
 
-                throw;
-            }
-            finally
-            {
-                Disconnect();
-            }
+        public DataTable GetData(string sql)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+            da.Fill(dt);
+            return dt;
         }
+
+        //Thêm, sửa ,xóa
+        public int executeNonQuery(string sql)
+        {
+            int result = 0;
+            if (cn.State == ConnectionState.Closed)
+                cn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+            result = cmd.ExecuteNonQuery();
+            return result;
+        }
+
+        //Trả về một đối tượng nào đó
+
+        public object exeCuteScalarQuery(string sql)
+        {
+            object result = 0;
+            if (cn.State == ConnectionState.Closed)
+                cn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = sql;
+            result = cmd.ExecuteScalar();
+            return result;
+        }
+
     }
 }
