@@ -16,3 +16,22 @@ C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MotelRoomManagement
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDAO.pdb
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe.config
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRBUS.dll
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDTO.dll
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDAO.dll
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRBUS.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDTO.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDAO.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmHireRoom.resources
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmInformation.resources
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmLogin.resources
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmMain.resources
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.Properties.Resources.resources
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\GenerateResource.write.1.tlog

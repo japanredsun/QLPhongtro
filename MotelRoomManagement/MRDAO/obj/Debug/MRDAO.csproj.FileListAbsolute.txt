@@ -5,3 +5,10 @@ C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRD
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.dll
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDAO.dll
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDAO.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.dll
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.pdb
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.dll
+C:\Users\Binh An Thinh\Desktop\BTLLTCSDL\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.pdb
