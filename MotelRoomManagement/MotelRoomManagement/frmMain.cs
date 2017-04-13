@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 using MRBUS;
 using MRDTO;
 
@@ -21,8 +22,7 @@ namespace MotelRoomManagement
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView1.DataSource = GetPhong();
+            Load_Data();   
         }
         private List<Phong> GetPhong()
         {
@@ -31,17 +31,46 @@ namespace MotelRoomManagement
             return tmp;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Load_Data()
         {
-            if (e.RowIndex > -1)
+            Room _Class = new Room();
+            dataGridView1.DataSource = _Class.GetData();
+
+            Load_Data_TreeView1();
+            
+            
+        }
+
+        private void Load_Data_TreeView1()
+        {
+            Room _TW = new Room();
+            for (int i = 0; i < _TW.GetDataTW().Rows.Count; i++)
             {
-                string command = dataGridView1.Columns[e.ColumnIndex].Name;
-                if (command == "ThuePhong") 
-                {
-                    frmHireRoom frn1 = new frmHireRoom();
-                    frn1.Show();
-                }
+                treeView1.Nodes.Add(_TW.GetDataTW().Rows[i][0].ToString());
+                treeView1.Nodes[i].Tag = "1";
+            }
+
+            for (int i = 0; i < _TW.GetDataTW().Rows.Count; i++)
+            {
+                treeView2.Nodes.Add(_TW.GetDataTW().Rows[i][0].ToString());
+                treeView2.Nodes[i].Tag = "1";
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
+        
+       
+      
+
+       
+
+      
+
+        
     }
 }
