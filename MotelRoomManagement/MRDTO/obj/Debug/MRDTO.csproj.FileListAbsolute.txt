@@ -2,3 +2,4 @@ C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDTO\bin\Debug\MRD
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.pdb
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.dll
 C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.pdb
+C:\Users\User\Desktop\KDCuong\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csprojResolveAssemblyReference.cache
