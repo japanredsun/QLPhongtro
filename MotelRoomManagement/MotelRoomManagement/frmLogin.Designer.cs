@@ -35,7 +35,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btLogin = new System.Windows.Forms.Button();
             this.btReset = new System.Windows.Forms.Button();
-            this.cbSave = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,35 +93,22 @@
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(328, 355);
+            this.btLogin.Location = new System.Drawing.Point(328, 326);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(75, 38);
             this.btLogin.TabIndex = 3;
             this.btLogin.Text = "Log in";
             this.btLogin.UseVisualStyleBackColor = true;
-            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // btReset
             // 
             this.btReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReset.Location = new System.Drawing.Point(409, 355);
+            this.btReset.Location = new System.Drawing.Point(409, 326);
             this.btReset.Name = "btReset";
             this.btReset.Size = new System.Drawing.Size(75, 38);
             this.btReset.TabIndex = 3;
-            this.btReset.Text = "Exit";
+            this.btReset.Text = "Reset";
             this.btReset.UseVisualStyleBackColor = true;
-            this.btReset.Click += new System.EventHandler(this.btReset_Click);
-            // 
-            // cbSave
-            // 
-            this.cbSave.AutoSize = true;
-            this.cbSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSave.Location = new System.Drawing.Point(233, 327);
-            this.cbSave.Name = "cbSave";
-            this.cbSave.Size = new System.Drawing.Size(116, 22);
-            this.cbSave.TabIndex = 4;
-            this.cbSave.Text = "Lưu mật khẩu";
-            this.cbSave.UseVisualStyleBackColor = true;
             // 
             // frmLogin
             // 
@@ -131,7 +117,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(607, 405);
-            this.Controls.Add(this.cbSave);
             this.Controls.Add(this.btReset);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.txtPassword);
@@ -141,8 +126,6 @@
             this.Controls.Add(this.label1);
             this.Name = "frmLogin";
             this.Text = "Login";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLogin_FormClosing);
-            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -158,6 +141,5 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.Button btReset;
-        private System.Windows.Forms.CheckBox cbSave;
     }
 }
