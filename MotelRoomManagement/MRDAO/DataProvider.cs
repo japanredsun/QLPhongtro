@@ -44,9 +44,67 @@ namespace MRDAO
                 SqlCommand cmd = new SqlCommand(sql, cn);
                 return (cmd.ExecuteReader());
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 throw ex;
+            }
+        }
+        //public void ExecuteScalar(string sql)
+        //{
+        //    try
+        //    {
+        //        SqlCommand cmd = new SqlCommand(sql, cn);
+        //    }
+        //    catch (SqlException ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
+        public int ExecuteNonQuery(string sql, CommandType type, List<SqlParameter> paras)
+        {
+            Connect();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                if (paras != null)
+                {
+                    foreach (SqlParameter para in paras)
+                    {
+                        cmd.Parameters.Add(para);
+                    }
+                }
+                cmd.ExecuteNonQuery();
+                return 1;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+        public int DExecuteNonQuery(string sql, CommandType type)
+        {
+            Connect();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                cmd.ExecuteNonQuery();
+                return 1;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
             }
         }
     }
