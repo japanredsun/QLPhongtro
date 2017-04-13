@@ -42,7 +42,6 @@ namespace MRDAO
         {
             List<GhiNho> list = new List<GhiNho>();
             string id, pass; 
-            int aa;
             dp.Connect();
             try
             {
@@ -51,9 +50,8 @@ namespace MRDAO
                 {
                     id = dr.GetString(0);
                     pass = dr.GetString(1);
-                    aa = dr.GetInt32(2);
 
-                    GhiNho gn = new GhiNho(id, pass, aa);
+                    GhiNho gn = new GhiNho(id, pass);
                     list.Add(gn);
                 }
                 return list;
