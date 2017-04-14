@@ -37,3 +37,13 @@ E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Deb
 E:\STUDY\LTPJ\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe.config
 E:\STUDY\LTPJ\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
 E:\STUDY\LTPJ\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe.config
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.csprojResolveAssemblyReference.cache
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmHireRoom.resources
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmInformation.resources
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmLogin.resources
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmMain.resources
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.Properties.Resources.resources
+E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.csproj.GenerateResource.Cache

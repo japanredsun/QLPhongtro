@@ -28,15 +28,21 @@ namespace MRBUS
         {
             DataProvider dp = new DataProvider();
             DataTable nodecha = new DataTable();
-            nodecha = dp.GetData("SELECT TenKhuVuc FROM KhuVuc");
+            nodecha = dp.GetData("SELECT * FROM KhuVuc");
             return nodecha;
         }
 
-        public DataTable GetDataTWChild()
+        public DataTable GetDataTWChild(string where, string trangthai)
         {
             DataProvider dp = new DataProvider();
             DataTable nodecon = new DataTable();
-            nodecon = dp.GetData("SELECT MaPhong FROM Phong Where ");
+            if (trangthai == "NoVacant")
+            {
+                nodecon = dp.GetData("SELECT MaPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Đã thuê'");
+            }
+            else
+                nodecon = dp.GetData("SELECT MaPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
+
             return nodecon;
         }
 
