@@ -45,7 +45,7 @@ namespace MRBUS
             }
             catch (SqlException ex)
             {
-                
+
                 throw ex;
             }
         }

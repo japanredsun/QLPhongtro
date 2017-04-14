@@ -88,6 +88,52 @@ namespace MRDAO
             result = cmd.ExecuteScalar();
             return result;
         }
+        public int IExecuteNonQuery(string sql, CommandType type, List<SqlParameter> paras)
+        {
+            Connect();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                if (paras != null)
+                {
+                    foreach (SqlParameter para in paras)
+                    {
+                        cmd.Parameters.Add(para);
+                    }
+                }
+                cmd.ExecuteNonQuery();
+                return 1;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
+        public int DExecuteNonQuery(string sql, CommandType type)
+        {
+            Connect();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                cmd.ExecuteNonQuery();
+                return 1;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                Disconnect();
+            }
+        }
     }
 }

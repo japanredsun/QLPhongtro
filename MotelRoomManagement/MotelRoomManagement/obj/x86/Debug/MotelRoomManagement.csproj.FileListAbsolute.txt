@@ -37,6 +37,26 @@ E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Deb
 E:\STUDY\LTPJ\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe.config
 E:\STUDY\LTPJ\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
 E:\STUDY\LTPJ\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
+<<<<<<< HEAD
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe.config
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRBUS.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDTO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDAO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRBUS.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDTO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MRDAO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmHireRoom.resources
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmInformation.resources
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmLogin.resources
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmMain.resources
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.Properties.Resources.resources
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.csproj.GenerateResource.Cache
+=======
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\bin\Debug\MotelRoomManagement.exe.config
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.exe
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.pdb
@@ -47,3 +67,4 @@ E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomMan
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmMain.resources
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.Properties.Resources.resources
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.csproj.GenerateResource.Cache
+>>>>>>> e103f4bbfe2883ce97f00da9c35a416cea3cf835

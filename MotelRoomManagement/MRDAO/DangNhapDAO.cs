@@ -5,7 +5,6 @@ using System.Text;
 using System.Data.SqlClient;
 
 using MRDTO;
-
 namespace MRDAO
 {
     public class DangNhapDAO
@@ -41,7 +40,7 @@ namespace MRDAO
         public List<GhiNho> getGN(string sql)
         {
             List<GhiNho> list = new List<GhiNho>();
-            string id, pass; 
+            string id, pass;
             dp.Connect();
             try
             {
@@ -58,7 +57,7 @@ namespace MRDAO
             }
             catch (SqlException ex)
             {
-                
+
                 throw ex;
             }
             finally
@@ -73,11 +72,11 @@ namespace MRDAO
             paras.Add(new SqlParameter("@Pass", pass));
             try
             {
-                return (dp.ExecuteNonQuery("saveP", System.Data.CommandType.StoredProcedure, paras));
+                return (dp.IExecuteNonQuery("saveP", System.Data.CommandType.StoredProcedure, paras));
             }
             catch (SqlException ex)
             {
-                
+
                 throw ex;
             }
         }
@@ -94,4 +93,5 @@ namespace MRDAO
             }
         }
     }
+
 }
