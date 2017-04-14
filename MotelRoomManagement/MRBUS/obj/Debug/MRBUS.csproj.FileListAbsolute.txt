@@ -16,6 +16,7 @@ E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDTO.pdb
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.csprojResolveAssemblyReference.cache
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.dll
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.pdb
+<<<<<<< HEAD
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.dll
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.pdb
@@ -25,3 +26,8 @@ C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDAO.dll
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDTO.dll
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDAO.pdb
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRBUS\bin\Debug\MRDTO.pdb
+=======
+E:\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.csprojResolveAssemblyReference.cache
+E:\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.dll
+E:\QLPhongtro\MotelRoomManagement\MRBUS\obj\Debug\MRBUS.pdb
+>>>>>>> e103f4bbfe2883ce97f00da9c35a416cea3cf835
