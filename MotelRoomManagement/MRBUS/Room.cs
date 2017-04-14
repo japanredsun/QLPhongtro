@@ -14,11 +14,11 @@ namespace MRBUS
     {
         //hàm get data
 
-        public DataTable GetData()
+        public DataTable GetData(string maphong)
         {
             DataTable result = new DataTable();
             DataProvider dp = new DataProvider();
-            string strQuery = "SELECT Ho +' '+ Ten AS [Họ và Tên]  FROM ThongTinKhach";
+            string strQuery = "Select Ho + ' ' + Ten AS [Họ và tên] From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "'";
             result = dp.GetData(strQuery);
             return result;
 

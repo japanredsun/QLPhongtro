@@ -33,8 +33,7 @@ namespace MotelRoomManagement
 
         private void Load_Data()
         {
-            Room _Class = new Room();
-            dataGridView1.DataSource = _Class.GetData();
+           
 
             Load_Data_TreeView1();
             Load_Data_TreeView2();
@@ -58,7 +57,7 @@ namespace MotelRoomManagement
                 }
 
 
-            }
+            } treeView1.ExpandAll();
         }
 
         private void Load_Data_TreeView2()
@@ -78,6 +77,16 @@ namespace MotelRoomManagement
                     treeView2.Nodes[i].Nodes[j].Tag = "2";
                 }
 
+            } treeView2.ExpandAll();
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            TreeNode theNode = this.treeView1.SelectedNode;
+            if (theNode.Tag == "2")
+            {
+                Room _Class = new Room();
+                dataGridView1.DataSource = _Class.GetData(theNode.Text);
             }
         }
 
@@ -86,7 +95,7 @@ namespace MotelRoomManagement
             this.Close();
         }
 
-       
+
         
        
       
