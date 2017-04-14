@@ -37,6 +37,7 @@ namespace MotelRoomManagement
             dataGridView1.DataSource = _Class.GetData();
 
             Load_Data_TreeView1();
+            Load_Data_TreeView2();
             
             
         }
@@ -46,14 +47,37 @@ namespace MotelRoomManagement
             Room _TW = new Room();
             for (int i = 0; i < _TW.GetDataTW().Rows.Count; i++)
             {
-                treeView1.Nodes.Add(_TW.GetDataTW().Rows[i][0].ToString());
+                string item_TenKV = _TW.GetDataTW().Rows[i][1].ToString();
+                string item_MaKV = _TW.GetDataTW().Rows[i][0].ToString();
+                treeView1.Nodes.Add(item_TenKV);
                 treeView1.Nodes[i].Tag = "1";
-            }
+                for (int j = 0; j < _TW.GetDataTWChild(item_MaKV, "NoVacant").Rows.Count; j++)
+                {
+                    treeView1.Nodes[i].Nodes.Add(_TW.GetDataTWChild(item_MaKV, "NoVacant").Rows[j][0].ToString());
+                    treeView1.Nodes[i].Nodes[j].Tag = "2";
+                }
 
-            for (int i = 0; i < _TW.GetDataTW().Rows.Count; i++)
+
+            }
+        }
+
+        private void Load_Data_TreeView2()
+        {
+            Room _TW2 = new Room();
+
+            for (int i = 0; i < _TW2.GetDataTW().Rows.Count; i++)
             {
-                treeView2.Nodes.Add(_TW.GetDataTW().Rows[i][0].ToString());
+                string item_MaKV = _TW2.GetDataTW().Rows[i][0].ToString();
+                string item_TenKV = _TW2.GetDataTW().Rows[i][1].ToString();
+
+                treeView2.Nodes.Add(item_TenKV);
                 treeView2.Nodes[i].Tag = "1";
+                for (int j = 0; j < _TW2.GetDataTWChild(item_MaKV, "Vacant").Rows.Count; j++)
+                {
+                    treeView2.Nodes[i].Nodes.Add(_TW2.GetDataTWChild(item_MaKV, "Vacant").Rows[j][0].ToString());
+                    treeView2.Nodes[i].Nodes[j].Tag = "2";
+                }
+
             }
         }
 
