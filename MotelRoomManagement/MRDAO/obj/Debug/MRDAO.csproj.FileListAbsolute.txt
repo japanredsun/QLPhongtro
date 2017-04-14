@@ -12,3 +12,10 @@ E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.pdb
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.csprojResolveAssemblyReference.cache
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.dll
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDAO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDAO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\bin\Debug\MRDTO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDAO\obj\Debug\MRDAO.pdb

@@ -7,3 +7,8 @@ E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.pdb
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csprojResolveAssemblyReference.cache
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.dll
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDTO\bin\Debug\MRDTO.pdb
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.dll
+C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MRDTO\obj\Debug\MRDTO.pdb

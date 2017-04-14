@@ -22,6 +22,7 @@ namespace MotelRoomManagement
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            cbSave.Checked = true;
             string sql = "SELECT * FROM GhiNho";
             List<GhiNho> tmp = new PhongBUS().getGN(sql);
             txtLogin.DataBindings.Add("Text", tmp, "ID");
@@ -49,7 +50,7 @@ namespace MotelRoomManagement
             }
             else
             {
-                MessageBox.Show("NoOK");
+                MessageBox.Show("Sai thông tin tài khoản hoặc mật khẩu", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -60,6 +61,11 @@ namespace MotelRoomManagement
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load_1(object sender, EventArgs e)
         {
 
         }
