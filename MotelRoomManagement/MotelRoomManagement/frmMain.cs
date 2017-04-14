@@ -80,22 +80,14 @@ namespace MotelRoomManagement
             } treeView2.ExpandAll();
         }
 
-        //private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        //{
-        //    TreeNode theNode = this.treeView1.SelectedNode;
-        //    if (theNode.Tag == "2")
-        //    {
-        //        Room _Class = new Room();
-        //        dataGridView1.DataSource = _Class.GetData(theNode.Text);
-        //    }
-        //}
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+
         {
             TreeNode theNode = this.treeView1.SelectedNode;
             if (theNode.Tag == "2")
