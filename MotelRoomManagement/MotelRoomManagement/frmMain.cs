@@ -80,7 +80,6 @@ namespace MotelRoomManagement
             } treeView2.ExpandAll();
         }
 
-       
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -88,6 +87,7 @@ namespace MotelRoomManagement
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+
         {
             TreeNode theNode = this.treeView1.SelectedNode;
             if (theNode.Tag == "2")
