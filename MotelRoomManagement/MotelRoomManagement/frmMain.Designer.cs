@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -61,6 +63,7 @@
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TwImgList = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -201,7 +204,7 @@
             this.treeView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treeView2.Location = new System.Drawing.Point(9, 27);
             this.treeView2.Name = "treeView2";
-            this.treeView2.Size = new System.Drawing.Size(336, 199);
+            this.treeView2.Size = new System.Drawing.Size(330, 197);
             this.treeView2.TabIndex = 1;
             // 
             // groupBox2
@@ -219,13 +222,11 @@
             // treeView1
             // 
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.treeView1.Location = new System.Drawing.Point(7, 27);
+            this.treeView1.Location = new System.Drawing.Point(6, 27);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(336, 199);
+            this.treeView1.Size = new System.Drawing.Size(337, 193);
             this.treeView1.TabIndex = 0;
-
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-
             // 
             // danhsachthutien
             // 
@@ -456,6 +457,13 @@
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
             this.thôngTinToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // TwImgList
+            // 
+            this.TwImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TwImgList.ImageStream")));
+            this.TwImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.TwImgList.Images.SetKeyName(0, "Places-user-home-icon.png");
+            this.TwImgList.Images.SetKeyName(1, "house-icon.png");
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,5 +534,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ImageList TwImgList;
     }
 }

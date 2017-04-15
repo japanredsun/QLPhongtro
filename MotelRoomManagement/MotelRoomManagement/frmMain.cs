@@ -44,16 +44,20 @@ namespace MotelRoomManagement
         private void Load_Data_TreeView1()
         {
             Room _TW = new Room();
+            treeView1.ImageList = TwImgList;
             for (int i = 0; i < _TW.GetDataTW().Rows.Count; i++)
             {
                 string item_TenKV = _TW.GetDataTW().Rows[i][1].ToString();
                 string item_MaKV = _TW.GetDataTW().Rows[i][0].ToString();
-                treeView1.Nodes.Add(item_TenKV);
+                TreeNode nodecha = treeView1.Nodes.Add(item_TenKV);
                 treeView1.Nodes[i].Tag = "1";
+                nodecha.ImageIndex = 0;
                 for (int j = 0; j < _TW.GetDataTWChild(item_MaKV, "NoVacant").Rows.Count; j++)
                 {
-                    treeView1.Nodes[i].Nodes.Add(_TW.GetDataTWChild(item_MaKV, "NoVacant").Rows[j][0].ToString());
+                    TreeNode nodecon = treeView1.Nodes[i].Nodes.Add(_TW.GetDataTWChild(item_MaKV, "NoVacant").Rows[j][0].ToString());
                     treeView1.Nodes[i].Nodes[j].Tag = "2";
+                    nodecon.ImageIndex = 1;
+                    nodecon.SelectedImageIndex = 1;
                 }
 
 
@@ -63,18 +67,21 @@ namespace MotelRoomManagement
         private void Load_Data_TreeView2()
         {
             Room _TW2 = new Room();
-
+            treeView2.ImageList = TwImgList;
             for (int i = 0; i < _TW2.GetDataTW().Rows.Count; i++)
             {
                 string item_MaKV = _TW2.GetDataTW().Rows[i][0].ToString();
                 string item_TenKV = _TW2.GetDataTW().Rows[i][1].ToString();
 
-                treeView2.Nodes.Add(item_TenKV);
+                TreeNode nodecha = treeView2.Nodes.Add(item_TenKV);
                 treeView2.Nodes[i].Tag = "1";
+                nodecha.ImageIndex = 0;
                 for (int j = 0; j < _TW2.GetDataTWChild(item_MaKV, "Vacant").Rows.Count; j++)
                 {
-                    treeView2.Nodes[i].Nodes.Add(_TW2.GetDataTWChild(item_MaKV, "Vacant").Rows[j][0].ToString());
+                    TreeNode nodecon = treeView2.Nodes[i].Nodes.Add(_TW2.GetDataTWChild(item_MaKV, "Vacant").Rows[j][0].ToString());
                     treeView2.Nodes[i].Nodes[j].Tag = "2";
+                    nodecon.ImageIndex = 1;
+                    nodecon.SelectedImageIndex = 1;
                 }
 
             } treeView2.ExpandAll();

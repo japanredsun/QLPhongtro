@@ -53,7 +53,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MotelRoomManagement.Properties.Resources.download;
             this.pictureBox1.Location = new System.Drawing.Point(196, 54);
             this.pictureBox1.Name = "pictureBox1";
@@ -116,13 +116,14 @@
             // cbSave
             // 
             this.cbSave.AutoSize = true;
+            this.cbSave.BackColor = System.Drawing.Color.Transparent;
             this.cbSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSave.Location = new System.Drawing.Point(233, 327);
             this.cbSave.Name = "cbSave";
             this.cbSave.Size = new System.Drawing.Size(116, 22);
             this.cbSave.TabIndex = 4;
             this.cbSave.Text = "Lưu mật khẩu";
-            this.cbSave.UseVisualStyleBackColor = true;
+            this.cbSave.UseVisualStyleBackColor = false;
             // 
             // frmLogin
             // 
