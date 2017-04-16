@@ -51,6 +51,37 @@ namespace MRDAO
             }
         }
 
+        public DataTable GetData(string maphong)
+        {
+            DataTable result = new DataTable();
+            dp.Connect();
+            string strQuery = "Select Ho + ' ' + Ten AS [Họ và tên] From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "'";
+            result = dp.GetData(strQuery);
+            return result;
+        }
+
+        public DataTable GetDataTW()
+        {
+            DataTable nodecha = new DataTable();
+            dp.Connect();
+            nodecha = dp.GetData("SELECT * FROM KhuVuc");
+            return nodecha;
+        }
+
+        public DataTable GetDataTWChild(string where, string trangthai)
+        {
+            DataTable nodecon = new DataTable();
+            dp.Connect();
+            if (trangthai == "NoVacant")
+            {
+                nodecon = dp.GetData("SELECT MaPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Đã thuê'");
+            }
+            else
+                nodecon = dp.GetData("SELECT MaPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
+
+            return nodecon;
+        }
+
       
     }
 }
