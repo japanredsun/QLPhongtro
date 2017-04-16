@@ -2,44 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 
-using MRDAO;
 using MRDTO;
-
+using MRDAO;
 
 namespace MRBUS
 {
-    public class Room
+    public class KhachThueBUS
     {
-        public DataTable GetDataTW()
+        public List<KhachThue> GetKhach_List(string sql)
         {
             try
             {
-                DataTable nodecha = new PhongDAO().GetDataTW();
-                return nodecha;
+                List<KhachThue> result = new KhachThueDAO().GetKhachThue(sql);
+                return result;
             }
             catch (SqlException ex)
             {
                 
-                throw ex;
+                throw ex ;
             }
         }
 
-        public DataTable GetDataTWChild(string where, string trangthai)
+        public DataTable GetKhach(string maphong)
         {
             try
             {
-                DataTable nodecon = new PhongDAO().GetDataTWChild(where, trangthai);
-                return nodecon;
+                DataTable result = new PhongDAO().GetData(maphong);
+                return result;
             }
             catch (SqlException ex)
             {
-                
+
                 throw ex;
             }
         }
-
     }
 }
