@@ -20,7 +20,7 @@ namespace MRDAO
             dp.Connect();
             try
             {
-                SqlConnection cn = new SqlConnection(@"Server = USER-PC\KDC; Database = QLPhongTro; Integrated Security = true;");
+                SqlConnection cn = new SqlConnection(@"Server = JR-PC\SQL2008; Database = QLPhongTro; Integrated Security = true;");
                 cn.Open();
                 SqlCommand cm = new SqlCommand(sql, cn);
                 cm.Parameters.Add(new SqlParameter("@id", id));

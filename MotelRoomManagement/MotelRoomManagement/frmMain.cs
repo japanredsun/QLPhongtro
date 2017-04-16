@@ -39,6 +39,7 @@ namespace MotelRoomManagement
             Load_Data_TreeView2();
             
             
+            
         }
 
         private void Load_Data_TreeView1()
@@ -96,14 +97,25 @@ namespace MotelRoomManagement
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
 
         {
+
+            listKhach.Items.Clear();
             TreeNode theNode = this.treeView1.SelectedNode;
-            if (theNode.Tag == "2")
+            KhachThueBUS _ListKT = new KhachThueBUS();
+            if (theNode.Tag.ToString() == "2")
             {
-                Room _Class = new Room();
-                dataGridView1.DataSource = _Class.GetData(theNode.Text);
+                for (int i = 0; i < _ListKT.GetKhach(theNode.Text).Rows.Count; i++)
+                {
+                    ListViewItem item = new ListViewItem(_ListKT.GetKhach(theNode.Text).Rows[i][0].ToString());
+                    if (_ListKT.GetKhach(theNode.Text).Rows[i][2].ToString() == "Nam") item.ImageIndex = 3; else item.ImageIndex = 2;
+                    item.SubItems.Add(_ListKT.GetKhach(theNode.Text).Rows[i][1].ToString());
+                    listKhach.Items.Add(item);
+                }
+                
             }
+
         }
 
+        
 
         
        
