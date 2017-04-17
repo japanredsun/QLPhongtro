@@ -42,10 +42,10 @@ namespace MotelRoomManagement
                 if (newP == rewrite)
                     MessageBox.Show("OK");
                 else
-                    MessageBox.Show("Nhập lại sai");
+                    MessageBox.Show("Vui lòng nhập lại mật khẩu mới", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                MessageBox.Show("Mật khẩu không đúng");
+                MessageBox.Show("Mật khẩu không đúng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

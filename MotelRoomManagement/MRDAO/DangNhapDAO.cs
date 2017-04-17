@@ -47,8 +47,8 @@ namespace MRDAO
                 SqlDataReader dr = dp.ExecuteReader(sql);
                 while (dr.Read())
                 {
-                    id = dr.GetString(0);
-                    pass = dr.GetString(1);
+                    id = dr.GetString(0).Trim();
+                    pass = dr.GetString(1).Trim();
 
                     GhiNho gn = new GhiNho(id, pass);
                     list.Add(gn);
