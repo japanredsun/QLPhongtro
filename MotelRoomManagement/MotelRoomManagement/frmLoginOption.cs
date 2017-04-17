@@ -32,5 +32,11 @@ namespace MotelRoomManagement
             lbU.Text = id;
             lbP.Text = "******";
         }
+
+        private void btChangePass_Click(object sender, EventArgs e)
+        {
+            frmChangePass frm = new frmChangePass(id, pass);
+            frm.Show();
+        }
     }
 }
