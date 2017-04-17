@@ -92,6 +92,9 @@ namespace MotelRoomManagement
             cbKhuVuc.DisplayMember = "TenKhuVuc";
             cbKhuVuc.ValueMember = "MaKhuVuc";
             cbKhuVuc.DataSource = _CbData.GetDataTW();
+
+
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

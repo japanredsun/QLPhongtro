@@ -41,5 +41,19 @@ namespace MRBUS
             }
         }
 
+        public DataTable GetCBPhong(string makv)
+        {
+            try
+            {
+                DataTable result = new PhongDAO().GetCBPhong(makv);
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
     }
 }
