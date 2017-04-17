@@ -170,7 +170,13 @@ namespace MotelRoomManagement
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
-          
+            listKhach.Items.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmTinhTien form = new frmTinhTien();
+            form.Show();
         }
 
    
