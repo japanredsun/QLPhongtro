@@ -50,6 +50,22 @@ namespace MRDAO
             }
         }
 
+        public DataTable ExecuteAdapter(string sql)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sql,cn);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+        }
+
         //Data TreeView
 
         public DataTable GetData(string sql)
