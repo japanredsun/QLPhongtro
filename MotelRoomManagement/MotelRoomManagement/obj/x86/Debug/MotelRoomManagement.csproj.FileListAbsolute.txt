@@ -68,3 +68,4 @@ E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomMan
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.Properties.Resources.resources
 E:\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.csproj.GenerateResource.Cache
 >>>>>>> e103f4bbfe2883ce97f00da9c35a416cea3cf835
+E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmSoftInfo.resources
