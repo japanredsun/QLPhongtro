@@ -173,6 +173,12 @@ namespace MotelRoomManagement
           
         }
 
+        private void phòngTrọToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRoomManagement frm = new frmRoomManagement();
+            frm.Show();
+        }
+
    
 
         

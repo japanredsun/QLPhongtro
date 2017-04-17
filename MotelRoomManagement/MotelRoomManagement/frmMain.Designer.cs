@@ -824,15 +824,16 @@
             // 
             this.kháchThuêToolStripMenuItem.Image = global::MotelRoomManagement.Properties.Resources.User_Group_icon;
             this.kháchThuêToolStripMenuItem.Name = "kháchThuêToolStripMenuItem";
-            this.kháchThuêToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.kháchThuêToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.kháchThuêToolStripMenuItem.Text = "Khách thuê";
             // 
             // phòngTrọToolStripMenuItem
             // 
             this.phòngTrọToolStripMenuItem.Image = global::MotelRoomManagement.Properties.Resources.home_icon;
             this.phòngTrọToolStripMenuItem.Name = "phòngTrọToolStripMenuItem";
-            this.phòngTrọToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.phòngTrọToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.phòngTrọToolStripMenuItem.Text = "Phòng trọ";
+            this.phòngTrọToolStripMenuItem.Click += new System.EventHandler(this.phòngTrọToolStripMenuItem_Click);
             // 
             // hóaĐơnToolStripMenuItem
             // 
