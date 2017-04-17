@@ -875,6 +875,7 @@
             this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(81, 70);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài khoản";
             this.tàiKhoảnToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.tàiKhoảnToolStripMenuItem_Click);
             // 
             // thôngTinToolStripMenuItem
             // 

@@ -41,7 +41,7 @@ namespace MotelRoomManagement
             int x = new PhongBUS().Log(sql, a, b);
             if (x == 1)
             {
-                frmMain frmM = new frmMain();
+                frmMain frmM = new frmMain(a, b);
                 frmM.Show();
                 if (cbSave.Checked)
                 {
