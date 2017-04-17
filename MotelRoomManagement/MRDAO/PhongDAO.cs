@@ -63,7 +63,7 @@ namespace MRDAO
         {
             DataTable result = new DataTable();
             dp.Connect();
-            result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='"+makv+"'");
+            result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='"+makv+"'AND TrangThai=N'Đã thuê'");
             return result;
         }
 
@@ -80,6 +80,27 @@ namespace MRDAO
                 nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
 
             return nodecon;
+        }
+
+        public DataTable GetDataPhong(string sql)
+        {
+            DataTable dt = new DataTable();
+            dp.Connect();
+            try
+            {
+                dt = dp.GetData(sql);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+            finally
+            {
+                dp.Disconnect();
+            }
         }
 
       

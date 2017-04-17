@@ -79,13 +79,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMaPhong = new System.Windows.Forms.TextBox();
+            this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtNgayThue = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -190,7 +190,8 @@
             this.cbPhong.Name = "cbPhong";
             this.cbPhong.Size = new System.Drawing.Size(162, 33);
             this.cbPhong.TabIndex = 2;
-            this.cbPhong.DropDown += new System.EventHandler(this.cbPhong_DropDown);
+            
+            this.cbPhong.SelectedIndexChanged += new System.EventHandler(this.cbPhong_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -658,12 +659,12 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.LightBlue;
-            this.groupBox2.Controls.Add(this.dateTimePicker3);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.txtNgayThue);
+            this.groupBox2.Controls.Add(this.txtMaPhong);
+            this.groupBox2.Controls.Add(this.txtTenPhong);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.DarkGreen;
@@ -673,17 +674,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN PHÒNG THUÊ";
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.CalendarFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Enabled = false;
-            this.dateTimePicker3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(118, 112);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(127, 27);
-            this.dateTimePicker3.TabIndex = 3;
             // 
             // button1
             // 
@@ -718,23 +708,23 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên phòng:";
             // 
-            // textBox7
+            // txtMaPhong
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(108, 70);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(137, 23);
-            this.textBox7.TabIndex = 2;
+            this.txtMaPhong.Enabled = false;
+            this.txtMaPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaPhong.Location = new System.Drawing.Point(108, 70);
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(137, 23);
+            this.txtMaPhong.TabIndex = 2;
             // 
-            // textBox6
+            // txtTenPhong
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(108, 29);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(137, 23);
-            this.textBox6.TabIndex = 2;
+            this.txtTenPhong.Enabled = false;
+            this.txtTenPhong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenPhong.Location = new System.Drawing.Point(108, 29);
+            this.txtTenPhong.Name = "txtTenPhong";
+            this.txtTenPhong.Size = new System.Drawing.Size(137, 23);
+            this.txtTenPhong.TabIndex = 2;
             // 
             // label4
             // 
@@ -746,6 +736,15 @@
             this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã phòng:";
+            // 
+            // txtNgayThue
+            // 
+            this.txtNgayThue.Enabled = false;
+            this.txtNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayThue.Location = new System.Drawing.Point(108, 112);
+            this.txtNgayThue.Name = "txtNgayThue";
+            this.txtNgayThue.Size = new System.Drawing.Size(137, 23);
+            this.txtNgayThue.TabIndex = 2;
             // 
             // frmTinhTien
             // 
@@ -817,9 +816,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtMaPhong;
+        private System.Windows.Forms.TextBox txtTenPhong;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.GroupBox groupBox6;
@@ -838,5 +836,6 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbKhuVuc;
+        private System.Windows.Forms.TextBox txtNgayThue;
     }
 }
