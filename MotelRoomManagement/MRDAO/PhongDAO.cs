@@ -51,15 +51,6 @@ namespace MRDAO
             }
         }
 
-        public DataTable GetData(string maphong)
-        {
-            DataTable result = new DataTable();
-            dp.Connect();
-            string strQuery = "Select ThongTinKhach.MaKhachTro AS [Mã khách], Ho + ' ' + Ten AS [Họ và tên], GioiTinh From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "'";
-            result = dp.GetData(strQuery);
-            return result;
-        }
-
         public DataTable GetDataTW()
         {
             DataTable nodecha = new DataTable();
@@ -74,10 +65,10 @@ namespace MRDAO
             dp.Connect();
             if (trangthai == "NoVacant")
             {
-                nodecon = dp.GetData("SELECT MaPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Đã thuê'");
+                nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Đã thuê'");
             }
             else
-                nodecon = dp.GetData("SELECT MaPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
+                nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
 
             return nodecon;
         }
