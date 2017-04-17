@@ -76,17 +76,33 @@ namespace MRDAO
 
         //Trả về một đối tượng nào đó
 
-        public object exeCuteScalarQuery(string sql)
+        public object exeCuteScalarQuery(string sql, CommandType type, List<SqlParameter> paras)
         {
             object result = 0;
-            if (cn.State == ConnectionState.Closed)
-                cn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = sql;
-            result = cmd.ExecuteScalar();
-            return result;
+            Connect();
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, cn);
+                cmd.CommandType = type;
+                if (paras != null)
+                {
+                    foreach (SqlParameter para in paras)
+                    {
+                        cmd.Parameters.Add(para);
+                    }
+                }
+                result = cmd.ExecuteScalar();
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                Disconnect();
+            }
         }
         public int IExecuteNonQuery(string sql, CommandType type, List<SqlParameter> paras)
         {
@@ -105,10 +121,10 @@ namespace MRDAO
                 cmd.ExecuteNonQuery();
                 return 1;
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
 
-                throw;
+                throw ex;
             }
             finally
             {
@@ -125,10 +141,10 @@ namespace MRDAO
                 cmd.ExecuteNonQuery();
                 return 1;
             }
-            catch (Exception)
+            catch (SqlException ex)
             {
 
-                throw;
+                throw ex;
             }
             finally
             {

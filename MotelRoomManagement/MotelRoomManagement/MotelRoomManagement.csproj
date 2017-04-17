@@ -53,6 +53,12 @@
     <Compile Include="frmAddRoom.Designer.cs">
       <DependentUpon>frmAddRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDelay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDelay.Designer.cs">
+      <DependentUpon>frmDelay.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHireRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +83,17 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSoftInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoftInfo.Designer.cs">
+      <DependentUpon>frmSoftInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDelay.resx">
+      <DependentUpon>frmDelay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHireRoom.resx">
       <DependentUpon>frmHireRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSoftInfo.resx">
+      <DependentUpon>frmSoftInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
