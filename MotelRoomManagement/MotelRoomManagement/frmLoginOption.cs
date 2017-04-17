@@ -30,7 +30,10 @@ namespace MotelRoomManagement
         private void frmLoginOption_Load(object sender, EventArgs e)
         {
             lbU.Text = id;
-            lbP.Text = "******";
+            string a = "";
+            for (int i = 0; i < int.Parse(pass.Count().ToString()); i++)
+                a += "*";
+            lbP.Text = a;
         }
 
         private void btChangePass_Click(object sender, EventArgs e)
