@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Globalization;
 
+
 using MRBUS;
 using MRDTO;
 
@@ -171,6 +172,11 @@ namespace MotelRoomManagement
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
           
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
    

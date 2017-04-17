@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ad.cs" />
     <Compile Include="frmAddRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +78,12 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLoginOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginOption.Designer.cs">
+      <DependentUpon>frmLoginOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +109,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginOption.resx">
+      <DependentUpon>frmLoginOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

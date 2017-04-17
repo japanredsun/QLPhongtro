@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace MotelRoomManagement
 {
-    public partial class frmSoftInfo : Form
+    public partial class frmLoginOption : Form
     {
-        public frmSoftInfo()
+        public frmLoginOption()
         {
             InitializeComponent();
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }
