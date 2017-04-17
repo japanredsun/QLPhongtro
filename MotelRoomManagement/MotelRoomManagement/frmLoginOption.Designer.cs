@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbHeader = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbU = new System.Windows.Forms.Label();
-            this.lbP = new System.Windows.Forms.Label();
             this.btChangePass = new System.Windows.Forms.Button();
+            this.lbP = new System.Windows.Forms.Label();
+            this.lbU = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,27 +52,37 @@
             this.panel1.Size = new System.Drawing.Size(328, 238);
             this.panel1.TabIndex = 0;
             // 
-            // lbHeader
+            // btChangePass
             // 
-            this.lbHeader.AutoSize = true;
-            this.lbHeader.Font = new System.Drawing.Font("Tahoma", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.ForeColor = System.Drawing.Color.Khaki;
-            this.lbHeader.Location = new System.Drawing.Point(13, 13);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(302, 35);
-            this.lbHeader.TabIndex = 1;
-            this.lbHeader.Text = "Thông tin tài khoản";
+            this.btChangePass.BackColor = System.Drawing.Color.LawnGreen;
+            this.btChangePass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btChangePass.Location = new System.Drawing.Point(175, 186);
+            this.btChangePass.Name = "btChangePass";
+            this.btChangePass.Size = new System.Drawing.Size(140, 39);
+            this.btChangePass.TabIndex = 4;
+            this.btChangePass.Text = "Đổi mật khẩu";
+            this.btChangePass.UseVisualStyleBackColor = false;
+            this.btChangePass.Click += new System.EventHandler(this.btChangePass_Click);
             // 
-            // label1
+            // lbP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Tên tài khoản:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lbP.AutoSize = true;
+            this.lbP.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbP.Location = new System.Drawing.Point(183, 125);
+            this.lbP.Name = "lbP";
+            this.lbP.Size = new System.Drawing.Size(67, 25);
+            this.lbP.TabIndex = 3;
+            this.lbP.Text = "label3";
+            // 
+            // lbU
+            // 
+            this.lbU.AutoSize = true;
+            this.lbU.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbU.Location = new System.Drawing.Point(183, 79);
+            this.lbU.Name = "lbU";
+            this.lbU.Size = new System.Drawing.Size(67, 25);
+            this.lbU.TabIndex = 3;
+            this.lbU.Text = "label3";
             // 
             // label2
             // 
@@ -85,36 +95,27 @@
             this.label2.Text = "Mật khẩu:";
             this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbU
+            // label1
             // 
-            this.lbU.AutoSize = true;
-            this.lbU.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbU.Location = new System.Drawing.Point(183, 79);
-            this.lbU.Name = "lbU";
-            this.lbU.Size = new System.Drawing.Size(67, 25);
-            this.lbU.TabIndex = 3;
-            this.lbU.Text = "label3";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Tên tài khoản:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // lbP
+            // lbHeader
             // 
-            this.lbP.AutoSize = true;
-            this.lbP.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbP.Location = new System.Drawing.Point(183, 125);
-            this.lbP.Name = "lbP";
-            this.lbP.Size = new System.Drawing.Size(67, 25);
-            this.lbP.TabIndex = 3;
-            this.lbP.Text = "label3";
-            // 
-            // btChangePass
-            // 
-            this.btChangePass.BackColor = System.Drawing.Color.LawnGreen;
-            this.btChangePass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btChangePass.Location = new System.Drawing.Point(175, 186);
-            this.btChangePass.Name = "btChangePass";
-            this.btChangePass.Size = new System.Drawing.Size(140, 39);
-            this.btChangePass.TabIndex = 4;
-            this.btChangePass.Text = "Đổi mật khẩu";
-            this.btChangePass.UseVisualStyleBackColor = false;
+            this.lbHeader.AutoSize = true;
+            this.lbHeader.Font = new System.Drawing.Font("Tahoma", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.Khaki;
+            this.lbHeader.Location = new System.Drawing.Point(13, 13);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(302, 35);
+            this.lbHeader.TabIndex = 1;
+            this.lbHeader.Text = "Thông tin tài khoản";
             // 
             // frmLoginOption
             // 
