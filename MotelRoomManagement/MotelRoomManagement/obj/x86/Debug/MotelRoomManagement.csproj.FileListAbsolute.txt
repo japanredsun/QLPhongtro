@@ -72,3 +72,5 @@ C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86
 E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmSoftInfo.resources
 >>>>>>> 7ecfee8b06190e62a217d479d8c58b682365ffac
 C:\Users\User\Desktop\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmSoftInfo.resources
+E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmDelay.resources
+E:\GIT\QLPhongTro\QLPhongtro\MotelRoomManagement\MotelRoomManagement\obj\x86\Debug\MotelRoomManagement.frmTinhTien.resources
