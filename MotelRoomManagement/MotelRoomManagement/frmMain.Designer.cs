@@ -347,7 +347,7 @@
             this.grCTHD.Controls.Add(this.groupBox9);
             this.grCTHD.Controls.Add(this.groupBox8);
             this.grCTHD.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grCTHD.ForeColor = System.Drawing.Color.DarkOrange;
+            this.grCTHD.ForeColor = System.Drawing.Color.DodgerBlue;
             this.grCTHD.Location = new System.Drawing.Point(380, 16);
             this.grCTHD.Name = "grCTHD";
             this.grCTHD.Size = new System.Drawing.Size(326, 380);
