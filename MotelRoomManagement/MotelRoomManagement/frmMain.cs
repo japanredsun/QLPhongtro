@@ -15,11 +15,16 @@ namespace MotelRoomManagement
 {
     public partial class frmMain : Form
     {
+        private string USER, PASS;
         public frmMain()
         {
             InitializeComponent();
         }
-
+        public frmMain(string username, string password): this()
+        {
+            USER = username;
+            PASS = password;
+        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -180,6 +185,12 @@ namespace MotelRoomManagement
         {
             frmTinhTien form = new frmTinhTien();
             form.Show();
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoginOption frm = new frmLoginOption(USER, PASS);
+            frm.Show();
         }
 
    
