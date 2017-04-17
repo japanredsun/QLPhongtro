@@ -5,8 +5,6 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Data;
 
-using MRDTO;
-
 namespace MRDAO
 {
     public class HoadonDAO

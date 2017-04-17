@@ -17,11 +17,15 @@ namespace MotelRoomManagement
     {
         public frmLogin()
         {
+            frmDelay fd = new frmDelay();
+            fd.ShowDialog();
             InitializeComponent();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+
+            
             cbSave.Checked = true;
             string sql = "SELECT * FROM GhiNho";
             List<GhiNho> tmp = new PhongBUS().getGN(sql);

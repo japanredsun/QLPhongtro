@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 
 using MRDAO;
 using MRDTO;
+
 namespace MRBUS
 {
     public class HoadonBUS
@@ -20,9 +21,10 @@ namespace MRBUS
             }
             catch (SqlException ex)
             {
-                
+
                 throw ex;
             }
         }
     }
 }
+

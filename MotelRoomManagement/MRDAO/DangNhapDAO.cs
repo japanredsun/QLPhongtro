@@ -17,15 +17,15 @@ namespace MRDAO
         }
         public int Log(string sql, string id, string pass)
         {
-            dp.Connect();
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@id", id));
+            paras.Add(new SqlParameter("@pw", pass));
             try
             {
-                SqlConnection cn = new SqlConnection(@"Server = JR-PC\SQL2008; Database = QLPhongTro; Integrated Security = true;");
-                cn.Open();
-                SqlCommand cm = new SqlCommand(sql, cn);
-                cm.Parameters.Add(new SqlParameter("@id", id));
-                cm.Parameters.Add(new SqlParameter("@pw", pass));
-                int x = (int)cm.ExecuteScalar();
+                //SqlConnection cn = new SqlConnection(@"Server = USER-PC\KDC; Database = QLPhongTro; Integrated Security = true;");
+                //cn.Open();
+                
+                int x = (int)dp.exeCuteScalarQuery(sql, System.Data.CommandType.Text, paras);
                 return x;
             }
             catch (SqlException ex)
