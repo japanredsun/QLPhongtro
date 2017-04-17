@@ -699,6 +699,7 @@
             // 
             // cbKhuVuc
             // 
+            this.cbKhuVuc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbKhuVuc.FormattingEnabled = true;
             this.cbKhuVuc.Location = new System.Drawing.Point(89, 26);
             this.cbKhuVuc.Name = "cbKhuVuc";
@@ -894,7 +895,6 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(978, 692);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

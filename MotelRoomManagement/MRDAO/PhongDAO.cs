@@ -59,6 +59,15 @@ namespace MRDAO
             return nodecha;
         }
 
+        public DataTable GetCBPhong(string makv)
+        {
+            DataTable result = new DataTable();
+            dp.Connect();
+            result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='"+makv+"'");
+            return result;
+        }
+
+
         public DataTable GetDataTWChild(string where, string trangthai)
         {
             DataTable nodecon = new DataTable();
