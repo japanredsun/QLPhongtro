@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 
 using MRBUS;
 using MRDTO;
@@ -36,19 +37,31 @@ namespace MotelRoomManagement
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
         {
             khuvuc = cbKhuVuc.SelectedValue.ToString();
-            cbPhong.SelectedIndex = -1;
-        }
-
-        private void cbPhong_DropDown(object sender, EventArgs e)
-        {
             cbPhong.DisplayMember = "TenPhong";
             cbPhong.ValueMember = "MaPhong";
             cbPhong.DataSource = cb.GetCBPhong(khuvuc);
+            
+        }
+
+       
+
+        private void cbPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string maphong = cbPhong.SelectedValue.ToString();
+            string sql = "SELECT p.MaPhong, TenPhong, NgayThue From Phong p , ThongTinThuePhong tp Where p.MaPhong='" + maphong + "'AND TrangThai=N'Đã thuê'";
+            var phong = cb.GetDataPhong(sql);
+
+            txtMaPhong.Text = maphong;
+            txtTenPhong.Text = phong.Rows[0][1].ToString();
+            string ngay = phong.Rows[0][2].ToString();
+            DateTime dt = DateTime.ParseExact(ngay, "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
+            string s = dt.ToString("dd/MM/yyyy", CultureInfo.InvariantCulture);
+            txtNgayThue.Text = s;
         }
 
         //finish combobox
 
-      
+    
 
     }
 }
