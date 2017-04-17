@@ -92,6 +92,21 @@ namespace MRDAO
                 throw ex;
             }
         }
+        public int ChangePass(string id, string newPass)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@ID", id));
+            paras.Add(new SqlParameter("@Pass", newPass));
+            try
+            {
+                return (dp.IExecuteNonQuery("ChangePass", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 
 }

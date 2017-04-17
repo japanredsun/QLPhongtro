@@ -40,6 +40,7 @@ namespace MotelRoomManagement
         {
             frmChangePass frm = new frmChangePass(id, pass);
             frm.Show();
+            Close();
         }
     }
 }
