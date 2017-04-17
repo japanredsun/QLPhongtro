@@ -28,7 +28,7 @@ namespace MotelRoomManagement
             
             cbSave.Checked = true;
             string sql = "SELECT * FROM GhiNho";
-            List<GhiNho> tmp = new PhongBUS().getGN(sql);
+            List<GhiNho> tmp = new DangNhapBUS().getGN(sql);
             txtLogin.DataBindings.Add("Text", tmp, "ID");
             txtPassword.DataBindings.Add("Text", tmp, "Pass");
         }
@@ -38,18 +38,18 @@ namespace MotelRoomManagement
             string sql = "SELECT Count(*) FROM DangNhap WHERE ID=@id AND PassWord=@pw";
             string a = txtLogin.Text.Trim();
             string b = txtPassword.Text;
-            int x = new PhongBUS().Log(sql, a, b);
+            int x = new DangNhapBUS().Log(sql, a, b);
             if (x == 1)
             {
                 frmMain frmM = new frmMain(a, b);
                 frmM.Show();
                 if (cbSave.Checked)
                 {
-                    int i = new PhongBUS().Save(a, b);
+                    int i = new DangNhapBUS().Save(a, b);
                 }
                 else
                 {
-                    int j = new PhongBUS().Xoa();
+                    int j = new DangNhapBUS().Xoa();
                 }
             }
             else

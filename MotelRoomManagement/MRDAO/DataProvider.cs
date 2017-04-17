@@ -60,22 +60,7 @@ namespace MRDAO
             return dt;
         }
 
-        //Thêm, sửa ,xóa
-        public int executeNonQuery(string sql)
-        {
-            int result = 0;
-            if (cn.State == ConnectionState.Closed)
-                cn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = sql;
-            result = cmd.ExecuteNonQuery();
-            return result;
-        }
-
-        //Trả về một đối tượng nào đó
-
+        //Select 1 hàng
         public object exeCuteScalarQuery(string sql, CommandType type, List<SqlParameter> paras)
         {
             object result = 0;
@@ -104,6 +89,8 @@ namespace MRDAO
                 Disconnect();
             }
         }
+
+        //Thêm, sửa 
         public int IExecuteNonQuery(string sql, CommandType type, List<SqlParameter> paras)
         {
             Connect();
@@ -131,6 +118,8 @@ namespace MRDAO
                 Disconnect();
             }
         }
+
+        //Xóa
         public int DExecuteNonQuery(string sql, CommandType type)
         {
             Connect();

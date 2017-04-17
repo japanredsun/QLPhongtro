@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.txtRewrite = new System.Windows.Forms.TextBox();
+            this.txtNewPass = new System.Windows.Forms.TextBox();
+            this.txtOldPass = new System.Windows.Forms.TextBox();
             this.btConfirm = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtOldPass = new System.Windows.Forms.TextBox();
-            this.txtNewPass = new System.Windows.Forms.TextBox();
-            this.txtRewrite = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,45 @@
             this.panel1.Size = new System.Drawing.Size(427, 238);
             this.panel1.TabIndex = 1;
             // 
+            // btCancel
+            // 
+            this.btCancel.BackColor = System.Drawing.Color.Red;
+            this.btCancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCancel.Location = new System.Drawing.Point(327, 185);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(84, 39);
+            this.btCancel.TabIndex = 6;
+            this.btCancel.Text = "Hủy bỏ";
+            this.btCancel.UseVisualStyleBackColor = false;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
+            // 
+            // txtRewrite
+            // 
+            this.txtRewrite.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRewrite.Location = new System.Drawing.Point(277, 128);
+            this.txtRewrite.Name = "txtRewrite";
+            this.txtRewrite.PasswordChar = '*';
+            this.txtRewrite.Size = new System.Drawing.Size(134, 33);
+            this.txtRewrite.TabIndex = 5;
+            // 
+            // txtNewPass
+            // 
+            this.txtNewPass.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPass.Location = new System.Drawing.Point(277, 78);
+            this.txtNewPass.Name = "txtNewPass";
+            this.txtNewPass.PasswordChar = '*';
+            this.txtNewPass.Size = new System.Drawing.Size(134, 33);
+            this.txtNewPass.TabIndex = 5;
+            // 
+            // txtOldPass
+            // 
+            this.txtOldPass.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPass.Location = new System.Drawing.Point(277, 24);
+            this.txtOldPass.Name = "txtOldPass";
+            this.txtOldPass.PasswordChar = '*';
+            this.txtOldPass.Size = new System.Drawing.Size(134, 33);
+            this.txtOldPass.TabIndex = 5;
+            // 
             // btConfirm
             // 
             this.btConfirm.BackColor = System.Drawing.Color.LawnGreen;
@@ -67,6 +106,16 @@
             this.btConfirm.Text = "Xác nhận";
             this.btConfirm.UseVisualStyleBackColor = false;
             this.btConfirm.Click += new System.EventHandler(this.btConfirm_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(14, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(257, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Nhập lại mật khẩu mới:";
             // 
             // label2
             // 
@@ -88,54 +137,6 @@
             this.label1.Size = new System.Drawing.Size(149, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mật khẩu cũ:";
-            // 
-            // txtOldPass
-            // 
-            this.txtOldPass.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldPass.Location = new System.Drawing.Point(277, 24);
-            this.txtOldPass.Name = "txtOldPass";
-            this.txtOldPass.PasswordChar = '*';
-            this.txtOldPass.Size = new System.Drawing.Size(134, 33);
-            this.txtOldPass.TabIndex = 5;
-            // 
-            // txtNewPass
-            // 
-            this.txtNewPass.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPass.Location = new System.Drawing.Point(277, 78);
-            this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.PasswordChar = '*';
-            this.txtNewPass.Size = new System.Drawing.Size(134, 33);
-            this.txtNewPass.TabIndex = 5;
-            // 
-            // txtRewrite
-            // 
-            this.txtRewrite.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRewrite.Location = new System.Drawing.Point(277, 128);
-            this.txtRewrite.Name = "txtRewrite";
-            this.txtRewrite.PasswordChar = '*';
-            this.txtRewrite.Size = new System.Drawing.Size(134, 33);
-            this.txtRewrite.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 136);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(257, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nhập lại mật khẩu mới:";
-            // 
-            // btCancel
-            // 
-            this.btCancel.BackColor = System.Drawing.Color.Red;
-            this.btCancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.Location = new System.Drawing.Point(327, 185);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(84, 39);
-            this.btCancel.TabIndex = 6;
-            this.btCancel.Text = "Hủy bỏ";
-            this.btCancel.UseVisualStyleBackColor = false;
             // 
             // frmChangePass
             // 
