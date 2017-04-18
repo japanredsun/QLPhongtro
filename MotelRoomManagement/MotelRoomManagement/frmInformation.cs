@@ -91,6 +91,7 @@ namespace MotelRoomManagement
         {
             ho = txtHo.Text;
             ten = txtTen.Text;
+            txtHoTen.Text = ho + " " + ten;
             birthday = dtpNgaySinh.Text.Trim();
             if (cbGioiTinh.SelectedItem.ToString() == "Nam")
                 gioitinh = "Nam";
