@@ -52,6 +52,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lbMaKt = new System.Windows.Forms.Label();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh34)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -144,6 +145,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dtpNgaySinh);
             this.panel1.Controls.Add(this.cbGioiTinh);
+            this.panel1.Controls.Add(this.txtHoTen);
             this.panel1.Controls.Add(this.txtHo);
             this.panel1.Controls.Add(this.txtTen);
             this.panel1.Controls.Add(this.txtGhiChu);
@@ -315,6 +317,15 @@
             this.lbMaKt.TabIndex = 0;
             this.lbMaKt.Text = "ID";
             // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(378, 225);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(251, 30);
+            this.txtHoTen.TabIndex = 8;
+            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,5 +372,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.TextBox txtHo;
+        private System.Windows.Forms.TextBox txtHoTen;
     }
 }
