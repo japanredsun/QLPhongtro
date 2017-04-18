@@ -22,7 +22,7 @@ namespace MRDAO
         {
             List<KhachThue> list = new List<KhachThue>();
             
-            string makt, ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong;
+            string makt, ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong, ghichu;
             DateTime ngaysinh;
             dp.Connect();
             try 
@@ -39,8 +39,9 @@ namespace MRDAO
                         quequan = dr.GetString(7);
                         nghenghiep = dr.GetString(8);
                         maphong = dr.GetString(9);
+                        ghichu = dr.GetString(10);
 
-                        KhachThue khach = new KhachThue(makt,ho,ten,gioitinh,ngaysinh,cmnd,quequan,nghenghiep,maphong);
+                        KhachThue khach = new KhachThue(makt,ho,ten,gioitinh,ngaysinh,cmnd,quequan,nghenghiep,maphong,ghichu);
                         list.Add(khach);
                     }
                     return list;

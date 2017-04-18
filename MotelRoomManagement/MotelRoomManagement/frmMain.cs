@@ -172,8 +172,8 @@ namespace MotelRoomManagement
             ListViewItem item = listKhach.SelectedItems[0];
             string id = item.Text;
 
-            //frmSoftInfo frm = new frmSoftInfo(id);
-            //frm.Show();
+            frmInformation frmInfo = new frmInformation(id);
+            frmInfo.Show();
         }
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)

@@ -16,8 +16,9 @@ namespace MRDTO
         public string QueQuan { get; set; }
         public string NgheNghiep { get; set; }
         public string MaPhong { get; set; }
+        public string  GhiChu { get; set; }
 
-        public KhachThue(string makt, string ho, string ten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep, string maphong)
+        public KhachThue(string makt, string ho, string ten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep, string maphong, string ghichu)
         {
             this.MaKhachTro = makt;
             this.Ho = ho;
@@ -28,6 +29,7 @@ namespace MRDTO
             this.QueQuan = quequan;
             this.NgheNghiep = nghenghiep;
             this.MaPhong = maphong;
+            this.GhiChu = ghichu;
         }
     }
 }
