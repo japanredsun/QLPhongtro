@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbHeader = new System.Windows.Forms.Label();
-            this.btnDSKT = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnDT = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnDSKT = new System.Windows.Forms.Button();
+            this.lbHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,27 +47,16 @@
             this.panel1.Size = new System.Drawing.Size(376, 150);
             this.panel1.TabIndex = 0;
             // 
-            // lbHeader
+            // btnDT
             // 
-            this.lbHeader.AutoSize = true;
-            this.lbHeader.Font = new System.Drawing.Font("Tahoma", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.ForeColor = System.Drawing.Color.Khaki;
-            this.lbHeader.Location = new System.Drawing.Point(4, 13);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(405, 35);
-            this.lbHeader.TabIndex = 2;
-            this.lbHeader.Text = "Chọn loại báo cáo cần xem";
-            // 
-            // btnDSKT
-            // 
-            this.btnDSKT.BackColor = System.Drawing.Color.Lime;
-            this.btnDSKT.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDSKT.Location = new System.Drawing.Point(43, 9);
-            this.btnDSKT.Name = "btnDSKT";
-            this.btnDSKT.Size = new System.Drawing.Size(130, 62);
-            this.btnDSKT.TabIndex = 0;
-            this.btnDSKT.Text = "Danh sách khách trọ";
-            this.btnDSKT.UseVisualStyleBackColor = false;
+            this.btnDT.BackColor = System.Drawing.Color.Tomato;
+            this.btnDT.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDT.Location = new System.Drawing.Point(123, 77);
+            this.btnDT.Name = "btnDT";
+            this.btnDT.Size = new System.Drawing.Size(130, 62);
+            this.btnDT.TabIndex = 0;
+            this.btnDT.Text = "Tổng doanh thu";
+            this.btnDT.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -80,16 +69,28 @@
             this.button2.Text = "Danh sách phòng";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // btnDT
+            // btnDSKT
             // 
-            this.btnDT.BackColor = System.Drawing.Color.Tomato;
-            this.btnDT.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDT.Location = new System.Drawing.Point(123, 77);
-            this.btnDT.Name = "btnDT";
-            this.btnDT.Size = new System.Drawing.Size(130, 62);
-            this.btnDT.TabIndex = 0;
-            this.btnDT.Text = "Tổng doanh thu";
-            this.btnDT.UseVisualStyleBackColor = false;
+            this.btnDSKT.BackColor = System.Drawing.Color.Lime;
+            this.btnDSKT.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDSKT.Location = new System.Drawing.Point(43, 9);
+            this.btnDSKT.Name = "btnDSKT";
+            this.btnDSKT.Size = new System.Drawing.Size(130, 62);
+            this.btnDSKT.TabIndex = 0;
+            this.btnDSKT.Text = "Danh sách khách trọ";
+            this.btnDSKT.UseVisualStyleBackColor = false;
+            this.btnDSKT.Click += new System.EventHandler(this.btnDSKT_Click);
+            // 
+            // lbHeader
+            // 
+            this.lbHeader.AutoSize = true;
+            this.lbHeader.Font = new System.Drawing.Font("Tahoma", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.Khaki;
+            this.lbHeader.Location = new System.Drawing.Point(4, 13);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(405, 35);
+            this.lbHeader.TabIndex = 2;
+            this.lbHeader.Text = "Chọn loại báo cáo cần xem";
             // 
             // frmReportOption
             // 

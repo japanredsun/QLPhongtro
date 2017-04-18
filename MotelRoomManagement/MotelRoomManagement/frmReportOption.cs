@@ -15,5 +15,11 @@ namespace MotelRoomManagement
         {
             InitializeComponent();
         }
+
+        private void btnDSKT_Click(object sender, EventArgs e)
+        {
+            frmCustomerReport frmCR = new frmCustomerReport();
+            frmCR.Show();
+        }
     }
 }
