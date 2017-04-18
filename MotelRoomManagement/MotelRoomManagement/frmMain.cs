@@ -193,6 +193,12 @@ namespace MotelRoomManagement
             frm.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmReportOption frmRO = new frmReportOption();
+            frmRO.Show();
+        }
+
    
 
         
