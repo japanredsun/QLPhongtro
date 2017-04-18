@@ -897,6 +897,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(978, 692);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
