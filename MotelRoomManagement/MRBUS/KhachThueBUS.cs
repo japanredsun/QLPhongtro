@@ -30,7 +30,7 @@ namespace MRBUS
         {
             try
             {
-                DataTable result = new KhachThueDAO().GetData(maphong);
+                DataTable result = new PhongDAO().GetData(maphong);
                 return result;
             }
             catch (SqlException ex)
