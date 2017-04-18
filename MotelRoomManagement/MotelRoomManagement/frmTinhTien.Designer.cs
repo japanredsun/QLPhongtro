@@ -82,10 +82,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtNgayThue = new System.Windows.Forms.TextBox();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtNgayThue = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -190,7 +190,6 @@
             this.cbPhong.Name = "cbPhong";
             this.cbPhong.Size = new System.Drawing.Size(162, 33);
             this.cbPhong.TabIndex = 2;
-            
             this.cbPhong.SelectedIndexChanged += new System.EventHandler(this.cbPhong_SelectedIndexChanged);
             // 
             // dateTimePicker1
@@ -708,6 +707,15 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Tên phòng:";
             // 
+            // txtNgayThue
+            // 
+            this.txtNgayThue.Enabled = false;
+            this.txtNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgayThue.Location = new System.Drawing.Point(108, 112);
+            this.txtNgayThue.Name = "txtNgayThue";
+            this.txtNgayThue.Size = new System.Drawing.Size(137, 23);
+            this.txtNgayThue.TabIndex = 2;
+            // 
             // txtMaPhong
             // 
             this.txtMaPhong.Enabled = false;
@@ -737,15 +745,6 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Mã phòng:";
             // 
-            // txtNgayThue
-            // 
-            this.txtNgayThue.Enabled = false;
-            this.txtNgayThue.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayThue.Location = new System.Drawing.Point(108, 112);
-            this.txtNgayThue.Name = "txtNgayThue";
-            this.txtNgayThue.Size = new System.Drawing.Size(137, 23);
-            this.txtNgayThue.TabIndex = 2;
-            // 
             // frmTinhTien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,7 +754,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmTinhTien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTinhTien";
+            this.Text = "Tính tiền trọ";
             this.Load += new System.EventHandler(this.frmTinhTien_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

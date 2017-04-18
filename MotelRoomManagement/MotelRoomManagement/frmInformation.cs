@@ -31,6 +31,7 @@ namespace MotelRoomManagement
         {
             txtTen.Enabled = false;
             txtHo.Enabled = false;
+            txtHoTen.Enabled = false;
             dtpNgaySinh.Enabled = false;
             cbGioiTinh.Enabled = false;
             txtCMND.Enabled = false;
@@ -43,6 +44,7 @@ namespace MotelRoomManagement
             cbGioiTinh.DataBindings.Add("Text", tmp, "GioiTinh");
             txtTen.DataBindings.Add("Text", tmp, "Ten");
             txtHo.DataBindings.Add("Text", tmp, "Ho"); ;
+            txtHoTen.Text = txtHo.Text + " " + txtTen.Text;
             dtpNgaySinh.DataBindings.Add("Text", tmp, "NgaySinh");
             txtCMND.DataBindings.Add("Text", tmp, "CMND");
             txtQue.DataBindings.Add("Text", tmp, "QueQuan");
@@ -53,8 +55,9 @@ namespace MotelRoomManagement
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-            txtHo.Enabled = true;
-            txtTen.Enabled = true;
+            txtHo.Enabled = true; 
+            txtTen.Enabled = true; 
+            txtHoTen.Visible = false;
             dtpNgaySinh.Enabled = true;
             cbGioiTinh.Enabled = true;
             txtCMND.Enabled = true;
@@ -69,8 +72,9 @@ namespace MotelRoomManagement
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            txtHo.Enabled = false;
+            txtHo.Enabled = false; 
             txtTen.Enabled = false;
+            txtHoTen.Visible = true; txtHoTen.Enabled = false;
             dtpNgaySinh.Enabled = false;
             cbGioiTinh.Enabled = false;
             txtCMND.Enabled = false;
@@ -100,6 +104,7 @@ namespace MotelRoomManagement
 
             txtHo.Enabled = false;
             txtTen.Enabled = false;
+            txtHoTen.Visible = true; txtHoTen.Enabled = false;
             dtpNgaySinh.Enabled = false;
             cbGioiTinh.Enabled = false;
             txtCMND.Enabled = false;
