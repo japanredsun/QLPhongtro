@@ -98,6 +98,20 @@ namespace MRBUS
                 throw ex;
             }
         }
+
+        public DataTable GetThongTinThuePhong(string sql)
+        {
+            try
+            {
+                DataTable result = new PhongDAO().GetDataPhong(sql);
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
         
     }
 }

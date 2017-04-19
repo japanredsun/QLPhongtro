@@ -27,12 +27,12 @@ namespace MotelRoomManagement
             string sql = "SELECT p.MaPhong,p.TenPhong,lp.TenLoaiPhong,lp.DonGia FROM Phong p,LoaiPhong lp WHERE p.TrangThai = N'Trống' AND p.MaLoaiPhong = lp.MaLoaiPhong";
            
             PhongBUS ListPhong = new PhongBUS();
-            for (int i = 0; i < ListPhong.GetPhongTrong(sql).Rows.Count; i++)
+            for (int i = 0; i < ListPhong.GetThongTinThuePhong(sql).Rows.Count; i++)
             {
-                ListViewItem item = new ListViewItem(ListPhong.GetPhongTrong(sql).Rows[i][0].ToString());
-                item.SubItems.Add(ListPhong.GetPhongTrong(sql).Rows[i][1].ToString());
-                item.SubItems.Add(ListPhong.GetPhongTrong(sql).Rows[i][2].ToString());
-                item.SubItems.Add(ListPhong.GetPhongTrong(sql).Rows[i][3].ToString());
+                ListViewItem item = new ListViewItem(ListPhong.GetThongTinThuePhong(sql).Rows[i][0].ToString());
+                item.SubItems.Add(ListPhong.GetThongTinThuePhong(sql).Rows[i][1].ToString());
+                item.SubItems.Add(ListPhong.GetThongTinThuePhong(sql).Rows[i][2].ToString());
+                item.SubItems.Add(ListPhong.GetThongTinThuePhong(sql).Rows[i][3].ToString());
 
                 lstPhongTrong.Items.Add(item);
             }
@@ -53,7 +53,11 @@ namespace MotelRoomManagement
        
         private void btSave_Click(object sender, EventArgs e)
         {
-            makt = txtMaKhach.Text.Trim();
+            ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
+            string sql1 = "SELECT * From ThongTinKhach";
+            int id_khach = soluongkhach.GetKhach(sql1).Rows.Count + 1;
+
+            makt = id_khach.ToString();
             ho = txtHo.Text.Trim();
             ten = txtTen.Text.Trim();
             ngaysinh = dtpNgaySinh.Text;
@@ -69,12 +73,28 @@ namespace MotelRoomManagement
             
             //Them vao bang ThongTinKhach
 
-            string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('"+makt+"',N'"+ho+"',N'"+ten+"',N'"+gioitinh+"','"+ngaysinh+"','"+cmnd+"',N'"+quequan+"',N'"+nghenghiep+"','"+maphong+"')";
+            string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('"+makt+"','"+ho+"',N'"+ten+"',N'"+gioitinh+"','"+ngaysinh+"','"+cmnd+"',N'"+quequan+"',N'"+nghenghiep+"','"+maphong+"')";
             List<KhachThue> tmp = new KhachThueBUS().GetKhach_List(sqlAddKhachInfo);
 
             //Them vao bang ThongTinThuePhong
+                //Lay thong tin
+            PhongBUS tttp = new PhongBUS();
+            string sql ="SELECT * From ThongTinThuePhong";
+            int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
+            string idtttp = id_tttp.ToString();
 
-            //string select_maphong = lbMaPhong.Text;
+            //ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
+            //string sql1="SELECT * From ThongTinKhach";
+            //int id_khach=soluongkhach.GetKhach(sql1).Rows.Count + 1;
+            string makhach = id_khach.ToString();
+
+            string select_maphong = lbMaPhong.Text;
+            string ngaythue = dtpNgayThue.Text;
+                //INSERT vao SQL
+            ThongTinThuePhongBUS dangki = new ThongTinThuePhongBUS();
+            string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
+            int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
+
             
 
 
@@ -93,7 +113,7 @@ namespace MotelRoomManagement
             PhongBUS listphong = new PhongBUS();
             string maphong = lstPhongTrong.SelectedItems[0].Text;
             string sql1 = "SELECT p.TenPhong, lp.DonGia From Phong p, LoaiPhong lp WHERE p.MaPhong=N'"+maphong+"'AND p.MaLoaiPhong = lp.MaLoaiPhong";
-            var dsphong = listphong.GetPhongTrong(sql1);
+            var dsphong = listphong.GetThongTinThuePhong(sql1);
             string tenphong = dsphong.Rows[0][0].ToString();
             string dongia = dsphong.Rows[0][1].ToString();
 
