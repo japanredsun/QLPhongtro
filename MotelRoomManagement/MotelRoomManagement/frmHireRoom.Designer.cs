@@ -235,6 +235,7 @@
             // 
             // txtMaKhach
             // 
+            this.txtMaKhach.Enabled = false;
             this.txtMaKhach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaKhach.Location = new System.Drawing.Point(448, 206);
             this.txtMaKhach.Name = "txtMaKhach";

@@ -38,5 +38,19 @@ namespace MRBUS
 		            throw ex;
 	            }
                     }
+        public int Update(string sql)
+        {
+            try
+            {
+                return new ThongTinThuePhongDAO().Update(sql, "Đã thuê");
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
+
+   
 }

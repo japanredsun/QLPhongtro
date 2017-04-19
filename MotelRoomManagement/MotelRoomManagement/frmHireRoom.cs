@@ -14,8 +14,9 @@ namespace MotelRoomManagement
 {
     public partial class frmHireRoom : Form
     {
-        string makt, ho, ten, gioitinh, cmnd, ngaythue, ngaysinh, quequan, nghenghiep, maphong;
-        double tiendatcoc;
+        string  ho , ten, gioitinh, cmnd,  ngaysinh, quequan, nghenghiep, maphong;
+        string makhach;
+        //double tiendatcoc;
 
         public frmHireRoom()
         {
@@ -24,6 +25,7 @@ namespace MotelRoomManagement
 
         private void frmHireRoom_Load(object sender, EventArgs e)
         {
+            //Load danh sach phong trong
             string sql = "SELECT p.MaPhong,p.TenPhong,lp.TenLoaiPhong,lp.DonGia FROM Phong p,LoaiPhong lp WHERE p.TrangThai = N'Trống' AND p.MaLoaiPhong = lp.MaLoaiPhong";
            
             PhongBUS ListPhong = new PhongBUS();
@@ -36,6 +38,13 @@ namespace MotelRoomManagement
 
                 lstPhongTrong.Items.Add(item);
             }
+
+            //Sinh Ma Khach moi
+            ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
+            string sql1 = "SELECT * From ThongTinKhach";
+            int id_khach = soluongkhach.GetKhach(sql1).Rows.Count + 1;
+            makhach = "KT" + id_khach.ToString(); 
+            txtMaKhach.Text = makhach;
         }
 
         //private List<KhachThue> getKhachThue()
@@ -53,11 +62,9 @@ namespace MotelRoomManagement
        
         private void btSave_Click(object sender, EventArgs e)
         {
-            ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
-            string sql1 = "SELECT * From ThongTinKhach";
-            int id_khach = soluongkhach.GetKhach(sql1).Rows.Count + 1;
+            //Lay thong tin bang ThongTinKhach
 
-            makt = id_khach.ToString();
+            makhach = txtMaKhach.Text.ToString();
             ho = txtHo.Text.Trim();
             ten = txtTen.Text.Trim();
             ngaysinh = dtpNgaySinh.Text;
@@ -73,7 +80,7 @@ namespace MotelRoomManagement
             
             //Them vao bang ThongTinKhach
 
-            string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('"+makt+"','"+ho+"',N'"+ten+"',N'"+gioitinh+"','"+ngaysinh+"','"+cmnd+"',N'"+quequan+"',N'"+nghenghiep+"','"+maphong+"')";
+            string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('"+makhach+"',N'"+ho+"',N'"+ten+"',N'"+gioitinh+"','"+ngaysinh+"','"+cmnd+"',N'"+quequan+"',N'"+nghenghiep+"','"+maphong+"')";
             List<KhachThue> tmp = new KhachThueBUS().GetKhach_List(sqlAddKhachInfo);
 
             //Them vao bang ThongTinThuePhong
@@ -82,23 +89,25 @@ namespace MotelRoomManagement
             string sql ="SELECT * From ThongTinThuePhong";
             int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
             string idtttp = id_tttp.ToString();
-
-            //ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
-            //string sql1="SELECT * From ThongTinKhach";
-            //int id_khach=soluongkhach.GetKhach(sql1).Rows.Count + 1;
-            string makhach = id_khach.ToString();
-
             string select_maphong = lbMaPhong.Text;
             string ngaythue = dtpNgayThue.Text;
                 //INSERT vao SQL
-            ThongTinThuePhongBUS dangki = new ThongTinThuePhongBUS();
             string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
             int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
 
+             //Cap nhat
+            
+                //Cap nhat trang thai
+            ThongTinThuePhongBUS update = new ThongTinThuePhongBUS();
+            string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='"+select_maphong+"'";
+            update.Update(sqlupdate);
+                //Refresh Form
             
 
 
             MessageBox.Show("Đã thêm thành công!");
+
+            this.Close();
         }
 
 
