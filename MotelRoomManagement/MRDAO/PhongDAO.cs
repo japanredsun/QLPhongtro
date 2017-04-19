@@ -91,5 +91,31 @@ namespace MRDAO
                 throw ex;
             }
         }
+        public DataTable GetCBPhong(string makv)
+        {
+             DataTable result = new DataTable();
+             dp.Connect();
+             result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='"+makv+"'AND TrangThai=N'Đã thuê'");
+             return result;
+        }
+        public DataTable GetDataPhong(string sql)
+        {
+            DataTable dt = new DataTable();
+            dp.Connect();
+            try
+            {
+                dt = dp.GetData(sql);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                dp.Disconnect();
+            }
+        }
     }
 }

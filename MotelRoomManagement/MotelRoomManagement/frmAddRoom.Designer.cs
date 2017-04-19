@@ -87,6 +87,7 @@
             this.btHuy.TabIndex = 3;
             this.btHuy.Text = "Hủy";
             this.btHuy.UseVisualStyleBackColor = false;
+            this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
             // btThem
             // 
@@ -98,6 +99,7 @@
             this.btThem.TabIndex = 3;
             this.btThem.Text = "Thêm";
             this.btThem.UseVisualStyleBackColor = false;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // label2
             // 
