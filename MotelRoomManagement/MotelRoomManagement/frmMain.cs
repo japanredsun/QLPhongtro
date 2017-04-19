@@ -127,14 +127,9 @@ namespace MotelRoomManagement
                     item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][4].ToString());
                     item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][5].ToString());
 
-                    listKhach.Items.Add(item);
-
-                    
-                }
-                
-            }
-            
-
+                    listKhach.Items.Add(item);                  
+                }             
+            }           
         }
 
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)

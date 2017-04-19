@@ -23,9 +23,7 @@ namespace MotelRoomManagement
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
-        {
-
-            
+        {      
             cbSave.Checked = true;
             string sql = "SELECT * FROM GhiNho";
             List<GhiNho> tmp = new DangNhapBUS().getGN(sql);
@@ -51,6 +49,7 @@ namespace MotelRoomManagement
                 {
                     int j = new DangNhapBUS().Xoa();
                 }
+                this.Hide();
             }
             else
             {

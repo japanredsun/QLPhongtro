@@ -736,7 +736,7 @@
   <Width>9.33333in</Width>
   <Page>
     <PageHeader>
-      <Height>0.25694in</Height>
+      <Height>0.26389in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -757,6 +757,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox20</rd:DefaultName>
+          <Top>0.00695in</Top>
           <Height>0.25in</Height>
           <Width>1.92708in</Width>
           <Style>
@@ -776,7 +777,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Giáo viên hướng dẫn: Nguyễn Viết Tuấn</Value>
+                  <Value>Giáo viên hướng dẫn: Nguyễn Lê Viết Tuấn</Value>
                   <Style>
                     <FontSize>12pt</FontSize>
                   </Style>
@@ -786,9 +787,9 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox21</rd:DefaultName>
-          <Left>6.33333in</Left>
+          <Left>6.00001in</Left>
           <Height>0.25in</Height>
-          <Width>3in</Width>
+          <Width>3.33332in</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
