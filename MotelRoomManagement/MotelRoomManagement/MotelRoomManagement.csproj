@@ -110,6 +110,12 @@
     <Compile Include="frmReportOption.Designer.cs">
       <DependentUpon>frmReportOption.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRoomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomManagement.Designer.cs">
+      <DependentUpon>frmRoomManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSoftInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportOption.resx">
       <DependentUpon>frmReportOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManagement.resx">
+      <DependentUpon>frmRoomManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSoftInfo.resx">
       <DependentUpon>frmSoftInfo.cs</DependentUpon>
