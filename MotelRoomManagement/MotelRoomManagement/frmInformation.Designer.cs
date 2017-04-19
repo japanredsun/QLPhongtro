@@ -40,6 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtHo = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
@@ -52,7 +53,6 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lbMaKt = new System.Windows.Forms.Label();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAnh34)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -192,6 +192,15 @@
             this.cbGioiTinh.Size = new System.Drawing.Size(115, 33);
             this.cbGioiTinh.TabIndex = 9;
             // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(378, 225);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(251, 30);
+            this.txtHoTen.TabIndex = 8;
+            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtHo
             // 
             this.txtHo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -316,15 +325,6 @@
             this.lbMaKt.Size = new System.Drawing.Size(178, 35);
             this.lbMaKt.TabIndex = 0;
             this.lbMaKt.Text = "ID";
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(378, 225);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(251, 30);
-            this.txtHoTen.TabIndex = 8;
-            this.txtHoTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmInformation
             // 
