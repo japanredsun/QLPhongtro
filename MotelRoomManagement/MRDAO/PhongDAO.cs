@@ -21,22 +21,21 @@ namespace MRDAO
         public List<Phong> GetPhong(string sql)
         {
             List<Phong> list = new List<Phong>();
-            string id, kind, khuvuc, day, trangthai;
-            int phongso;
+            string maphong, maloai, khuvuc, tenphong, day, trangthai;
             dp.Connect();
             try
             {
                 SqlDataReader dr = dp.ExecuteReader(sql);
                 while (dr.Read())
                 {
-                    id = dr.GetString(0);
-                    kind = dr.GetString(1);
+                    maphong = dr.GetString(0);
+                    maloai = dr.GetString(1);
                     khuvuc = dr.GetString(2);
-                    day = dr.GetString(3);
-                    phongso = dr.GetInt32(4);
+                    tenphong = dr.GetString(3);
+                    day = dr.GetString(4);
                     trangthai = dr.GetString(5);
 
-                    Phong pro = new Phong(id, kind,khuvuc, day, phongso, trangthai);
+                    Phong pro = new Phong(maphong, maloai, khuvuc, tenphong, day, trangthai);
                     list.Add(pro);
                 }
                 return list;
@@ -59,15 +58,6 @@ namespace MRDAO
             return nodecha;
         }
 
-        public DataTable GetCBPhong(string makv)
-        {
-            DataTable result = new DataTable();
-            dp.Connect();
-            result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='"+makv+"'AND TrangThai=N'Đã thuê'");
-            return result;
-        }
-
-
         public DataTable GetDataTWChild(string where, string trangthai)
         {
             DataTable nodecon = new DataTable();
@@ -81,28 +71,25 @@ namespace MRDAO
 
             return nodecon;
         }
-
-        public DataTable GetDataPhong(string sql)
+        public int themphong(string sql, string maphong, string maloai, string makhu, string tenphong, string day, string trangthai)
         {
-            DataTable dt = new DataTable();
-            dp.Connect();
+
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@maphong", maphong));
+            paras.Add(new SqlParameter("@maloai", maloai));
+            paras.Add(new SqlParameter("@makhu", makhu));
+            paras.Add(new SqlParameter("@tenphong", tenphong));
+            paras.Add(new SqlParameter("@day", day));
+            paras.Add(new SqlParameter("@trangthai", trangthai));
             try
             {
-                dt = dp.GetData(sql);
-                return dt;
+                return (dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
 
                 throw ex;
             }
-
-            finally
-            {
-                dp.Disconnect();
-            }
         }
-
-      
     }
 }

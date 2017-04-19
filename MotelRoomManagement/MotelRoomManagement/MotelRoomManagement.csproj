@@ -135,6 +135,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLPT.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmAddRoom.resx">
+      <DependentUpon>frmAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePass.resx">
       <DependentUpon>frmChangePass.cs</DependentUpon>
     </EmbeddedResource>
