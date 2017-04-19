@@ -15,5 +15,10 @@ namespace MotelRoomManagement
         {
             InitializeComponent();
         }
+
+        private void frmAddRoom_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
