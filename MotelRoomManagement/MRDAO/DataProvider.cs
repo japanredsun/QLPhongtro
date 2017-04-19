@@ -89,6 +89,21 @@ namespace MRDAO
                 Disconnect();
             }
         }
+        public DataTable ExecuteAdapter(string sql)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
 
         //Thêm, sửa 
         public int IExecuteNonQuery(string sql, CommandType type, List<SqlParameter> paras)
