@@ -49,7 +49,6 @@ namespace MotelRoomManagement
                 {
                     int j = new DangNhapBUS().Xoa();
                 }
-                this.Hide();
             }
             else
             {
