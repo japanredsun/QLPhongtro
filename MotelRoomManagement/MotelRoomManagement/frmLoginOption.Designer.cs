@@ -35,18 +35,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbHeader = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightBlue;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btChangePass);
             this.panel1.Controls.Add(this.lbP);
             this.panel1.Controls.Add(this.lbU);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lbHeader);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 238);
@@ -111,11 +113,20 @@
             this.lbHeader.AutoSize = true;
             this.lbHeader.Font = new System.Drawing.Font("Tahoma", 21.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.ForeColor = System.Drawing.Color.Khaki;
-            this.lbHeader.Location = new System.Drawing.Point(13, 13);
+            this.lbHeader.Location = new System.Drawing.Point(9, 20);
             this.lbHeader.Name = "lbHeader";
             this.lbHeader.Size = new System.Drawing.Size(302, 35);
             this.lbHeader.TabIndex = 1;
             this.lbHeader.Text = "Thông tin tài khoản";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.Controls.Add(this.lbHeader);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(328, 66);
+            this.panel2.TabIndex = 5;
             // 
             // frmLoginOption
             // 
@@ -129,6 +140,8 @@
             this.Load += new System.EventHandler(this.frmLoginOption_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -142,5 +155,6 @@
         private System.Windows.Forms.Label lbU;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btChangePass;
+        private System.Windows.Forms.Panel panel2;
     }
 }

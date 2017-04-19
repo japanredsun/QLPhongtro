@@ -127,14 +127,9 @@ namespace MotelRoomManagement
                     item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][4].ToString());
                     item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][5].ToString());
 
-                    listKhach.Items.Add(item);
-
-                    
-                }
-                
-            }
-            
-
+                    listKhach.Items.Add(item);                  
+                }             
+            }           
         }
 
         private void cbKhuVuc_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,6 +185,24 @@ namespace MotelRoomManagement
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmLoginOption frm = new frmLoginOption(USER, PASS);
+            frm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmReportOption frmRO = new frmReportOption();
+            frmRO.Show();
+        }
+
+        private void phòngTrọToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRoomManagement frm = new frmRoomManagement();
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmHireRoom frm = new frmHireRoom();
             frm.Show();
         }
 

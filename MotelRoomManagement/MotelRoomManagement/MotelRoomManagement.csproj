@@ -34,9 +34,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +61,12 @@
     </Compile>
     <Compile Include="frmChangePass.Designer.cs">
       <DependentUpon>frmChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerReport.Designer.cs">
+      <DependentUpon>frmCustomerReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDelay.cs">
       <SubType>Form</SubType>
@@ -95,6 +104,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportOption.Designer.cs">
+      <DependentUpon>frmReportOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoomManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomManagement.Designer.cs">
+      <DependentUpon>frmRoomManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSoftInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,8 +130,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLPT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLPT.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmAddRoom.resx">
+      <DependentUpon>frmAddRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChangePass.resx">
       <DependentUpon>frmChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerReport.resx">
+      <DependentUpon>frmCustomerReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDelay.resx">
       <DependentUpon>frmDelay.cs</DependentUpon>
@@ -130,12 +162,19 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReportOption.resx">
+      <DependentUpon>frmReportOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomManagement.resx">
+      <DependentUpon>frmRoomManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSoftInfo.resx">
       <DependentUpon>frmSoftInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTinhTien.resx">
       <DependentUpon>frmTinhTien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachTroReport.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -170,6 +209,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLPT.xsc">
+      <DependentUpon>QLPT.xsd</DependentUpon>
+    </None>
+    <None Include="QLPT.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLPT.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QLPT.xss">
+      <DependentUpon>QLPT.xsd</DependentUpon>
+    </None>
     <None Include="Resources\download.png" />
   </ItemGroup>
   <ItemGroup>

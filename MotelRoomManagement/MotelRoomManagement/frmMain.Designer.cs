@@ -721,6 +721,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "ĐĂNG KÍ PHÒNG";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -748,6 +749,7 @@
             this.button1.TabIndex = 3;
             this.button1.Text = "BÁO CÁO";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -835,6 +837,7 @@
             this.phòngTrọToolStripMenuItem.Name = "phòngTrọToolStripMenuItem";
             this.phòngTrọToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.phòngTrọToolStripMenuItem.Text = "Phòng trọ";
+            this.phòngTrọToolStripMenuItem.Click += new System.EventHandler(this.phòngTrọToolStripMenuItem_Click);
             // 
             // hóaĐơnToolStripMenuItem
             // 
@@ -896,6 +899,7 @@
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(978, 692);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
