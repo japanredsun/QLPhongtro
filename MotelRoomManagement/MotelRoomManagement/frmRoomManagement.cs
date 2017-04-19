@@ -48,5 +48,22 @@ namespace MotelRoomManagement
             frmAddRoom frm = new frmAddRoom();
             frm.Show();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            listView1.Items.Clear();
+            string maloaiphong = comboBox1.SelectedValue.ToString();
+            string sql = "SELECT MaPhong,TenPhong,kv.TenKhuVuc,TenPhong,Day,TrangThai FROM Phong p, KhuVuc kv WHERE kv.MaKhuVuc = p.MaKhuVuc AND MaLoaiPhong = '" + maloaiphong + "'";
+            List<Phong> dsphong = new PhongBUS().GetPhong(sql);
+            foreach (var i in dsphong)
+            {
+                ListViewItem item = new ListViewItem(i.maphong);
+                item.SubItems.Add(i.KhuVuc);
+                item.SubItems.Add(i.tenphong);
+                item.SubItems.Add(i.Day);
+                item.SubItems.Add(i.Trangthai);
+                listView1.Items.Add(item);
+            }            
+        }
     }
 }
