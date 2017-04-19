@@ -33,5 +33,20 @@ namespace MRDAO
                 throw ex;
             }
         }
+
+        public int Update(string sql, string trangthai)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@trangthai",trangthai));
+            try
+	    {	        
+		    return(dp.IExecuteNonQuery(sql,System.Data.CommandType.Text,paras));
+	    }
+	    catch (SqlException ex)
+	    {
+		
+		    throw ex;
+	    }
+            }
     }
 }
