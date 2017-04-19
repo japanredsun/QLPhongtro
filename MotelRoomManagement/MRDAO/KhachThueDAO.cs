@@ -65,5 +65,7 @@ namespace MRDAO
             result = dp.GetData(strQuery);
             return result;
         }
+
+       
     }
 }
