@@ -113,6 +113,36 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Alarm_Plus_icon {
+            get {
+                object obj = ResourceManager.GetObject("Alarm-Plus-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Apps_preferences_desktop_user_password_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps-preferences-desktop-user-password-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Books_icon {
+            get {
+                object obj = ResourceManager.GetObject("Books-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Calculator_icon {
             get {
                 object obj = ResourceManager.GetObject("Calculator-icon", resourceCulture);
@@ -203,6 +233,16 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image__2__22323 {
+            get {
+                object obj = ResourceManager.GetObject("image (2) 22323", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Info_icon {
             get {
                 object obj = ResourceManager.GetObject("Info-icon", resourceCulture);
@@ -223,6 +263,16 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Mail_icon {
+            get {
+                object obj = ResourceManager.GetObject("Mail-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Manager_icon {
             get {
                 object obj = ResourceManager.GetObject("Manager-icon", resourceCulture);
@@ -233,9 +283,29 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Misc_Graphics_icon {
+            get {
+                object obj = ResourceManager.GetObject("Misc-Graphics-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap money_icon {
             get {
                 object obj = ResourceManager.GetObject("money-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap personal_information_icon {
+            get {
+                object obj = ResourceManager.GetObject("personal-information-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,6 +333,16 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sign_check_icon {
+            get {
+                object obj = ResourceManager.GetObject("sign-check-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap User_Group_icon {
             get {
                 object obj = ResourceManager.GetObject("User-Group-icon", resourceCulture);
@@ -276,6 +356,16 @@ namespace MotelRoomManagement.Properties {
         internal static System.Drawing.Bitmap User_Group_icon1 {
             get {
                 object obj = ResourceManager.GetObject("User-Group-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Users_icon {
+            get {
+                object obj = ResourceManager.GetObject("Users-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

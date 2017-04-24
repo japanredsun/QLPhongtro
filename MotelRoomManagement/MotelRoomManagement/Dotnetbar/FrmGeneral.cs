@@ -25,5 +25,15 @@ namespace MotelRoomManagement
         {
 
         }
+
+        private void buttonItem18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonItem30_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
