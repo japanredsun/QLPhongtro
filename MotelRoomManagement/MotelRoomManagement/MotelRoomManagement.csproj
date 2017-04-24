@@ -75,6 +75,12 @@
     <Compile Include="frmDelay.Designer.cs">
       <DependentUpon>frmDelay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dotnetbar\FrmGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dotnetbar\FrmGeneral.Designer.cs">
+      <DependentUpon>FrmGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHireRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDelay.resx">
       <DependentUpon>frmDelay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dotnetbar\FrmGeneral.resx">
+      <DependentUpon>FrmGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHireRoom.resx">
       <DependentUpon>frmHireRoom.cs</DependentUpon>
@@ -257,8 +266,26 @@
     <None Include="Resources\sequence.Still010.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sign-check-icon.png" />
+    <None Include="Resources\Users-icon.png" />
+    <None Include="Resources\Actions-tool-node-editor-icon.png" />
     <Content Include="Resources\Age-Child-Female-Light-icon.png" />
     <Content Include="Resources\Age-Child-Male-Light-icon.png" />
+    <None Include="Resources\Alarm-Plus-icon.png" />
+    <None Include="Resources\Apps-preferences-desktop-user-password-icon.png" />
+    <None Include="Resources\Books-icon.png" />
+    <Content Include="Resources\Calculator-icon.png" />
+    <None Include="Resources\Cash-register-icon.png" />
+    <None Include="Resources\Food-List-Ingredients-icon.png" />
+    <None Include="Resources\guest_register.png" />
+    <None Include="Resources\guest_return.png" />
+    <Content Include="Resources\home-icon-menu-fix.png" />
+    <None Include="Resources\money-icon.png" />
+    <None Include="Resources\personal-information-icon.png" />
+    <None Include="Resources\Mail-icon.png" />
+    <None Include="Resources\Misc-Graphics-icon.png" />
+    <None Include="Resources\image %282%29 22323.jpg" />
+    <Content Include="Resources\return-home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
