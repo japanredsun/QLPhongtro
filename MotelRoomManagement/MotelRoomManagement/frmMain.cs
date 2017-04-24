@@ -36,11 +36,7 @@ namespace MotelRoomManagement
             Load_Data_TreeView1();
             Load_Data_TreeView2();
             Load_CB_KV();
-            
-            
-            
-            
-            
+         
         }
 
         private void Load_Data_TreeView1()
@@ -116,17 +112,17 @@ namespace MotelRoomManagement
             KhachThueBUS _ListKT = new KhachThueBUS();
             if (theNode.Tag.ToString() == "2")
             {
-                for (int i = 0; i < _ListKT.GetKhach(theNode.Name.ToString()).Rows.Count; i++)
-                {
-                    ListViewItem item = new ListViewItem(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][0].ToString());
-                    if (_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][2].ToString() == "Nam") item.ImageIndex = 3; else item.ImageIndex = 2;
-                    item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][1].ToString());
-                    DateTime dt = DateTime.ParseExact(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][3].ToString(), "M/d/yyyy hh:mm:ss tt", CultureInfo.InvariantCulture);
-                    string s = dt.ToString("dd/M/yyyy", CultureInfo.InvariantCulture);
-                    item.SubItems.Add(s);
-                    item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][4].ToString());
-                    item.SubItems.Add(_ListKT.GetKhach(theNode.Name.ToString()).Rows[i][5].ToString());
+                string node = theNode.Name.ToString();
+                var list_khach = _ListKT.GetKhach(node);
 
+                for (int i = 0; i < list_khach.Rows.Count; i++)
+                {
+                    ListViewItem item = new ListViewItem(list_khach.Rows[i][0].ToString());
+                    if (list_khach.Rows[i][2].ToString() == "Nam") item.ImageIndex = 3; else item.ImageIndex = 2;
+                    item.SubItems.Add(list_khach.Rows[i][1].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][3].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][4].ToString());
+                    item.SubItems.Add(list_khach.Rows[i][5].ToString());
                     listKhach.Items.Add(item);                  
                 }             
             }           
@@ -210,6 +206,15 @@ namespace MotelRoomManagement
         {
             frmRoomManagement frm = new frmRoomManagement();
             frm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            treeView1.Nodes.Clear();
+            treeView2.Nodes.Clear();
+            listKhach.Items.Clear();
+            Load_Data_TreeView1();
+            Load_Data_TreeView2();
         }
 
    
