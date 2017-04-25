@@ -123,6 +123,16 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_x_icon {
+            get {
+                object obj = ResourceManager.GetObject("App-x-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Apps_preferences_desktop_user_password_icon {
             get {
                 object obj = ResourceManager.GetObject("Apps-preferences-desktop-user-password-icon", resourceCulture);
@@ -136,6 +146,26 @@ namespace MotelRoomManagement.Properties {
         internal static System.Drawing.Bitmap Books_icon {
             get {
                 object obj = ResourceManager.GetObject("Books-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Close_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button-Close-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_exit_icon {
+            get {
+                object obj = ResourceManager.GetObject("Button-exit-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -366,6 +396,16 @@ namespace MotelRoomManagement.Properties {
         internal static System.Drawing.Bitmap Users_icon {
             get {
                 object obj = ResourceManager.GetObject("Users-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Windows_Close_Program_icon {
+            get {
+                object obj = ResourceManager.GetObject("Windows-Close-Program-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
