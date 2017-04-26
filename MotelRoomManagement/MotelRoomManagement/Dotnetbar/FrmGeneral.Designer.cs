@@ -103,18 +103,30 @@
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.sideBar1 = new DevComponents.DotNetBar.SideBar();
-            this.sideBarPanelItem1 = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.controlContainerItem1 = new DevComponents.DotNetBar.ControlContainerItem();
+            this.quickBar = new DevComponents.DotNetBar.SideBarPanelItem();
+            this.searchBar = new DevComponents.DotNetBar.SideBarPanelItem();
             this.tabMain = new DevComponents.DotNetBar.TabControl();
             this.ctmRM = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ctmCloseThis = new System.Windows.Forms.ToolStripMenuItem();
             this.ctmCloseOthers = new System.Windows.Forms.ToolStripMenuItem();
             this.ctmCloseAll = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabTrangThai = new DevComponents.DotNetBar.TabControlPanel();
-            this.tbTrangThai = new DevComponents.DotNetBar.TabItem(this.components);
-            this.tabControlPanel2 = new DevComponents.DotNetBar.TabControlPanel();
-            this.tabHoaDon = new DevComponents.DotNetBar.TabItem(this.components);
             this.tabIcon = new System.Windows.Forms.ImageList(this.components);
+            this.radialMenu1 = new DevComponents.DotNetBar.RadialMenu();
+            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.radManage = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem1 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem2 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem3 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem4 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem9 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem10 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem11 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem12 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem13 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem5 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem6 = new DevComponents.DotNetBar.RadialMenuItem();
+            this.radialMenuItem7 = new DevComponents.DotNetBar.RadialMenuItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
@@ -122,8 +134,8 @@
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
+            this.sideBar1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).BeginInit();
-            this.tabMain.SuspendLayout();
             this.ctmRM.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,11 +147,11 @@
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.applicationButton1,
@@ -218,8 +230,10 @@
             this.ribbonBar12.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnExit});
+            this.ribbonBar12.ItemSpacing = 0;
             this.ribbonBar12.Location = new System.Drawing.Point(586, 0);
             this.ribbonBar12.Name = "ribbonBar12";
+            this.ribbonBar12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ribbonBar12.Size = new System.Drawing.Size(136, 99);
             this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar12.TabIndex = 2;
@@ -343,7 +357,7 @@
             this.btnTrangThai.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnTrangThai.Name = "btnTrangThai";
             this.btnTrangThai.SubItemsExpandWidth = 14;
-            this.btnTrangThai.Text = "<div  width=\'100\'>Trạng thái thuê</div>";
+            this.btnTrangThai.Text = "<div  align=\"center\" width=\'100\'>Trạng thái thuê</div>";
             this.btnTrangThai.Click += new System.EventHandler(this.btnTrangThai_Click);
             // 
             // btnDSTT
@@ -353,7 +367,7 @@
             this.btnDSTT.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnDSTT.Name = "btnDSTT";
             this.btnDSTT.SubItemsExpandWidth = 14;
-            this.btnDSTT.Text = "<div  width=\'120\'>Danh sách thu tiền</div>";
+            this.btnDSTT.Text = "<div  align=\"center\"  width=\'120\'>Danh sách thu tiền</div>";
             this.btnDSTT.Click += new System.EventHandler(this.btnDSTT_Click);
             // 
             // ribbonPanel6
@@ -1217,55 +1231,88 @@
             this.sideBar1.Appearance = DevComponents.DotNetBar.eSideBarAppearance.Flat;
             this.sideBar1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.sideBar1.BorderStyle = DevComponents.DotNetBar.eBorderType.None;
+            this.sideBar1.Controls.Add(this.radialMenu1);
             this.sideBar1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sideBar1.ExpandedPanel = this.sideBarPanelItem1;
+            this.sideBar1.ExpandedPanel = this.searchBar;
             this.sideBar1.Location = new System.Drawing.Point(5, 159);
             this.sideBar1.Name = "sideBar1";
             this.sideBar1.Panels.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.sideBarPanelItem1});
+            this.quickBar,
+            this.searchBar});
             this.sideBar1.Size = new System.Drawing.Size(225, 521);
-            this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2003;
+            this.sideBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Metro;
             this.sideBar1.TabIndex = 1;
-            this.sideBar1.Text = "sideBar1";
             // 
-            // sideBarPanelItem1
+            // quickBar
             // 
-            this.sideBarPanelItem1.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.sideBarPanelItem1.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.sideBarPanelItem1.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem1.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.sideBarPanelItem1.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.sideBarPanelItem1.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.sideBarPanelItem1.HeaderHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem1.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.sideBarPanelItem1.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.sideBarPanelItem1.HeaderSideHotStyle.GradientAngle = 90;
-            this.sideBarPanelItem1.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(220)))), ((int)(((byte)(248)))));
-            this.sideBarPanelItem1.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
-            this.sideBarPanelItem1.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem1.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.sideBarPanelItem1.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
+            this.quickBar.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.quickBar.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
+            this.quickBar.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.quickBar.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.quickBar.FontBold = true;
+            this.quickBar.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.quickBar.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.quickBar.HeaderHotStyle.GradientAngle = 90;
+            this.quickBar.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.quickBar.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.quickBar.HeaderSideHotStyle.GradientAngle = 90;
+            this.quickBar.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(220)))), ((int)(((byte)(248)))));
+            this.quickBar.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
+            this.quickBar.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.quickBar.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.quickBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
                         | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem1.HeaderSideStyle.GradientAngle = 90;
-            this.sideBarPanelItem1.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.sideBarPanelItem1.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.sideBarPanelItem1.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.sideBarPanelItem1.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.sideBarPanelItem1.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
+            this.quickBar.HeaderSideStyle.GradientAngle = 90;
+            this.quickBar.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.quickBar.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.quickBar.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.quickBar.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.quickBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
                         | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.sideBarPanelItem1.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.sideBarPanelItem1.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.sideBarPanelItem1.HeaderStyle.GradientAngle = 90;
-            this.sideBarPanelItem1.Name = "sideBarPanelItem1";
-            this.sideBarPanelItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.controlContainerItem1});
-            this.sideBarPanelItem1.Text = "MENU";
+            this.quickBar.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.quickBar.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.quickBar.HeaderStyle.GradientAngle = 90;
+            this.quickBar.Image = global::MotelRoomManagement.Properties.Resources.lightning_icon;
+            this.quickBar.Name = "quickBar";
+            this.quickBar.Text = "TRUY CẬP NHANH";
+            this.quickBar.Click += new System.EventHandler(this.quickBar_Click);
             // 
-            // controlContainerItem1
+            // searchBar
             // 
-            this.controlContainerItem1.AllowItemResize = false;
-            this.controlContainerItem1.MenuVisibility = DevComponents.DotNetBar.eMenuVisibility.VisibleAlways;
-            this.controlContainerItem1.Name = "controlContainerItem1";
+            this.searchBar.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
+            this.searchBar.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
+            this.searchBar.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.searchBar.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.searchBar.FontBold = true;
+            this.searchBar.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.searchBar.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.searchBar.HeaderHotStyle.GradientAngle = 90;
+            this.searchBar.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.searchBar.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.searchBar.HeaderSideHotStyle.GradientAngle = 90;
+            this.searchBar.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(220)))), ((int)(((byte)(248)))));
+            this.searchBar.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
+            this.searchBar.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.searchBar.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.searchBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.searchBar.HeaderSideStyle.GradientAngle = 90;
+            this.searchBar.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
+            this.searchBar.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
+            this.searchBar.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.searchBar.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            this.searchBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.searchBar.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.searchBar.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.searchBar.HeaderStyle.GradientAngle = 90;
+            this.searchBar.Image = global::MotelRoomManagement.Properties.Resources.search_icon;
+            this.searchBar.Name = "searchBar";
+            this.searchBar.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem14,
+            this.buttonItem15});
+            this.searchBar.Text = "TÌM KIẾM";
+            this.searchBar.Click += new System.EventHandler(this.searchBar_Click);
             // 
             // tabMain
             // 
@@ -1276,8 +1323,6 @@
             this.tabMain.CloseButtonPosition = DevComponents.DotNetBar.eTabCloseButtonPosition.Right;
             this.tabMain.CloseButtonVisible = true;
             this.tabMain.ContextMenuStrip = this.ctmRM;
-            this.tabMain.Controls.Add(this.tabTrangThai);
-            this.tabMain.Controls.Add(this.tabControlPanel2);
             this.tabMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabMain.ImageList = this.tabIcon;
             this.tabMain.Location = new System.Drawing.Point(230, 159);
@@ -1287,8 +1332,6 @@
             this.tabMain.Size = new System.Drawing.Size(986, 521);
             this.tabMain.TabIndex = 2;
             this.tabMain.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
-            this.tabMain.Tabs.Add(this.tbTrangThai);
-            this.tabMain.Tabs.Add(this.tabHoaDon);
             this.tabMain.Text = "tabControl1";
             this.tabMain.TabItemClose += new DevComponents.DotNetBar.TabStrip.UserActionEventHandler(this.tabMain_TabItemClose);
             // 
@@ -1327,55 +1370,6 @@
             this.ctmCloseAll.Text = "Đóng tất cả";
             this.ctmCloseAll.Click += new System.EventHandler(this.ctmCloseAll_Click);
             // 
-            // tabTrangThai
-            // 
-            this.tabTrangThai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabTrangThai.Location = new System.Drawing.Point(0, 26);
-            this.tabTrangThai.Name = "tabTrangThai";
-            this.tabTrangThai.Padding = new System.Windows.Forms.Padding(1);
-            this.tabTrangThai.Size = new System.Drawing.Size(986, 495);
-            this.tabTrangThai.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabTrangThai.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabTrangThai.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabTrangThai.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabTrangThai.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabTrangThai.Style.GradientAngle = 90;
-            this.tabTrangThai.TabIndex = 1;
-            this.tabTrangThai.TabItem = this.tbTrangThai;
-            // 
-            // tbTrangThai
-            // 
-            this.tbTrangThai.AttachedControl = this.tabTrangThai;
-            this.tbTrangThai.CloseButtonVisible = false;
-            this.tbTrangThai.ImageIndex = 1;
-            this.tbTrangThai.Name = "tbTrangThai";
-            this.tbTrangThai.Text = "Trạng thái thuê";
-            // 
-            // tabControlPanel2
-            // 
-            this.tabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlPanel2.Location = new System.Drawing.Point(0, 26);
-            this.tabControlPanel2.Name = "tabControlPanel2";
-            this.tabControlPanel2.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel2.Size = new System.Drawing.Size(986, 495);
-            this.tabControlPanel2.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
-            this.tabControlPanel2.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
-            this.tabControlPanel2.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.tabControlPanel2.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.tabControlPanel2.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.tabControlPanel2.Style.GradientAngle = 90;
-            this.tabControlPanel2.TabIndex = 2;
-            this.tabControlPanel2.TabItem = this.tabHoaDon;
-            // 
-            // tabHoaDon
-            // 
-            this.tabHoaDon.AttachedControl = this.tabControlPanel2;
-            this.tabHoaDon.ImageIndex = 0;
-            this.tabHoaDon.Name = "tabHoaDon";
-            this.tabHoaDon.Text = "Danh sách thu tiền";
-            // 
             // tabIcon
             // 
             this.tabIcon.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("tabIcon.ImageStream")));
@@ -1385,6 +1379,132 @@
             this.tabIcon.Images.SetKeyName(2, "Calculator-icon.png");
             this.tabIcon.Images.SetKeyName(3, "home-icon-menu-fix.png");
             this.tabIcon.Images.SetKeyName(4, "return-home.png");
+            // 
+            // radialMenu1
+            // 
+            this.radialMenu1.BackColor = System.Drawing.Color.Transparent;
+            this.radialMenu1.Diameter = 300;
+            this.radialMenu1.ForeColor = System.Drawing.Color.Transparent;
+            this.radialMenu1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.radManage,
+            this.radialMenuItem4,
+            this.radialMenuItem9,
+            this.radialMenuItem13});
+            this.radialMenu1.Location = new System.Drawing.Point(119, 83);
+            this.radialMenu1.Name = "radialMenu1";
+            this.radialMenu1.Size = new System.Drawing.Size(40, 40);
+            this.radialMenu1.Symbol = "";
+            this.radialMenu1.SymbolSize = 30F;
+            this.radialMenu1.TabIndex = 0;
+            this.radialMenu1.Text = "radialMenu1";
+            this.radialMenu1.Visible = false;
+            // 
+            // buttonItem14
+            // 
+            this.buttonItem14.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem14.Name = "buttonItem14";
+            this.buttonItem14.Symbol = "";
+            this.buttonItem14.Text = "Khách trọ";
+            // 
+            // buttonItem15
+            // 
+            this.buttonItem15.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem15.Name = "buttonItem15";
+            this.buttonItem15.Symbol = "";
+            this.buttonItem15.Text = "Phòng trọ";
+            // 
+            // radManage
+            // 
+            this.radManage.CircularBackColor = System.Drawing.Color.Blue;
+            this.radManage.CircularBorderColor = System.Drawing.Color.Blue;
+            this.radManage.CircularForeColor = System.Drawing.Color.Blue;
+            this.radManage.Name = "radManage";
+            this.radManage.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.radialMenuItem1,
+            this.radialMenuItem2,
+            this.radialMenuItem3});
+            this.radManage.Symbol = "";
+            this.radManage.Text = "Quản lí phòng trọ";
+            // 
+            // radialMenuItem1
+            // 
+            this.radialMenuItem1.Name = "radialMenuItem1";
+            this.radialMenuItem1.Symbol = "";
+            this.radialMenuItem1.Text = "Danh sách";
+            // 
+            // radialMenuItem2
+            // 
+            this.radialMenuItem2.Name = "radialMenuItem2";
+            this.radialMenuItem2.Symbol = "";
+            this.radialMenuItem2.Text = "Loại phòng";
+            // 
+            // radialMenuItem3
+            // 
+            this.radialMenuItem3.Name = "radialMenuItem3";
+            this.radialMenuItem3.Symbol = "";
+            this.radialMenuItem3.Text = "Tiền tháng";
+            // 
+            // radialMenuItem4
+            // 
+            this.radialMenuItem4.Name = "radialMenuItem4";
+            this.radialMenuItem4.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.radialMenuItem5,
+            this.radialMenuItem6,
+            this.radialMenuItem7});
+            this.radialMenuItem4.Symbol = "";
+            this.radialMenuItem4.Text = "Quản lí khách";
+            // 
+            // radialMenuItem9
+            // 
+            this.radialMenuItem9.Name = "radialMenuItem9";
+            this.radialMenuItem9.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.radialMenuItem10,
+            this.radialMenuItem11,
+            this.radialMenuItem12});
+            this.radialMenuItem9.Symbol = "";
+            this.radialMenuItem9.Text = "Tài khoản";
+            // 
+            // radialMenuItem10
+            // 
+            this.radialMenuItem10.Name = "radialMenuItem10";
+            this.radialMenuItem10.Symbol = "";
+            this.radialMenuItem10.Text = "Thông tin";
+            // 
+            // radialMenuItem11
+            // 
+            this.radialMenuItem11.Name = "radialMenuItem11";
+            this.radialMenuItem11.Symbol = "";
+            this.radialMenuItem11.Text = "Đổi mật khẩu";
+            // 
+            // radialMenuItem12
+            // 
+            this.radialMenuItem12.Name = "radialMenuItem12";
+            this.radialMenuItem12.Symbol = "";
+            this.radialMenuItem12.Text = "Thêm tài khoản";
+            // 
+            // radialMenuItem13
+            // 
+            this.radialMenuItem13.Name = "radialMenuItem13";
+            this.radialMenuItem13.Symbol = "";
+            this.radialMenuItem13.Text = "Thoát";
+            // 
+            // radialMenuItem5
+            // 
+            this.radialMenuItem5.Name = "radialMenuItem5";
+            this.radialMenuItem5.Symbol = "";
+            this.radialMenuItem5.Text = "DS Khách thuê";
+            // 
+            // radialMenuItem6
+            // 
+            this.radialMenuItem6.Name = "radialMenuItem6";
+            this.radialMenuItem6.Symbol = "";
+            this.radialMenuItem6.Text = "DS Khách đăng kí";
+            // 
+            // radialMenuItem7
+            // 
+            this.radialMenuItem7.Name = "radialMenuItem7";
+            this.radialMenuItem7.Symbol = "";
+            this.radialMenuItem7.Text = "DS Khách trả phòng";
             // 
             // FrmGeneral
             // 
@@ -1405,8 +1525,8 @@
             this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
+            this.sideBar1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabMain)).EndInit();
-            this.tabMain.ResumeLayout(false);
             this.ctmRM.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1482,16 +1602,11 @@
         private DevComponents.DotNetBar.RibbonBar ribbonBar11;
         private DevComponents.DotNetBar.ButtonItem buttonItem37;
         private DevComponents.DotNetBar.SideBar sideBar1;
-        private DevComponents.DotNetBar.SideBarPanelItem sideBarPanelItem1;
+        private DevComponents.DotNetBar.SideBarPanelItem quickBar;
         private DevComponents.DotNetBar.ButtonItem buttonItem35;
         private DevComponents.DotNetBar.ButtonItem buttonItem36;
         private DevComponents.DotNetBar.ButtonItem buttonItem17;
         private DevComponents.DotNetBar.TabControl tabMain;
-        private DevComponents.DotNetBar.TabControlPanel tabTrangThai;
-        private DevComponents.DotNetBar.TabItem tbTrangThai;
-        private DevComponents.DotNetBar.TabControlPanel tabControlPanel2;
-        private DevComponents.DotNetBar.TabItem tabHoaDon;
-        private DevComponents.DotNetBar.ControlContainerItem controlContainerItem1;
         private System.Windows.Forms.ContextMenuStrip ctmRM;
         private System.Windows.Forms.ToolStripMenuItem ctmCloseThis;
         private System.Windows.Forms.ToolStripMenuItem ctmCloseOthers;
@@ -1499,5 +1614,22 @@
         private DevComponents.DotNetBar.RibbonBar ribbonBar12;
         private DevComponents.DotNetBar.ButtonItem btnExit;
         private System.Windows.Forms.ImageList tabIcon;
+        private DevComponents.DotNetBar.SideBarPanelItem searchBar;
+        private DevComponents.DotNetBar.RadialMenu radialMenu1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem14;
+        private DevComponents.DotNetBar.ButtonItem buttonItem15;
+        private DevComponents.DotNetBar.RadialMenuItem radManage;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem1;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem2;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem3;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem4;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem9;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem10;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem11;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem12;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem13;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem5;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem6;
+        private DevComponents.DotNetBar.RadialMenuItem radialMenuItem7;
     }
 }

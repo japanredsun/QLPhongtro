@@ -283,6 +283,16 @@ namespace MotelRoomManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lightning_icon {
+            get {
+                object obj = ResourceManager.GetObject("lightning-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lock_Lock_icon {
             get {
                 object obj = ResourceManager.GetObject("Lock-Lock-icon", resourceCulture);
@@ -346,6 +356,16 @@ namespace MotelRoomManagement.Properties {
         internal static System.Drawing.Bitmap return_home {
             get {
                 object obj = ResourceManager.GetObject("return-home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_icon {
+            get {
+                object obj = ResourceManager.GetObject("search-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
