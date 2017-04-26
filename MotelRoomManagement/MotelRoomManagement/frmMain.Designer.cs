@@ -173,7 +173,7 @@
             this.groupBox5.Controls.Add(this.listKhach);
             this.groupBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.groupBox5.ForeColor = System.Drawing.Color.Green;
-            this.groupBox5.Location = new System.Drawing.Point(7, 262);
+            this.groupBox5.Location = new System.Drawing.Point(7, 261);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(711, 178);
             this.groupBox5.TabIndex = 1;
@@ -315,7 +315,7 @@
             this.danhsachthutien.Location = new System.Drawing.Point(4, 28);
             this.danhsachthutien.Name = "danhsachthutien";
             this.danhsachthutien.Padding = new System.Windows.Forms.Padding(3);
-            this.danhsachthutien.Size = new System.Drawing.Size(724, 446);
+            this.danhsachthutien.Size = new System.Drawing.Size(724, 451);
             this.danhsachthutien.TabIndex = 1;
             this.danhsachthutien.Text = "Danh sách thu tiền";
             this.danhsachthutien.UseVisualStyleBackColor = true;

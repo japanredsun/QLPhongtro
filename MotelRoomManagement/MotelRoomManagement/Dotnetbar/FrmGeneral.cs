@@ -20,9 +20,47 @@ namespace MotelRoomManagement
 
         private void FrmGeneral_Load(object sender, EventArgs e)
         {
-
+            TabTrangThai();
         }
 
+        private void TabTrangThai()
+        {
+            //Khoi tao 
+            TrangThai ucTrangThai = new TrangThai();
+            TabControlPanel newTabPanel = new DevComponents.DotNetBar.TabControlPanel();
+            TabItem newTabPage = new TabItem(this.components);
+            newTabPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            newTabPanel.Location = new System.Drawing.Point(0, 26);
+            newTabPanel.Name = "panel TrangThaiThue";
+            newTabPanel.Padding = new System.Windows.Forms.Padding(1);
+            newTabPanel.Size = new System.Drawing.Size(1230, 384);
+            newTabPanel.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
+            newTabPanel.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
+            newTabPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            newTabPanel.Style.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
+            newTabPanel.Style.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Right)
+                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            newTabPanel.Style.GradientAngle = 90;
+            newTabPanel.TabIndex = 2;
+            newTabPanel.TabItem = newTabPage;
+            
+            //-------------Them tab page---------------------
+            Random ran = new Random();
+            newTabPage.Name = "TrangThaiThue" + ran.Next(100000) + ran.Next(22342);
+            newTabPage.AttachedControl = newTabPanel;
+            newTabPage.Text = "Trạng thái thuê";
+            ucTrangThai.Dock = DockStyle.Fill;
+            newTabPanel.Controls.Add(ucTrangThai);
+            //------------Them Tab page vao Tab control-------------
+            tabMain.Controls.Add(newTabPanel);
+            tabMain.Tabs.Add(newTabPage);
+            tabMain.SelectedTab = newTabPage;
+            newTabPage.ImageIndex = 1;
+            newTabPage.CloseButtonVisible = false;
+            
+        }
+
+        //Ham thoat
         public void CloseThis()
         {
             TabItem selectedTab = tabMain.SelectedTab;
@@ -82,7 +120,6 @@ namespace MotelRoomManagement
 
             TabControlPanel newTabPanel = new DevComponents.DotNetBar.TabControlPanel();
             TabItem newTabPage = new TabItem(this.components);
-            newTabPage.ImageIndex = 0;
             //newTabPage.MouseDown += new System.Windows.Forms.MouseEventHandler(tabItem_MouseDown);
             newTabPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             newTabPanel.Location = new System.Drawing.Point(0, 26);
@@ -128,8 +165,8 @@ namespace MotelRoomManagement
 
         private void btnDKP_Click(object sender, EventArgs e)
         {
-            Test uctest = new Test();
-            addNewTab("Đăng kí phòng", uctest,3);
+            //TrangThai tt = new TrangThai();
+            //addNewTab("Đăng kí phòng", tt,3);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -137,6 +174,16 @@ namespace MotelRoomManagement
             if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
 
+        }
+
+        private void quickBar_Click(object sender, EventArgs e)
+        {
+            radialMenu1.Visible = true;
+        }
+
+        private void searchBar_Click(object sender, EventArgs e)
+        {
+            radialMenu1.Visible = false;
         }
 
   
