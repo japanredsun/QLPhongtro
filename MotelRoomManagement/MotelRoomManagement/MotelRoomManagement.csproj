@@ -156,11 +156,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLPT.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SapPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SapPhong.Designer.cs">
+      <DependentUpon>SapPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TinhTienThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TinhTienThang.Designer.cs">
+      <DependentUpon>TinhTienThang.cs</DependentUpon>
     </Compile>
     <Compile Include="TrangThai.cs">
       <SubType>UserControl</SubType>
@@ -227,8 +239,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SapPhong.resx">
+      <DependentUpon>SapPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TinhTienThang.resx">
+      <DependentUpon>TinhTienThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangThai.resx">
       <DependentUpon>TrangThai.cs</DependentUpon>

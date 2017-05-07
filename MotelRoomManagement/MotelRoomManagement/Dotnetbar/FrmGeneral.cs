@@ -164,7 +164,7 @@ namespace MotelRoomManagement
 
         private void btnDKP_Click(object sender, EventArgs e)
         {
-            DKPhong uc = new DKPhong();
+            SapPhong uc = new SapPhong();
             addNewTab("Đăng kí phòng", uc,3);
         }
 
@@ -179,6 +179,8 @@ namespace MotelRoomManagement
         {
             radialMenu1.Visible = true;
         }
+
+       
 
     
 

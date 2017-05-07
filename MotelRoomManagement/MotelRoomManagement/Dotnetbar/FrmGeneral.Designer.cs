@@ -240,7 +240,7 @@
             this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnExit});
             this.ribbonBar12.ItemSpacing = 0;
-            this.ribbonBar12.Location = new System.Drawing.Point(586, 0);
+            this.ribbonBar12.Location = new System.Drawing.Point(588, 0);
             this.ribbonBar12.Name = "ribbonBar12";
             this.ribbonBar12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ribbonBar12.Size = new System.Drawing.Size(136, 99);
@@ -284,7 +284,7 @@
             this.buttonItem36});
             this.ribbonBar10.Location = new System.Drawing.Point(252, 0);
             this.ribbonBar10.Name = "ribbonBar10";
-            this.ribbonBar10.Size = new System.Drawing.Size(334, 99);
+            this.ribbonBar10.Size = new System.Drawing.Size(336, 99);
             this.ribbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar10.TabIndex = 1;
             this.ribbonBar10.Text = "Thao tác";
@@ -1592,15 +1592,15 @@
             this.quickBar.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
             this.quickBar.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.quickBar.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.quickBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.quickBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.quickBar.HeaderSideStyle.GradientAngle = 90;
             this.quickBar.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
             this.quickBar.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
             this.quickBar.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.quickBar.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.quickBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.quickBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.quickBar.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.quickBar.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.quickBar.HeaderStyle.GradientAngle = 90;
@@ -1626,15 +1626,15 @@
             this.searchBar.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
             this.searchBar.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.searchBar.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.searchBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.searchBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.searchBar.HeaderSideStyle.GradientAngle = 90;
             this.searchBar.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
             this.searchBar.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
             this.searchBar.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
             this.searchBar.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.searchBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
+            this.searchBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top) 
+            | DevComponents.DotNetBar.eBorderSide.Bottom)));
             this.searchBar.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
             this.searchBar.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.searchBar.HeaderStyle.GradientAngle = 90;
