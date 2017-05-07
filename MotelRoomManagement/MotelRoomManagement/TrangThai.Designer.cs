@@ -233,7 +233,6 @@
             this.grTTPT.TabIndex = 4;
             this.grTTPT.TabStop = false;
             this.grTTPT.Text = "Thông tin phòng trống";
-            this.grTTPT.Visible = false;
             // 
             // panel2
             // 
@@ -250,6 +249,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(229, 211);
             this.panel2.TabIndex = 5;
+            this.panel2.Visible = false;
             // 
             // label2
             // 
@@ -276,12 +276,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(124, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 19);
+            this.label1.Size = new System.Drawing.Size(59, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
@@ -299,12 +299,12 @@
             // lbLoaiPhong
             // 
             this.lbLoaiPhong.AutoSize = true;
-            this.lbLoaiPhong.BackColor = System.Drawing.Color.White;
-            this.lbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoaiPhong.ForeColor = System.Drawing.Color.Black;
+            this.lbLoaiPhong.BackColor = System.Drawing.Color.Transparent;
+            this.lbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiPhong.ForeColor = System.Drawing.Color.Blue;
             this.lbLoaiPhong.Location = new System.Drawing.Point(124, 54);
             this.lbLoaiPhong.Name = "lbLoaiPhong";
-            this.lbLoaiPhong.Size = new System.Drawing.Size(51, 19);
+            this.lbLoaiPhong.Size = new System.Drawing.Size(59, 19);
             this.lbLoaiPhong.TabIndex = 3;
             this.lbLoaiPhong.Text = "label1";
             // 
@@ -322,24 +322,24 @@
             // lbDienTich
             // 
             this.lbDienTich.AutoSize = true;
-            this.lbDienTich.BackColor = System.Drawing.Color.White;
-            this.lbDienTich.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDienTich.ForeColor = System.Drawing.Color.Black;
+            this.lbDienTich.BackColor = System.Drawing.Color.Transparent;
+            this.lbDienTich.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDienTich.ForeColor = System.Drawing.Color.Blue;
             this.lbDienTich.Location = new System.Drawing.Point(124, 87);
             this.lbDienTich.Name = "lbDienTich";
-            this.lbDienTich.Size = new System.Drawing.Size(51, 19);
+            this.lbDienTich.Size = new System.Drawing.Size(59, 19);
             this.lbDienTich.TabIndex = 3;
             this.lbDienTich.Text = "label1";
             // 
             // lbgia
             // 
             this.lbgia.AutoSize = true;
-            this.lbgia.BackColor = System.Drawing.Color.White;
-            this.lbgia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbgia.ForeColor = System.Drawing.Color.Black;
+            this.lbgia.BackColor = System.Drawing.Color.Transparent;
+            this.lbgia.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbgia.ForeColor = System.Drawing.Color.Blue;
             this.lbgia.Location = new System.Drawing.Point(124, 117);
             this.lbgia.Name = "lbgia";
-            this.lbgia.Size = new System.Drawing.Size(51, 19);
+            this.lbgia.Size = new System.Drawing.Size(59, 19);
             this.lbgia.TabIndex = 3;
             this.lbgia.Text = "label1";
             // 
@@ -447,7 +447,7 @@
             this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRefresh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnRefresh.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(300, 191);
+            this.btnRefresh.Location = new System.Drawing.Point(262, 191);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(39, 29);
             this.btnRefresh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

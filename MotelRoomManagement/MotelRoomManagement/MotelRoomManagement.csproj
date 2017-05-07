@@ -34,6 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
@@ -51,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DKPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DKPhong.Designer.cs">
+      <DependentUpon>DKPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSThuTien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DSThuTien.Designer.cs">
+      <DependentUpon>DSThuTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +168,12 @@
     <Compile Include="TrangThai.Designer.cs">
       <DependentUpon>TrangThai.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DKPhong.resx">
+      <DependentUpon>DKPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DSThuTien.resx">
+      <DependentUpon>DSThuTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddRoom.resx">
       <DependentUpon>frmAddRoom.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +322,8 @@
     <None Include="Resources\Food-List-Ingredients-icon.png" />
     <None Include="Resources\guest_register.png" />
     <None Include="Resources\guest_return.png" />
+    <None Include="Resources\Editing-Collapse-icon.png" />
+    <None Include="Resources\Editing-Expand-icon.png" />
     <Content Include="Resources\home-icon-menu-fix.png" />
     <None Include="Resources\money-icon.png" />
     <None Include="Resources\personal-information-icon.png" />
