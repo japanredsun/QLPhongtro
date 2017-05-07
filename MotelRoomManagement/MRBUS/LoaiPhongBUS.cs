@@ -38,11 +38,11 @@ namespace MRBUS
                 throw ex;
             }
         }
-        public DataTable GetLoaiPhongDA(string maloaiphong)
+        public DataTable GetLoaiPhongDA(string makhuvuc)
         {
             try
             {
-                DataTable tmp = new LoaiPhongDAO().GetDataLoaiPhong(maloaiphong);
+                DataTable tmp = new LoaiPhongDAO().GetDataLoaiPhong(makhuvuc);
                 return tmp;
             }
             catch (SqlException ex)

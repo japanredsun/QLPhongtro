@@ -57,6 +57,8 @@ namespace MRDAO
             }
         }
 
+        
+
         public DataTable GetData(string maphong)
         {
             DataTable result = new DataTable();
