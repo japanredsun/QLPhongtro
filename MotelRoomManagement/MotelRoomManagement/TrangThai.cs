@@ -42,8 +42,8 @@ namespace MotelRoomManagement
         {
             Room _CbData = new Room();
             string makv = cbKV.SelectedValue.ToString();
-            var phongtrong = _CbData.GetDataTWChild(makv, "NoVacant");
-            var phongdathue = _CbData.GetDataTWChild(makv, "Vacant");
+            var phongtrong = _CbData.GetDataTWChild(makv, "Vacant");
+            var phongdathue = _CbData.GetDataTWChild(makv, "NoVacant");
             numTrong.Text = phongtrong.Rows.Count.ToString();
             numRent.Text = phongdathue.Rows.Count.ToString();
         }
