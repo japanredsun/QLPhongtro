@@ -104,7 +104,7 @@ namespace MotelRoomManagement
             KhachThueBUS _ListKT = new KhachThueBUS();
             if (theNode.Tag.ToString() == "2")
             {
-                grTTPT.Visible = false;
+                panel2.Visible = false;
                 string node = theNode.Name.ToString();
                 var list_khach = _ListKT.GetKhach(node);
 
@@ -123,15 +123,19 @@ namespace MotelRoomManagement
 
         private void treeView2_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            TreeNode theNode = this.treeView2.SelectedNode;
-            string dkphong = theNode.Name.ToString();
-            label1.Text = dkphong;
             listKhach.Items.Clear();
 
-            if (theNode.Tag.ToString() == "2")
+            Room p = new Room();
+            TreeNode theNode = this.treeView2.SelectedNode;
+            string dkphong = theNode.Name.ToString();
+            var ttp = p.GetDataPhong("SELECT TenLoaiPhong, DienTichPhong, DonGia FROM LoaiPhong lp, Phong p WHERE p.MaLoaiPhong=lp.MaLoaiPhong AND p.MaPhong='"+dkphong+"'");
+              if (theNode.Tag.ToString() == "2")
             {
-                
-                grTTPT.Visible = true;
+                label1.Text = dkphong;
+                lbLoaiPhong.Text = ttp.Rows[0][0].ToString();
+                lbDienTich.Text = ttp.Rows[0][1].ToString();
+                lbgia.Text = ttp.Rows[0][2].ToString();
+                panel2.Visible = true;
             }
         }
 
@@ -150,6 +154,7 @@ namespace MotelRoomManagement
             listKhach.Items.Clear();
             Load_Data_TreeView1();
             Load_Data_TreeView2();
+            panel2.Visible = false;
         }
 
         

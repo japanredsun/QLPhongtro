@@ -75,14 +75,14 @@ namespace MotelRoomManagement
             CloseThis();
         }
 
-        private void đóngTrangNàyToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ctmCloseThis_Click(object sender, EventArgs e)
         {
             CloseThis();
         }
 
         private void ctmRM_Opening(object sender, CancelEventArgs e)
         {
-            bool isShow = (tabMain.SelectedTabIndex == 0)?false:true;
+            bool isShow = (tabMain.SelectedTabIndex == 0) ? false : true;
             ctmCloseThis.Enabled = isShow;
         }
 
@@ -93,14 +93,13 @@ namespace MotelRoomManagement
                 if (index != i)
                     tabMain.Tabs.RemoveAt(i);
             tabMain.Refresh();
-
         }
 
         private void ctmCloseAll_Click(object sender, EventArgs e)
         {
             int index = tabMain.SelectedTabIndex;
             for (int i = tabMain.Tabs.Count - 1; i > 0; i--)
-                    tabMain.Tabs.RemoveAt(i);
+                tabMain.Tabs.RemoveAt(i);
             tabMain.Refresh();
         }
 
@@ -152,21 +151,21 @@ namespace MotelRoomManagement
         //Xu li Menu Button
         private void btnDSTT_Click(object sender, EventArgs e)
         {
-            Test uctest = new Test();
-            addNewTab("Danh sách thu tiền", uctest,0);
+            DSThuTien dstt = new DSThuTien();
+            addNewTab("Danh sách thu tiền", dstt,0);
             
         }
 
         private void btnTrangThai_Click(object sender, EventArgs e)
         {
-            Test uctest = new Test();
-            addNewTab("Trạng thái thuê", uctest,1);
+            TrangThai uc = new TrangThai();
+            addNewTab("Trạng thái thuê", uc,1);
         }
 
         private void btnDKP_Click(object sender, EventArgs e)
         {
-            //TrangThai tt = new TrangThai();
-            //addNewTab("Đăng kí phòng", tt,3);
+            DKPhong uc = new DKPhong();
+            addNewTab("Đăng kí phòng", uc,3);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -181,10 +180,14 @@ namespace MotelRoomManagement
             radialMenu1.Visible = true;
         }
 
-        private void searchBar_Click(object sender, EventArgs e)
-        {
-            radialMenu1.Visible = false;
-        }
+    
+
+      
+
+        
+
+
+
 
   
    
