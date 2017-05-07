@@ -26,6 +26,7 @@ namespace MRBUS
             }
         }
 
+
         public DataTable GetKhach(string maphong)
         {
             try
