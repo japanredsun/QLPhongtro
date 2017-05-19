@@ -13,15 +13,19 @@ namespace MotelRoomManagement
 {
     public partial class FrmGeneral : DevComponents.DotNetBar.RibbonForm
     {
+        
         public FrmGeneral()
         {
             InitializeComponent();
         }
 
+     
+    
         private void FrmGeneral_Load(object sender, EventArgs e)
         {
             TabTrangThai();
         }
+
 
         private void TabTrangThai()
         {
@@ -69,6 +73,9 @@ namespace MotelRoomManagement
                 tabMain.Tabs.Remove(selectedTab);
         }
 
+   
+     
+
         // chuột phải đóng trang
         private void tabMain_TabItemClose(object sender, TabStripActionEventArgs e)
         {
@@ -104,7 +111,7 @@ namespace MotelRoomManagement
         }
 
         // Ham Add-Tab
-        private void addNewTab(string strTabName, UserControl ucContent,int imgindex)
+        public void addNewTab(string strTabName, UserControl ucContent,int imgindex)
         {
             //-----------If exist tabpage then exit---------------
             foreach (TabItem tabPage in tabMain.Tabs)
@@ -164,8 +171,10 @@ namespace MotelRoomManagement
 
         private void btnDKP_Click(object sender, EventArgs e)
         {
-            SapPhong uc = new SapPhong();
-            addNewTab("Đăng kí phòng", uc,3);
+            
+                SapPhong uc = new SapPhong();
+                addNewTab("Đăng kí phòng", uc, 3);
+           
         }
 
         private void btnExit_Click(object sender, EventArgs e)

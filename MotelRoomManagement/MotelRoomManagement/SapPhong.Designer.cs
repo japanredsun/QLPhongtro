@@ -38,7 +38,7 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cbKV = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.groupPanel5 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dtpNgayThue = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dtpNgayThue = new System.Windows.Forms.DateTimePicker();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.lbGia = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -78,7 +78,6 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelEx1.SuspendLayout();
             this.groupPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayThue)).BeginInit();
             this.groupPanel4.SuspendLayout();
             this.groupPanel3.SuspendLayout();
             this.panelEx2.SuspendLayout();
@@ -88,6 +87,7 @@
             // 
             // panelEx1
             // 
+            this.panelEx1.AutoScroll = true;
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.panelEx1.Controls.Add(this.buttonX2);
@@ -124,7 +124,8 @@
             this.buttonX2.Size = new System.Drawing.Size(113, 53);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 4;
-            this.buttonX2.Text = "Hủy";
+            this.buttonX2.Text = "Clear";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // btnSave
             // 
@@ -237,50 +238,10 @@
             // 
             // dtpNgayThue
             // 
-            // 
-            // 
-            // 
-            this.dtpNgayThue.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dtpNgayThue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtpNgayThue.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dtpNgayThue.ButtonDropDown.Visible = true;
-            this.dtpNgayThue.IsPopupCalendarOpen = false;
+            this.dtpNgayThue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayThue.Location = new System.Drawing.Point(3, 3);
-            // 
-            // 
-            // 
-            this.dtpNgayThue.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dtpNgayThue.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtpNgayThue.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dtpNgayThue.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dtpNgayThue.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtpNgayThue.MonthCalendar.DisplayMonth = new System.DateTime(2017, 5, 1, 0, 0, 0, 0);
-            this.dtpNgayThue.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dtpNgayThue.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dtpNgayThue.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dtpNgayThue.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtpNgayThue.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dtpNgayThue.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtpNgayThue.MonthCalendar.TodayButtonVisible = true;
-            this.dtpNgayThue.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dtpNgayThue.Name = "dtpNgayThue";
             this.dtpNgayThue.Size = new System.Drawing.Size(200, 27);
-            this.dtpNgayThue.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dtpNgayThue.TabIndex = 0;
             // 
             // groupPanel4
@@ -785,7 +746,6 @@
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();
             this.groupPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtpNgayThue)).EndInit();
             this.groupPanel4.ResumeLayout(false);
             this.groupPanel4.PerformLayout();
             this.groupPanel3.ResumeLayout(false);
@@ -838,7 +798,6 @@
         private System.Windows.Forms.Label lbMaPhong;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label9;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtpNgayThue;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX btnSave;
         private System.Windows.Forms.RadioButton rdnTuNhap;
@@ -846,5 +805,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ColumnHeader maphonga;
         private System.Windows.Forms.ColumnHeader tenphonga;
+        private System.Windows.Forms.DateTimePicker dtpNgayThue;
     }
 }

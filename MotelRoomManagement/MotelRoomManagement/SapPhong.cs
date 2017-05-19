@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 using MRBUS;
 using MRDTO;
 
@@ -14,7 +15,7 @@ namespace MotelRoomManagement
 {
     public partial class SapPhong : UserControl
     {
-        string ho, ten, gioitinh, cmnd, ngaysinh, quequan, nghenghiep, maphong;
+        string ho, ten, gioitinh, cmnd, ngaysinh, quequan, nghenghiep, maphong,ghichu;
         string makhach;
         //double tiendatcoc;
         public SapPhong()
@@ -118,12 +119,12 @@ namespace MotelRoomManagement
             lbGia.Text = gia + " vnd"; lbGia.ForeColor = Color.Red;
         }
 
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Sinh Ma Khach moi
             ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
-            string sql1 = "SELECT * From ThongTinKhach";
-            int id_khach = soluongkhach.GetKhach(sql1).Rows.Count + 1;
+            int id_khach=soluongkhach.newID("SELECT * FROM ThongTinKhach");
             makhach = "KT" + id_khach.ToString();
 
             //Lay thong tin bang ThongTinKhach
@@ -138,14 +139,17 @@ namespace MotelRoomManagement
             quequan = txtQueQuan.Text.Trim();
             nghenghiep = txtNgheNghiep.Text.Trim();
             maphong = lbMaPhong.Text.Trim();
+            ghichu="1";
             //tiendatcoc = (double)txtTienDatCoc.Text.Trim();
 
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Them vao bang ThongTinKhach
-
-                string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('" + makhach + "',N'" + ho + "',N'" + ten + "',N'" + gioitinh + "','" + ngaysinh + "','" + cmnd + "',N'" + quequan + "',N'" + nghenghiep + "','" + maphong + "')";
+                string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('" + makhach + "',N'" + ho + "',N'" + ten + "',N'" + gioitinh + "','" + ngaysinh + "','" + cmnd + "',N'" + quequan + "',N'" + nghenghiep + "','" + maphong + "','"+ghichu+"')";
                 List<KhachThue> tmp = new KhachThueBUS().GetKhach_List(sqlAddKhachInfo);
+
+                //string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES(@makhach,@ho,@ten,@ngaysinh,@cmnd,@quequan,@nghenghiep,@maphong,@ghichu)";
+                //int j = new KhachThueBUS().Insert(sqlAddKhachInfo, makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, "");
 
                 //Them vao bang ThongTinThuePhong
                 //Lay thong tin
@@ -155,21 +159,36 @@ namespace MotelRoomManagement
                 string idtttp = id_tttp.ToString();
                 string select_maphong = lbMaPhong.Text;
                 string ngaythue = dtpNgayThue.Text;
-                //INSERT vao SQL
+                       //INSERT vao SQL
                 string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
                 int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
-
-                //Cap nhat
-
-                //Cap nhat trang thai
+                                
+                 //Cap nhat trang thai phong
                 ThongTinThuePhongBUS update = new ThongTinThuePhongBUS();
                 string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + select_maphong + "'";
                 update.Update(sqlupdate);
                 //Refresh Form
+                lvPhong.Items.Clear();
+                LoadData_ListPhong();
                 MessageBox.Show("Đã thêm thành công!");
+               
 
                
             }
+        }
+
+        // Nút Clear
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            dtpNgaySinh.Value = DateTime.Today;
+            cbGioiTinh.Text = "";
+            List<TextBox> tmp = new List<TextBox>();
+            tmp.Add(txtCMND);tmp.Add(txtHo);tmp.Add(txtNgheNghiep); tmp.Add(txtQueQuan); tmp.Add(txtTen); tmp.Add(txtTienDatCoc);
+            foreach (TextBox txtbox in tmp)
+            {
+                txtbox.Text = "";
+            }
+
         }
 
        

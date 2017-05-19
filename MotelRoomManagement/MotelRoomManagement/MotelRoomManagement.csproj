@@ -328,6 +328,7 @@
     <None Include="Resources\sign-check-icon.png" />
     <None Include="Resources\Users-icon.png" />
     <None Include="Resources\Actions-tool-node-editor-icon.png" />
+    <None Include="Resources\Actions-user-group-new-icon.png" />
     <Content Include="Resources\Age-Child-Female-Light-icon.png" />
     <Content Include="Resources\Age-Child-Male-Light-icon.png" />
     <None Include="Resources\Alarm-Plus-icon.png" />

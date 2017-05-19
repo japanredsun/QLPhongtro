@@ -54,22 +54,49 @@ namespace MRDAO
         {
             DataTable nodecha = new DataTable();
             dp.Connect();
-            nodecha = dp.GetData("SELECT * FROM KhuVuc");
-            return nodecha;
+            try
+            {
+                
+                nodecha = dp.GetData("SELECT * FROM KhuVuc");
+                return nodecha;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                dp.Disconnect();
+            }
+           
         }
 
         public DataTable GetDataTWChild(string where, string trangthai)
         {
             DataTable nodecon = new DataTable();
             dp.Connect();
-            if (trangthai == "NoVacant")
+            try
             {
-                nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Đã thuê'");
-            }
-            else
-                nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
+                
+                if (trangthai == "NoVacant")
+                {
+                    nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Đã thuê'");
+                }
+                else
+                    nodecon = dp.GetData("SELECT MaPhong, TenPhong FROM Phong Where MaKhuVuc='" + where + "'AND TrangThai=N'Trống'");
 
-            return nodecon;
+                return nodecon;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                dp.Disconnect();
+            }
         }
         public int themphong(string sql, string maphong, string maloai, string makhu, string tenphong, string day, string trangthai)
         {
@@ -93,10 +120,23 @@ namespace MRDAO
         }
         public DataTable GetCBPhong(string makv)
         {
-             DataTable result = new DataTable();
-             dp.Connect();
-             result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='"+makv+"'AND TrangThai=N'Đã thuê'");
-             return result;
+            DataTable result = new DataTable();
+            dp.Connect();
+            try
+            {
+                result = dp.GetData("SELECT MaPhong, TenPhong From Phong Where MaKhuVuc='" + makv + "'AND TrangThai=N'Đã thuê'");
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                dp.Disconnect();
+            }
+             
         }
         public DataTable GetDataPhong(string sql)
         {

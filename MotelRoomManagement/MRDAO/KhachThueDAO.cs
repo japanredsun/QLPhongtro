@@ -61,11 +61,48 @@ namespace MRDAO
 
         public DataTable GetData(string maphong)
         {
-            DataTable result = new DataTable();
-            dp.Connect();
-            string strQuery = "Select ThongTinKhach.MaKhachTro AS [Mã khách], Ho + ' ' + Ten AS [Họ và tên], GioiTinh, CONVERT(varchar(10),NgaySinh,103),QueQuan,NgheNghiep From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "'";
-            result = dp.GetData(strQuery);
-            return result;
+            try
+            {
+                DataTable result = new DataTable();
+                dp.Connect();
+                string strQuery = "Select ThongTinKhach.MaKhachTro AS [Mã khách], Ho + ' ' + Ten AS [Họ và tên], GioiTinh, CONVERT(varchar(10),NgaySinh,103),QueQuan,NgheNghiep From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "'";
+                result = dp.GetData(strQuery);
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                dp.Disconnect();
+            }
+            
+        }
+
+        public int Insert(string sql, string makhach, string ho, string ten, string gioitinh, string ngaysinh, string cmnd, string quequan, string nghenghiep, string maphong,string ghichu)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@makhach", makhach));
+            paras.Add(new SqlParameter("@ho", ho));
+            paras.Add(new SqlParameter("@ten", ten));
+            paras.Add(new SqlParameter("@gioitinh", gioitinh));
+            paras.Add(new SqlParameter("@ngaysinh", ngaysinh));
+            paras.Add(new SqlParameter("@cmnd", cmnd));
+            paras.Add(new SqlParameter("@quequan", quequan));
+            paras.Add(new SqlParameter("@nghenghiep", nghenghiep));
+            paras.Add(new SqlParameter("@maphong", maphong));
+            paras.Add(new SqlParameter("@ghichu", ghichu));
+            try
+            {
+                return (dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
         }
 
        

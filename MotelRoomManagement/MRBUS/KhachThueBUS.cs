@@ -40,5 +40,20 @@ namespace MRBUS
                 throw ex;
             }
         }
+
+        public int Insert(string sql, string makhach, string ho, string ten, string gioitinh, string ngaysinh, string cmnd, string quequan, string nghenghiep, string maphong,string ghichu)
+        {
+            try
+            {
+                return new KhachThueDAO().Insert(sql, makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong,ghichu);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        
     }
 }

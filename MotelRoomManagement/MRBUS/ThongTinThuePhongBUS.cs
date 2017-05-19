@@ -50,6 +50,19 @@ namespace MRBUS
                 throw ex;
             }
         }
+
+        public int newID(string sql)
+        {
+            var table = new PhongDAO().GetDataPhong(sql);
+            table.PrimaryKey = new DataColumn[] { table.Columns["MaKhachTro"] };
+            int id_khach = table.Rows.Count + 1;
+            for (int i = 1; i < table.Rows.Count; i++)
+            {
+                if (table.Rows.Find("KT"+i) == null)
+                    return i;
+            }
+            return id_khach;
+        }
     }
 
    
