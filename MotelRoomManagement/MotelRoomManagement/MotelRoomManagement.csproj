@@ -95,6 +95,12 @@
     <Compile Include="Dotnetbar\FrmGeneral.Designer.cs">
       <DependentUpon>FrmGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDKPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDKPhong.Designer.cs">
+      <DependentUpon>frmDKPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHireRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     <EmbeddedResource Include="Dotnetbar\FrmGeneral.resx">
       <DependentUpon>FrmGeneral.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDKPhong.resx">
+      <DependentUpon>frmDKPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHireRoom.resx">
       <DependentUpon>frmHireRoom.cs</DependentUpon>

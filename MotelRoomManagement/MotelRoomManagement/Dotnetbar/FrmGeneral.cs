@@ -180,6 +180,12 @@ namespace MotelRoomManagement
             radialMenu1.Visible = true;
         }
 
+        private void buttonItem21_Click(object sender, EventArgs e)
+        {
+            DKPhong uc = new DKPhong();
+            addNewTab("Nhập thông tin đăng ký", uc, 1);
+        }
+
        
 
     
