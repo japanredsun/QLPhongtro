@@ -131,6 +131,12 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMySoftware.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMySoftware.Designer.cs">
+      <DependentUpon>frmMySoftware.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmReportOption.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMySoftware.resx">
+      <DependentUpon>frmMySoftware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportOption.resx">
       <DependentUpon>frmReportOption.cs</DependentUpon>
@@ -347,6 +356,7 @@
     <None Include="Resources\Users-icon.png" />
     <None Include="Resources\Actions-tool-node-editor-icon.png" />
     <None Include="Resources\Actions-user-group-new-icon.png" />
+    <None Include="Resources\2.png" />
     <Content Include="Resources\Age-Child-Female-Light-icon.png" />
     <Content Include="Resources\Age-Child-Male-Light-icon.png" />
     <None Include="Resources\Alarm-Plus-icon.png" />

@@ -45,7 +45,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(122, 243);
+            this.label1.Location = new System.Drawing.Point(225, 282);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 25);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::MotelRoomManagement.Properties.Resources.download;
-            this.pictureBox1.Location = new System.Drawing.Point(196, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(299, 93);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,7 +68,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(122, 295);
+            this.label2.Location = new System.Drawing.Point(225, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(106, 25);
             this.label2.TabIndex = 0;
@@ -77,7 +77,7 @@
             // txtLogin
             // 
             this.txtLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLogin.Location = new System.Drawing.Point(233, 243);
+            this.txtLogin.Location = new System.Drawing.Point(336, 282);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(251, 31);
             this.txtLogin.TabIndex = 1;
@@ -85,7 +85,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(233, 289);
+            this.txtPassword.Location = new System.Drawing.Point(336, 328);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(251, 31);
@@ -94,7 +94,7 @@
             // btLogin
             // 
             this.btLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLogin.Location = new System.Drawing.Point(328, 355);
+            this.btLogin.Location = new System.Drawing.Point(431, 394);
             this.btLogin.Name = "btLogin";
             this.btLogin.Size = new System.Drawing.Size(75, 38);
             this.btLogin.TabIndex = 3;
@@ -105,7 +105,7 @@
             // btReset
             // 
             this.btReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btReset.Location = new System.Drawing.Point(409, 355);
+            this.btReset.Location = new System.Drawing.Point(512, 394);
             this.btReset.Name = "btReset";
             this.btReset.Size = new System.Drawing.Size(75, 38);
             this.btReset.TabIndex = 3;
@@ -118,7 +118,7 @@
             this.cbSave.AutoSize = true;
             this.cbSave.BackColor = System.Drawing.Color.Transparent;
             this.cbSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSave.Location = new System.Drawing.Point(233, 327);
+            this.cbSave.Location = new System.Drawing.Point(336, 366);
             this.cbSave.Name = "cbSave";
             this.cbSave.Size = new System.Drawing.Size(116, 22);
             this.cbSave.TabIndex = 4;
@@ -133,7 +133,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::MotelRoomManagement.Properties.Resources.sequence_Still010;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(607, 405);
+            this.ClientSize = new System.Drawing.Size(819, 494);
             this.Controls.Add(this.cbSave);
             this.Controls.Add(this.btReset);
             this.Controls.Add(this.btLogin);
