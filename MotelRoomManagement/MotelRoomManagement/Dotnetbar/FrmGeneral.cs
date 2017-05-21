@@ -220,5 +220,17 @@ namespace MotelRoomManagement
             frmChangePass frm = new frmChangePass();
             frm.Show();
         }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            AccountInformation frm = new AccountInformation(USER, PASS);
+            frm.Show();
+        }
+
+        private void buttonItem17_Click(object sender, EventArgs e)
+        {
+            AccountInformation frm = new AccountInformation(USER, PASS);
+            frm.Show();
+        }
     }
 }
