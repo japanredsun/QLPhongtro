@@ -27,6 +27,7 @@ namespace MotelRoomManagement
     
         private void FrmGeneral_Load(object sender, EventArgs e)
         {
+            labelX2.Text = "Xin chào " + USER;
             TabTrangThai();
         }
 
@@ -205,8 +206,19 @@ namespace MotelRoomManagement
         }
         private void buttonItem21_Click(object sender, EventArgs e)
         {
-            DKPhong uc = new DKPhong();
-            addNewTab("Nhập thông tin đăng ký", uc, 1);
+
+        }
+
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            frmChangePass frm = new frmChangePass();
+            frm.Show();
+        }
+
+        private void buttonItem30_Click(object sender, EventArgs e)
+        {
+            frmChangePass frm = new frmChangePass();
+            frm.Show();
         }
     }
 }

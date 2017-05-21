@@ -26,5 +26,11 @@ namespace MotelRoomManagement
         {
 
         }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            frmDKPhong frm = new frmDKPhong();
+            frm.Show();
+        }
     }
 }

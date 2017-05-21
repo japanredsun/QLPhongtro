@@ -60,6 +60,7 @@
             this.buttonX1.SymbolSize = 50F;
             this.buttonX1.TabIndex = 1;
             this.buttonX1.Text = "GUEST";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // buttonX2
             // 
