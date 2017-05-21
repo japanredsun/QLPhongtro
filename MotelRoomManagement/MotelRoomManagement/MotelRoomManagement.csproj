@@ -180,6 +180,12 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemNguoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThemNguoi.Designer.cs">
+      <DependentUpon>ThemNguoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="TinhTienThang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Test.resx">
       <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNguoi.resx">
+      <DependentUpon>ThemNguoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TinhTienThang.resx">
       <DependentUpon>TinhTienThang.cs</DependentUpon>

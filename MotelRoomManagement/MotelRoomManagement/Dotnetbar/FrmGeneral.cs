@@ -181,6 +181,12 @@ namespace MotelRoomManagement
            
         }
 
+        private void btnThemNguoi_Click(object sender, EventArgs e)
+        {
+            ThemNguoi uc = new ThemNguoi();
+            addNewTab("Thêm người", uc, 5);
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
