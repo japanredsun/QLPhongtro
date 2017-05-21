@@ -44,6 +44,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TwImgList = new System.Windows.Forms.ImageList(this.components);
             this.lbGia = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbGioiHan = new System.Windows.Forms.Label();
@@ -78,7 +79,6 @@
             this.txtHo = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TwImgList = new System.Windows.Forms.ImageList(this.components);
             this.panelEx1.SuspendLayout();
             this.groupPanel5.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -120,7 +120,7 @@
             this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.buttonX2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonX2.Location = new System.Drawing.Point(764, 472);
+            this.buttonX2.Location = new System.Drawing.Point(764, 409);
             this.buttonX2.Name = "buttonX2";
             this.buttonX2.Size = new System.Drawing.Size(113, 53);
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -132,7 +132,7 @@
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(608, 472);
+            this.btnSave.Location = new System.Drawing.Point(608, 409);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(113, 53);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -314,6 +314,16 @@
             this.columnHeader4.Text = "Nghề nghiệp";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeader4.Width = 120;
+            // 
+            // TwImgList
+            // 
+            this.TwImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TwImgList.ImageStream")));
+            this.TwImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.TwImgList.Images.SetKeyName(0, "Places-user-home-icon.png");
+            this.TwImgList.Images.SetKeyName(1, "house-icon.png");
+            this.TwImgList.Images.SetKeyName(2, "Age-Child-Female-Light-icon.png");
+            this.TwImgList.Images.SetKeyName(3, "Age-Child-Male-Light-icon.png");
+            this.TwImgList.Images.SetKeyName(4, "Actions-document-edit-icon.png");
             // 
             // lbGia
             // 
@@ -726,16 +736,6 @@
             this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 50;
             this.label2.Text = "Họ và tên:";
-            // 
-            // TwImgList
-            // 
-            this.TwImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TwImgList.ImageStream")));
-            this.TwImgList.TransparentColor = System.Drawing.Color.Transparent;
-            this.TwImgList.Images.SetKeyName(0, "Places-user-home-icon.png");
-            this.TwImgList.Images.SetKeyName(1, "house-icon.png");
-            this.TwImgList.Images.SetKeyName(2, "Age-Child-Female-Light-icon.png");
-            this.TwImgList.Images.SetKeyName(3, "Age-Child-Male-Light-icon.png");
-            this.TwImgList.Images.SetKeyName(4, "Actions-document-edit-icon.png");
             // 
             // ThemNguoi
             // 
