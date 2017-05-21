@@ -15,7 +15,7 @@ namespace MotelRoomManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmGeneral());
+            Application.Run(new frmDKPhong());
         }
     }
 }
