@@ -91,7 +91,8 @@ namespace MotelRoomManagement
             string idtttp = id_tttp.ToString();
             string select_maphong = lbMaPhong.Text;
             string ngaythue = dtpNgayThue.Text;
-                //INSERT vao SQL
+          
+            //INSERT vao SQL
             string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
             int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
 

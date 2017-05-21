@@ -20,6 +20,8 @@ namespace MotelRoomManagement
             InitializeComponent();
         }
 
+   
+
         private void TrangThai_Load(object sender, EventArgs e)
         {
             Load_Data_TreeView1();

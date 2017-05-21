@@ -135,6 +135,7 @@
             this.searchBar = new DevComponents.DotNetBar.SideBarPanelItem();
             this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnThemNguoi = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
@@ -155,12 +156,13 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
+
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.applicationButton1,
@@ -390,7 +392,7 @@
             this.ribbonBar12.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnExit});
             this.ribbonBar12.ItemSpacing = 0;
-            this.ribbonBar12.Location = new System.Drawing.Point(588, 0);
+            this.ribbonBar12.Location = new System.Drawing.Point(732, 0);
             this.ribbonBar12.Name = "ribbonBar12";
             this.ribbonBar12.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ribbonBar12.Size = new System.Drawing.Size(136, 99);
@@ -430,11 +432,12 @@
             this.ribbonBar10.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar10.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnDKP,
-            this.buttonItem35,
-            this.buttonItem36});
+            this.btnThemNguoi,
+            this.buttonItem36,
+            this.buttonItem35});
             this.ribbonBar10.Location = new System.Drawing.Point(252, 0);
             this.ribbonBar10.Name = "ribbonBar10";
-            this.ribbonBar10.Size = new System.Drawing.Size(336, 99);
+            this.ribbonBar10.Size = new System.Drawing.Size(480, 99);
             this.ribbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar10.TabIndex = 1;
             this.ribbonBar10.Text = "Thao tác";
@@ -455,7 +458,7 @@
             this.btnDKP.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnDKP.Name = "btnDKP";
             this.btnDKP.SubItemsExpandWidth = 14;
-            this.btnDKP.Text = "<div align =\"center\" width=\'100\'>Đăng kí phòng</div>";
+            this.btnDKP.Text = "<div align =\"center\" width=\'130\'>Đăng kí phòng trống</div>";
             this.btnDKP.Click += new System.EventHandler(this.btnDKP_Click);
             // 
             // buttonItem35
@@ -1659,6 +1662,16 @@
             this.buttonItem15.Symbol = "";
             this.buttonItem15.Text = "Phòng trọ";
             // 
+            // btnThemNguoi
+            // 
+            this.btnThemNguoi.HoverImage = ((System.Drawing.Image)(resources.GetObject("btnThemNguoi.HoverImage")));
+            this.btnThemNguoi.Image = global::MotelRoomManagement.Properties.Resources.Actions_user_group_new_icon;
+            this.btnThemNguoi.ImageFixedSize = new System.Drawing.Size(54, 54);
+            this.btnThemNguoi.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnThemNguoi.Name = "btnThemNguoi";
+            this.btnThemNguoi.SubItemsExpandWidth = 14;
+            this.btnThemNguoi.Text = "<div align =\"center\" width=\'100\'>Thêm người</div>";
+            // 
             // FrmGeneral
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -1794,5 +1807,6 @@
         private DevComponents.DotNetBar.Controls.Line line2;
         private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
         private DevComponents.Editors.Calculator calculator1;
+        private DevComponents.DotNetBar.ButtonItem btnThemNguoi;
     }
 }

@@ -55,9 +55,17 @@ namespace MRDAO
         public DataTable GetData(string sql)
         {
             DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(sql, cn);
-            da.Fill(dt);
-            return dt;
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter(sql, cn);
+                da.Fill(dt);
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            
         }
 
         //Select 1 hàng
@@ -155,5 +163,9 @@ namespace MRDAO
                 Disconnect();
             }
         }
+
+      
+ 
+        
     }
 }
