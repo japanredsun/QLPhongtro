@@ -13,12 +13,16 @@ namespace MotelRoomManagement
 {
     public partial class FrmGeneral : DevComponents.DotNetBar.RibbonForm
     {
-        
+        private string USER, PASS;
         public FrmGeneral()
         {
             InitializeComponent();
         }
-
+        public FrmGeneral(string username, string password): this()
+        {
+            USER = username;
+            PASS = password;
+        }
      
     
         private void FrmGeneral_Load(object sender, EventArgs e)
@@ -179,9 +183,7 @@ namespace MotelRoomManagement
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
-
+            Close();
         }
 
         private void quickBar_Click(object sender, EventArgs e)
@@ -189,22 +191,11 @@ namespace MotelRoomManagement
             radialMenu1.Visible = true;
         }
 
-       
+        private void FrmGeneral_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                e.Cancel = true;
 
-    
-
-      
-
-        
-
-
-
-
-  
-   
-
-     
-
-       
+        }
     }
 }

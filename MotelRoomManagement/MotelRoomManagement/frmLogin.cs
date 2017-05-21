@@ -17,8 +17,6 @@ namespace MotelRoomManagement
     {
         public frmLogin()
         {
-            frmDelay fd = new frmDelay();
-            fd.ShowDialog();
             InitializeComponent();
         }
 
@@ -39,7 +37,7 @@ namespace MotelRoomManagement
             int x = new DangNhapBUS().Log(sql, a, b);
             if (x == 1)
             {
-                frmMain frmM = new frmMain(a, b);
+                FrmGeneral frmM = new FrmGeneral(a, b);
                 frmM.Show();
                 if (cbSave.Checked)
                 {
@@ -49,6 +47,7 @@ namespace MotelRoomManagement
                 {
                     int j = new DangNhapBUS().Xoa();
                 }
+                this.Close();
             }
             else
             {
