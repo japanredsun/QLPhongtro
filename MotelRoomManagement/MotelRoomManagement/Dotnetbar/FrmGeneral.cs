@@ -177,6 +177,12 @@ namespace MotelRoomManagement
            
         }
 
+        private void btnThemNguoi_Click(object sender, EventArgs e)
+        {
+            ThemNguoi uc = new ThemNguoi();
+            addNewTab("Thêm người", uc, 5);
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -194,6 +200,8 @@ namespace MotelRoomManagement
             DKPhong uc = new DKPhong();
             addNewTab("Nhập thông tin đăng ký", uc, 1);
         }
+
+       
 
        
 
