@@ -12,11 +12,11 @@ namespace MRBUS
 {
     public class ThongTinDKBUS
     {
-        public int Insert(string sql, int id, string ho, string ten, string gioitinh, string ngaysinh, string cmnd, string quequan, string nghenghiep, string makhuvuc, string maloaiphong)
+        public int Insert(string sql, KhachDangKy kdk)
         {
             try
             {
-                return new ThongTinDKDAO().Insert(sql, id, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, makhuvuc, maloaiphong);
+                return new ThongTinDKDAO().Insert(sql, kdk);
             }
             catch (SqlException ex)
             {

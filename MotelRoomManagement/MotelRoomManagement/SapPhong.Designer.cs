@@ -477,8 +477,9 @@
             this.lbPCK1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPCK1.Location = new System.Drawing.Point(160, 8);
             this.lbPCK1.Name = "lbPCK1";
-            this.lbPCK1.Size = new System.Drawing.Size(0, 16);
+            this.lbPCK1.Size = new System.Drawing.Size(43, 16);
             this.lbPCK1.TabIndex = 58;
+            this.lbPCK1.Text = "name";
             // 
             // grTTKDK
             // 

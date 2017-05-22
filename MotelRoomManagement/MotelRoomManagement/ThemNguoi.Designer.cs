@@ -104,7 +104,7 @@
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(975, 383);
+            this.panelEx1.Size = new System.Drawing.Size(1070, 584);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -150,7 +150,7 @@
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.Location = new System.Drawing.Point(8, 23);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(115, 22);
+            this.labelX1.Size = new System.Drawing.Size(124, 24);
             this.labelX1.TabIndex = 2;
             this.labelX1.Text = "Chọn khu vực: ";
             // 
@@ -269,7 +269,7 @@
             // 
             this.panel1.Controls.Add(this.lvKhachThue);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 66);
+            this.panel1.Location = new System.Drawing.Point(0, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(555, 175);
             this.panel1.TabIndex = 53;
@@ -471,7 +471,7 @@
             this.lvPhong.LargeImageList = this.phongimglist;
             this.lvPhong.Location = new System.Drawing.Point(0, 58);
             this.lvPhong.Name = "lvPhong";
-            this.lvPhong.Size = new System.Drawing.Size(445, 183);
+            this.lvPhong.Size = new System.Drawing.Size(445, 181);
             this.lvPhong.SmallImageList = this.phongimglist;
             this.lvPhong.TabIndex = 61;
             this.lvPhong.UseCompatibleStateImageBehavior = false;
@@ -743,7 +743,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelEx1);
             this.Name = "ThemNguoi";
-            this.Size = new System.Drawing.Size(975, 383);
+            this.Size = new System.Drawing.Size(1070, 584);
             this.Load += new System.EventHandler(this.ThemNguoi_Load);
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();

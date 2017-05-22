@@ -18,7 +18,8 @@ namespace MotelRoomManagement
             InitializeComponent();
         }
 
-        string ho, ten, ngaysinh, gioitinh, cmnd, quequan, nghenghiep, makhuvuc, maloaiphong;
+        string ho, ten,  gioitinh, cmnd, quequan, nghenghiep, makhuvuc, maloaiphong;
+        DateTime ngaysinh;
 
         private void frmDKPhong_Load(object sender, EventArgs e)
         {
@@ -81,7 +82,7 @@ namespace MotelRoomManagement
                 int id = ttdk.GetThongTinDK(sql).Rows.Count + 1;
                 ho = txtHo.Text;
                 ten = txtTen.Text;
-                ngaysinh = dtiNgaySinh.Text;
+                ngaysinh = dtiNgaySinh.Value;
                 gioitinh = "Nam";
                 if (cbGioiTinh.SelectedItem.ToString() == "Nam")
                     gioitinh = "Nam";
@@ -93,8 +94,9 @@ namespace MotelRoomManagement
                 makhuvuc = cbKhuVuc.SelectedValue.ToString();
                 maloaiphong = lstLoaiPhong.SelectedItems[0].Text;
 
+                KhachDangKy kdk = new KhachDangKy(id, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep,makhuvuc,maloaiphong);
                 string sqlInsert = "INSERT INTO ThongTinDangKyPhong(Id,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaKhuVuc,MaLoaiPhong) VALUES(@id,@ho,@ten,@gioitinh,@ngaysinh,@cmnd,@quequan,@nghenghiep,@makhuvuc,@maloaiphong)";
-                int i = new ThongTinDKBUS().Insert(sqlInsert, id, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, makhuvuc, maloaiphong);
+                int i = new ThongTinDKBUS().Insert(sqlInsert,kdk);
 
                 MessageBox.Show("Đã thêm thành công!");
             }

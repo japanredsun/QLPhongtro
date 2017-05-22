@@ -182,6 +182,8 @@ namespace MotelRoomManagement
                 ThongTinThuePhongBUS update = new ThongTinThuePhongBUS();
                 string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + select_maphong + "'";
                 update.Update(sqlupdate);
+                //Xoa Khach tu DS Dang Ky
+
                 //Refresh Form
                 lvPhong.Items.Clear();
                 LoadData_ListPhong();
@@ -222,6 +224,15 @@ namespace MotelRoomManagement
             txtTen.Text = khachdk.Rows[0][2].ToString();
             cbGioiTinh.Text = khachdk.Rows[0][3].ToString();
             dtpNgaySinh.Text = khachdk.Rows[0][4].ToString();
+            txtCMND.Text = khachdk.Rows[0][5].ToString();
+            txtQueQuan.Text = khachdk.Rows[0][6].ToString();
+            txtNgheNghiep.Text = khachdk.Rows[0][7].ToString();
+
+            string maloaiphong = khachdk.Rows[0][9].ToString();
+            var tenphong = data.GetDataPhong("SELECT TenLoaiPhong From LoaiPhong Where MaLoaiPhong='"+maloaiphong+"'");
+            lbPCK1.Text = tenphong.Rows[0][0].ToString();
+
+           
         }
 
        
