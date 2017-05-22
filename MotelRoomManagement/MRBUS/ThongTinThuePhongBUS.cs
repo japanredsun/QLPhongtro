@@ -51,17 +51,18 @@ namespace MRBUS
             }
         }
 
-        public int newID(string sql)
+        public string newID()
         {
-            var table = new PhongDAO().GetDataPhong(sql);
+            var table = new PhongDAO().GetDataPhong("SELECT * From ThongTinKhach");
             table.PrimaryKey = new DataColumn[] { table.Columns["MaKhachTro"] };
             int id_khach = table.Rows.Count + 1;
+            string idkhach = "KT" + id_khach.ToString("000");
             for (int i = 1; i < table.Rows.Count; i++)
             {
-                if (table.Rows.Find("KT"+i) == null)
-                    return i;
+                if (table.Rows.Find("KT"+i.ToString("000")) == null)
+                    return ("KT" + i.ToString("000"));
             }
-            return id_khach;
+            return idkhach;
         }
     }
 
