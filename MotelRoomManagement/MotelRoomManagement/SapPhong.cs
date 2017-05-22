@@ -159,6 +159,14 @@ namespace MotelRoomManagement
             ghichu="1";
             //tiendatcoc = (int)txtTienDatCoc.Text.Trim();
 
+            //Lay thong tin ThongTinThuePhong
+            PhongBUS tttp = new PhongBUS();
+            string sql = "SELECT * From ThongTinThuePhong";
+            int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
+            string idtttp = id_tttp.ToString();
+            string select_maphong = lbMaPhong.Text;
+            string ngaythue = dtpNgayThue.Text;
+
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 //Them vao bang ThongTinKhach               
@@ -166,15 +174,8 @@ namespace MotelRoomManagement
                 string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong,GhiChu) VALUES(@makhach,@ho,@ten,@gioitinh,@ngaysinh,@cmnd,@quequan,@nghenghiep,@maphong,@ghichu)";
                 int j = new KhachThueBUS().Insert(sqlAddKhachInfo,kt);
 
-                //Them vao bang ThongTinThuePhong
-                //Lay thong tin
-                PhongBUS tttp = new PhongBUS();
-                string sql = "SELECT * From ThongTinThuePhong";
-                int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
-                string idtttp = id_tttp.ToString();
-                string select_maphong = lbMaPhong.Text;
-                string ngaythue = dtpNgayThue.Text;
-                       //INSERT vao bang
+                //Them vao bang ThongTinThuePhong             
+                       
                 string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
                 int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
                                 
@@ -183,14 +184,17 @@ namespace MotelRoomManagement
                 string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + select_maphong + "'";
                 update.Update(sqlupdate);
                 //Xoa Khach tu DS Dang Ky
+                ListViewItem item = listKDK.SelectedItems[0];
+                string id = item.Text;
+                int z = new ThongTinDKBUS().XoaKDK("DELETE From ThongTinDangKyPhong Where Id="+id);
 
                 //Refresh Form
                 lvPhong.Items.Clear();
                 LoadData_ListPhong();
-                MessageBox.Show("Đã thêm thành công!");
-               
-
-               
+                ClearAll();
+                Load_ListKDK();
+                MessageBox.Show("Đã thêm thành công!");              
+              
             }
         }
 

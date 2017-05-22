@@ -65,7 +65,7 @@ namespace MRDAO
             {
                 DataTable result = new DataTable();
                 dp.Connect();
-                string strQuery = "Select ThongTinKhach.MaKhachTro AS [Mã khách], Ho + ' ' + Ten AS [Họ và tên], GioiTinh, CONVERT(varchar(10),NgaySinh,103),QueQuan,NgheNghiep From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "'";
+                string strQuery = "Select ThongTinKhach.MaKhachTro AS [Mã khách], Ho + ' ' + Ten AS [Họ và tên], GioiTinh, CONVERT(varchar(10),NgaySinh,103),QueQuan,NgheNghiep From ThongTinKhach ,ThongTinThuePhong Where ThongTinKhach.MaKhachTro = ThongTinThuePhong.MaKhachTro AND ThongTinThuePhong.MaPhong='" + maphong + "' ORDER BY ThongTinKhach.MaKhachTro ASC";
                 result = dp.GetData(strQuery);
                 return result;
             }

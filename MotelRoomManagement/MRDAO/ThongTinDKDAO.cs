@@ -97,5 +97,21 @@ namespace MRDAO
                     dp.Disconnect();
                 }
             }
+
+            public int XoaKDK(string sql)
+            {
+                try
+                {
+                    return dp.DExecuteNonQuery(sql, CommandType.Text);
+                }
+                catch (SqlException ex)
+                {
+
+                    throw ex;
+                }
+               
+            }
         }
+
+   
 }
