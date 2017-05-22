@@ -81,19 +81,20 @@ namespace MRDAO
             
         }
 
-        public int Insert(string sql, string makhach, string ho, string ten, string gioitinh, string ngaysinh, string cmnd, string quequan, string nghenghiep, string maphong,string ghichu)
+        public int Insert(string sql, KhachThue kt)
         {
+
             List<SqlParameter> paras = new List<SqlParameter>();
-            paras.Add(new SqlParameter("@makhach", makhach));
-            paras.Add(new SqlParameter("@ho", ho));
-            paras.Add(new SqlParameter("@ten", ten));
-            paras.Add(new SqlParameter("@gioitinh", gioitinh));
-            paras.Add(new SqlParameter("@ngaysinh", ngaysinh));
-            paras.Add(new SqlParameter("@cmnd", cmnd));
-            paras.Add(new SqlParameter("@quequan", quequan));
-            paras.Add(new SqlParameter("@nghenghiep", nghenghiep));
-            paras.Add(new SqlParameter("@maphong", maphong));
-            paras.Add(new SqlParameter("@ghichu", ghichu));
+            paras.Add(new SqlParameter("@makhach", kt.MaKhachTro));
+            paras.Add(new SqlParameter("@ho", kt.Ho));
+            paras.Add(new SqlParameter("@ten", kt.Ten));
+            paras.Add(new SqlParameter("@gioitinh", kt.GioiTinh));
+            paras.Add(new SqlParameter("@ngaysinh", kt.NgaySinh));
+            paras.Add(new SqlParameter("@cmnd", kt.CMND));
+            paras.Add(new SqlParameter("@quequan", kt.QueQuan));
+            paras.Add(new SqlParameter("@nghenghiep", kt.NgheNghiep));
+            paras.Add(new SqlParameter("@maphong", kt.MaPhong));
+            paras.Add(new SqlParameter("@ghichu", kt.GhiChu));
             try
             {
                 return (dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));

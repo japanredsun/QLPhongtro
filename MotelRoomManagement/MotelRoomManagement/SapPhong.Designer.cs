@@ -76,6 +76,7 @@
             this.listKDK = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TwImgList = new System.Windows.Forms.ImageList(this.components);
             this.panelEx1.SuspendLayout();
             this.groupPanel5.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -718,12 +719,17 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listKDK.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listKDK.FullRowSelect = true;
+            this.listKDK.GridLines = true;
+            this.listKDK.LargeImageList = this.TwImgList;
             this.listKDK.Location = new System.Drawing.Point(0, 0);
             this.listKDK.Name = "listKDK";
             this.listKDK.Size = new System.Drawing.Size(374, 173);
+            this.listKDK.SmallImageList = this.TwImgList;
             this.listKDK.TabIndex = 0;
             this.listKDK.UseCompatibleStateImageBehavior = false;
             this.listKDK.View = System.Windows.Forms.View.Details;
+            this.listKDK.Click += new System.EventHandler(this.listKDK_Click);
             // 
             // columnHeader1
             // 
@@ -734,6 +740,16 @@
             // 
             this.columnHeader2.Text = "Họ tên";
             this.columnHeader2.Width = 244;
+            // 
+            // TwImgList
+            // 
+            this.TwImgList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TwImgList.ImageStream")));
+            this.TwImgList.TransparentColor = System.Drawing.Color.Transparent;
+            this.TwImgList.Images.SetKeyName(0, "Places-user-home-icon.png");
+            this.TwImgList.Images.SetKeyName(1, "house-icon.png");
+            this.TwImgList.Images.SetKeyName(2, "Age-Child-Female-Light-icon.png");
+            this.TwImgList.Images.SetKeyName(3, "Age-Child-Male-Light-icon.png");
+            this.TwImgList.Images.SetKeyName(4, "Actions-document-edit-icon.png");
             // 
             // SapPhong
             // 
@@ -806,5 +822,6 @@
         private System.Windows.Forms.ColumnHeader maphonga;
         private System.Windows.Forms.ColumnHeader tenphonga;
         private System.Windows.Forms.DateTimePicker dtpNgayThue;
+        private System.Windows.Forms.ImageList TwImgList;
     }
 }

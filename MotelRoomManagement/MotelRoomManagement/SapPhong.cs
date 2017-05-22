@@ -15,7 +15,8 @@ namespace MotelRoomManagement
 {
     public partial class SapPhong : UserControl
     {
-        string ho, ten, gioitinh, cmnd, ngaysinh, quequan, nghenghiep, maphong,ghichu;
+        string ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong,ghichu;
+        DateTime ngaysinh;
         string makhach;
         //double tiendatcoc;
         public SapPhong()
@@ -39,6 +40,7 @@ namespace MotelRoomManagement
             if (rdnTuNhap.Checked)
             {
                 lbPKC.Visible = false;
+                ClearAll();
             }
             else
                 lbPKC.Visible = true;
@@ -68,11 +70,27 @@ namespace MotelRoomManagement
             cbLoaiPhong.DisplayMember = "TenLoaiPhong";
             cbLoaiPhong.DataSource = loaiphong;
         }
+        private void Load_ListKDK()
+        {
+            listKDK.Items.Clear();
+            string makv = cbKV.SelectedValue.ToString();
+            Room data = new Room();
+            var khachdk = data.GetDataPhong("SELECT * From ThongTinDangKyPhong Where MaKhuVuc='"+makv+"'");
+
+            for (int i = 0; i < khachdk.Rows.Count; i++)
+            {
+                ListViewItem item = new ListViewItem(khachdk.Rows[i][0].ToString());
+                if (khachdk.Rows[i][3].ToString() == "Nam") item.ImageIndex = 3; else item.ImageIndex = 2;
+                item.SubItems.Add(khachdk.Rows[i][1].ToString() + " " + khachdk.Rows[i][2].ToString());
+                listKDK.Items.Add(item);
+            }
+        }
 
         private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
         {
             lvPhong.Items.Clear();
             Load_CBLoaiPhong();
+            Load_ListKDK();
 
         }
        
@@ -123,14 +141,13 @@ namespace MotelRoomManagement
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Sinh Ma Khach moi
-            ThongTinThuePhongBUS soluongkhach = new ThongTinThuePhongBUS();
-            int id_khach=soluongkhach.newID("SELECT * FROM ThongTinKhach");
-            makhach = "KT" + id_khach.ToString();
-
+            ThongTinThuePhongBUS data = new ThongTinThuePhongBUS();
+            makhach = data.newID();      
+      
             //Lay thong tin bang ThongTinKhach
             ho = txtHo.Text.Trim();
             ten = txtTen.Text.Trim();
-            ngaysinh = dtpNgaySinh.Text;
+            ngaysinh = dtpNgaySinh.Value;
             if (cbGioiTinh.SelectedItem.ToString() == "Nam")
                 gioitinh = "Nam";
             else
@@ -140,16 +157,14 @@ namespace MotelRoomManagement
             nghenghiep = txtNgheNghiep.Text.Trim();
             maphong = lbMaPhong.Text.Trim();
             ghichu="1";
-            //tiendatcoc = (double)txtTienDatCoc.Text.Trim();
+            //tiendatcoc = (int)txtTienDatCoc.Text.Trim();
 
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //Them vao bang ThongTinKhach
-                string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES('" + makhach + "',N'" + ho + "',N'" + ten + "',N'" + gioitinh + "','" + ngaysinh + "','" + cmnd + "',N'" + quequan + "',N'" + nghenghiep + "','" + maphong + "','"+ghichu+"')";
-                List<KhachThue> tmp = new KhachThueBUS().GetKhach_List(sqlAddKhachInfo);
-
-                //string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong) VALUES(@makhach,@ho,@ten,@ngaysinh,@cmnd,@quequan,@nghenghiep,@maphong,@ghichu)";
-                //int j = new KhachThueBUS().Insert(sqlAddKhachInfo, makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, "");
+                //Them vao bang ThongTinKhach               
+                KhachThue kt = new KhachThue(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
+                string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong,GhiChu) VALUES(@makhach,@ho,@ten,@gioitinh,@ngaysinh,@cmnd,@quequan,@nghenghiep,@maphong,@ghichu)";
+                int j = new KhachThueBUS().Insert(sqlAddKhachInfo,kt);
 
                 //Them vao bang ThongTinThuePhong
                 //Lay thong tin
@@ -159,7 +174,7 @@ namespace MotelRoomManagement
                 string idtttp = id_tttp.ToString();
                 string select_maphong = lbMaPhong.Text;
                 string ngaythue = dtpNgayThue.Text;
-                       //INSERT vao SQL
+                       //INSERT vao bang
                 string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
                 int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
                                 
@@ -178,17 +193,35 @@ namespace MotelRoomManagement
         }
 
         // Nút Clear
-        private void buttonX2_Click(object sender, EventArgs e)
+        private void ClearAll()
         {
             dtpNgaySinh.Value = DateTime.Today;
             cbGioiTinh.Text = "";
             List<TextBox> tmp = new List<TextBox>();
-            tmp.Add(txtCMND);tmp.Add(txtHo);tmp.Add(txtNgheNghiep); tmp.Add(txtQueQuan); tmp.Add(txtTen); tmp.Add(txtTienDatCoc);
+            tmp.Add(txtCMND); tmp.Add(txtHo); tmp.Add(txtNgheNghiep); tmp.Add(txtQueQuan); tmp.Add(txtTen); tmp.Add(txtTienDatCoc);
             foreach (TextBox txtbox in tmp)
             {
                 txtbox.Text = "";
             }
+        }
 
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        private void listKDK_Click(object sender, EventArgs e)
+        {
+            ListViewItem item = listKDK.SelectedItems[0];
+            string id = item.Text;
+
+            Room data = new Room();
+            var khachdk = data.GetDataPhong("SELECT * From ThongTinDangKyPhong Where Id=" + id);
+
+            txtHo.Text = khachdk.Rows[0][1].ToString();
+            txtTen.Text = khachdk.Rows[0][2].ToString();
+            cbGioiTinh.Text = khachdk.Rows[0][3].ToString();
+            dtpNgaySinh.Text = khachdk.Rows[0][4].ToString();
         }
 
        
