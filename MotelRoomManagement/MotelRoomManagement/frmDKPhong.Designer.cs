@@ -84,7 +84,6 @@
             this.cbGioiTinh.Size = new System.Drawing.Size(89, 29);
             this.cbGioiTinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbGioiTinh.TabIndex = 11;
-            this.cbGioiTinh.Text = "Nam";
             // 
             // comboItem1
             // 

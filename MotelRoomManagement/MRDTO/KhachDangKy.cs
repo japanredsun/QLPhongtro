@@ -15,8 +15,10 @@ namespace MRDTO
         public string CMND { get; set; }
         public string QueQuan { get; set; }
         public string NgheNghiep { get; set; }
+        public string MaKhuVuc { get; set; }
+        public string MaLoaiPhong { get; set; }
 
-        public KhachDangKy(int id, string ho, string ten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep)
+        public KhachDangKy(int id, string ho, string ten, string gioitinh, DateTime ngaysinh, string cmnd, string quequan, string nghenghiep,string makhuvuc, string maloaiphong)
         {
             this.Id = id;
             this.Ho = ho;
@@ -26,6 +28,8 @@ namespace MRDTO
             this.CMND = cmnd;
             this.QueQuan = quequan;
             this.NgheNghiep = nghenghiep;
+            this.MaKhuVuc = makhuvuc;
+            this.MaLoaiPhong = maloaiphong;
         }
     }
 }

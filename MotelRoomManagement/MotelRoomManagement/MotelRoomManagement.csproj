@@ -59,12 +59,6 @@
     <Compile Include="AccountInformation.Designer.cs">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="DKPhong.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="DKPhong.Designer.cs">
-      <DependentUpon>DKPhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="DSThuTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -206,9 +200,6 @@
     </Compile>
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DKPhong.resx">
-      <DependentUpon>DKPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DSThuTien.resx">
       <DependentUpon>DSThuTien.cs</DependentUpon>

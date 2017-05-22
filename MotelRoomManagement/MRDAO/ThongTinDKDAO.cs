@@ -17,19 +17,19 @@ namespace MRDAO
             dp = new DataProvider();
         }
 
-        public int Insert(string sql,int id, string ho, string ten, string gioitinh, string ngaysinh, string cmnd, string quequan, string nghenghiep, string makhuvuc, string maloaiphong)
+        public int Insert(string sql, KhachDangKy kdk)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
-            paras.Add(new SqlParameter("@id",id));
-            paras.Add(new SqlParameter("@ho",ho));
-            paras.Add(new SqlParameter("@ten",ten));
-            paras.Add(new SqlParameter("@gioitinh",gioitinh));
-            paras.Add(new SqlParameter("@ngaysinh",ngaysinh));
-            paras.Add(new SqlParameter("@cmnd",cmnd));
-            paras.Add(new SqlParameter("@quequan",quequan));
-            paras.Add(new SqlParameter("@nghenghiep",nghenghiep));
-            paras.Add(new SqlParameter("@makhuvuc", makhuvuc));
-            paras.Add(new SqlParameter("@maloaiphong", maloaiphong));
+            paras.Add(new SqlParameter("@id",kdk.Id));
+            paras.Add(new SqlParameter("@ho",kdk.Ho));
+            paras.Add(new SqlParameter("@ten",kdk.Ten));
+            paras.Add(new SqlParameter("@gioitinh",kdk.GioiTinh));
+            paras.Add(new SqlParameter("@ngaysinh",kdk.NgaySinh));
+            paras.Add(new SqlParameter("@cmnd",kdk.CMND));
+            paras.Add(new SqlParameter("@quequan",kdk.QueQuan));
+            paras.Add(new SqlParameter("@nghenghiep",kdk.NgheNghiep));
+            paras.Add(new SqlParameter("@makhuvuc", kdk.MaKhuVuc));
+            paras.Add(new SqlParameter("@maloaiphong", kdk.MaLoaiPhong));
 
             try
             {
