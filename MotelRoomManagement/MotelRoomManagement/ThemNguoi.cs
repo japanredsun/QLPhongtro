@@ -14,6 +14,11 @@ namespace MotelRoomManagement
 {
     public partial class ThemNguoi : UserControl
     {
+        string ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong, ghichu;
+        DateTime ngaysinh;
+        string makhach;
+        //double tiendatcoc;
+
         public ThemNguoi()
         {
             InitializeComponent();
@@ -98,7 +103,7 @@ namespace MotelRoomManagement
             Load_ListKhach(maphong);
             
         }   
-            
+        //Load ListView Khach thue 
         private void Load_ListKhach(string maphong)
         {
             KhachThueBUS khach = new KhachThueBUS();
@@ -115,5 +120,82 @@ namespace MotelRoomManagement
             }
             lbSoNguoi.Text = listkhach.Rows.Count.ToString();
         }
+
+        //Clear Textbox
+        private void ClearAll()
+        {
+            txtHo.Text = "";
+            txtTen.Text = "";
+            txtCMND.Text = "";
+            txtNgheNghiep.Text = "";
+            txtQueQuan.Text = "";
+            txtTienDatCoc.Text = "";
+            cbGioiTinh.Text = "";
+            dtpNgaySinh.Value = DateTime.Today;
+        }
+
+        //Nút Clear
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        //Nút Lưu
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //Sinh Ma Khach moi
+            ThongTinThuePhongBUS data = new ThongTinThuePhongBUS();
+            makhach = data.newID();
+
+            //Lay thong tin bang ThongTinKhach
+            ho = txtHo.Text.Trim();
+            ten = txtTen.Text.Trim();
+            ngaysinh = dtpNgaySinh.Value;
+            if (cbGioiTinh.SelectedItem.ToString() == "Nam")
+                gioitinh = "Nam";
+            else
+                gioitinh = "Nữ";
+            cmnd = txtCMND.Text.Trim();
+            quequan = txtQueQuan.Text.Trim();
+            nghenghiep = txtNgheNghiep.Text.Trim();
+            maphong = lbMaPhong.Text.Trim();
+            ghichu = "1";
+            //tiendatcoc = (int)txtTienDatCoc.Text.Trim();
+
+            //Lay thong tin ThongTinThuePhong
+            PhongBUS tttp = new PhongBUS();
+            string sql = "SELECT * From ThongTinThuePhong";
+            int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
+            string idtttp = id_tttp.ToString();
+            string select_maphong = lbMaPhong.Text;
+            string ngaythue = dtpNgayThue.Text;
+
+            if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //Them vao bang ThongTinKhach               
+                KhachThue kt = new KhachThue(makhach, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep, maphong, ghichu);
+                string sqlAddKhachInfo = "INSERT INTO ThongTinKhach(MaKhachTro,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaPhong,GhiChu) VALUES(@makhach,@ho,@ten,@gioitinh,@ngaysinh,@cmnd,@quequan,@nghenghiep,@maphong,@ghichu)";
+                int j = new KhachThueBUS().Insert(sqlAddKhachInfo, kt);
+
+                //Them vao bang ThongTinThuePhong             
+
+                string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
+                int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
+
+                //Cap nhat trang thai phong
+                ThongTinThuePhongBUS update = new ThongTinThuePhongBUS();
+                string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + select_maphong + "'";
+                update.Update(sqlupdate);
+
+                //Refresh Form
+                lvPhong.Items.Clear();
+                LoadData_ListPhong();
+                ClearAll();
+                Load_ListKhach(maphong);
+                MessageBox.Show("Đã thêm thành công!");      
+            }
+        }
+
+
     }
 }

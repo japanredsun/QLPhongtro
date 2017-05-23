@@ -37,5 +37,17 @@ namespace MRBUS
                 throw ex;
             }
         }
+        public int XoaKDK(string sql)
+        {
+            try
+            {
+                return (new ThongTinDKDAO().XoaKDK(sql));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
