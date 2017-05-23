@@ -55,7 +55,7 @@
             this.cbKhuVuc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dtiNgaySinh = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dtiNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtHo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -67,7 +67,6 @@
             this.groupPanel2.SuspendLayout();
             this.groupPanel4.SuspendLayout();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtiNgaySinh)).BeginInit();
             this.SuspendLayout();
             // 
             // cbGioiTinh
@@ -508,50 +507,10 @@
             // 
             // dtiNgaySinh
             // 
-            // 
-            // 
-            // 
-            this.dtiNgaySinh.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dtiNgaySinh.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiNgaySinh.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dtiNgaySinh.ButtonDropDown.Visible = true;
-            this.dtiNgaySinh.IsPopupCalendarOpen = false;
-            this.dtiNgaySinh.Location = new System.Drawing.Point(124, 54);
-            // 
-            // 
-            // 
-            this.dtiNgaySinh.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dtiNgaySinh.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiNgaySinh.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dtiNgaySinh.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dtiNgaySinh.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiNgaySinh.MonthCalendar.DisplayMonth = new System.DateTime(2017, 4, 1, 0, 0, 0, 0);
-            this.dtiNgaySinh.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dtiNgaySinh.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dtiNgaySinh.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dtiNgaySinh.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dtiNgaySinh.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dtiNgaySinh.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dtiNgaySinh.MonthCalendar.TodayButtonVisible = true;
-            this.dtiNgaySinh.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dtiNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtiNgaySinh.Location = new System.Drawing.Point(124, 56);
             this.dtiNgaySinh.Name = "dtiNgaySinh";
-            this.dtiNgaySinh.Size = new System.Drawing.Size(148, 29);
-            this.dtiNgaySinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dtiNgaySinh.Size = new System.Drawing.Size(200, 29);
             this.dtiNgaySinh.TabIndex = 12;
             // 
             // txtHo
@@ -653,12 +612,12 @@
             this.MaximizeBox = false;
             this.Name = "frmDKPhong";
             this.Text = "Thông tin đăng ký";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDKPhong_FormClosing);
             this.Load += new System.EventHandler(this.frmDKPhong_Load);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel4.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtiNgaySinh)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,7 +649,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbKhuVuc;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dtiNgaySinh;
         private DevComponents.DotNetBar.Controls.TextBoxX txtHo;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX7;
@@ -700,5 +658,6 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.ButtonX btnNhapLai;
+        private System.Windows.Forms.DateTimePicker dtiNgaySinh;
     }
 }

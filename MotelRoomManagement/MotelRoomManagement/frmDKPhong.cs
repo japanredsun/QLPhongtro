@@ -18,11 +18,11 @@ namespace MotelRoomManagement
             InitializeComponent();
         }
 
-        string ho, ten,  gioitinh, cmnd, quequan, nghenghiep, makhuvuc, maloaiphong;
-        DateTime ngaysinh;
+        int check;
 
         private void frmDKPhong_Load(object sender, EventArgs e)
         {
+            cbGioiTinh.SelectedIndex = 0;
             LoadKV();
 
         }
@@ -70,39 +70,63 @@ namespace MotelRoomManagement
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnGui_Click(object sender, EventArgs e)
         {
             try
             {
+                string ho, ten, cmnd, quequan, nghenghiep, makhuvuc;
+                DateTime ngaysinh;
                 ThongTinDKBUS ttdk = new ThongTinDKBUS();
                 string sql = "SELECT * FROM ThongTinDangKyPhong";
-                int id = ttdk.GetThongTinDK(sql).Rows.Count + 1;
+                var table = ttdk.GetThongTinDK(sql);
+                table.PrimaryKey = new DataColumn[] { table.Columns["Id"] };
+                int id, k;
+                for (k = 1; k <= table.Rows.Count; k++)
+                {
+                    if (table.Rows.Find(k) == null)
+                    {
+                        break;
+                    }
+                }
+                id = k;
                 ho = txtHo.Text;
                 ten = txtTen.Text;
                 ngaysinh = dtiNgaySinh.Value;
-                gioitinh = "Nam";
-                if (cbGioiTinh.SelectedItem.ToString() == "Nam")
-                    gioitinh = "Nam";
-                else
-                    gioitinh = "Nữ";
                 cmnd = txtCmnd.Text;
                 quequan = txtQuequan.Text;
                 nghenghiep = txtNghenghiep.Text;
                 makhuvuc = cbKhuVuc.SelectedValue.ToString();
-                maloaiphong = lstLoaiPhong.SelectedItems[0].Text;
+                //maloaiphong = lstLoaiPhong.SelectedItems[0].Text;
+                List<string> lc = new List<string>();
+                lc.Add(ho); lc.Add(ten); lc.Add(cmnd); lc.Add(lbKhuvuc.Text); lc.Add(lbLoai.Text); lc.Add(quequan);
+                lc.Add(nghenghiep); lc.Add(ngaysinh.ToString()); lc.Add(cbKhuVuc.SelectedItem.ToString());
+                foreach (string c in lc)
+                {
+                    if (c == "")
+                    {
+                        check = 1;
+                    }
+                }
+                if (check == 1)
+                {
+                    check = 0;
+                    MessageBox.Show("Phải nhập đầy đủ thông tin!");
+                }
+                else
+                {
+                    KhachDangKy kdk = new KhachDangKy(id, ho, ten, cbGioiTinh.SelectedItem.ToString(), ngaysinh, cmnd, quequan, nghenghiep, makhuvuc, lstLoaiPhong.SelectedItems[0].Text);
+                    string sqlInsert = "INSERT INTO ThongTinDangKyPhong(Id,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaKhuVuc,MaLoaiPhong) VALUES(@id,@ho,@ten,@gioitinh,@ngaysinh,@cmnd,@quequan,@nghenghiep,@makhuvuc,@maloaiphong)";
+                    int i = new ThongTinDKBUS().Insert(sqlInsert, kdk);
 
-                KhachDangKy kdk = new KhachDangKy(id, ho, ten, gioitinh, ngaysinh, cmnd, quequan, nghenghiep,makhuvuc,maloaiphong);
-                string sqlInsert = "INSERT INTO ThongTinDangKyPhong(Id,Ho,Ten,GioiTinh,NgaySinh,CMND,QueQuan,NgheNghiep,MaKhuVuc,MaLoaiPhong) VALUES(@id,@ho,@ten,@gioitinh,@ngaysinh,@cmnd,@quequan,@nghenghiep,@makhuvuc,@maloaiphong)";
-                int i = new ThongTinDKBUS().Insert(sqlInsert,kdk);
-
-                MessageBox.Show("Đã thêm thành công!");
+                    MessageBox.Show("Đã thêm thành công!");
+                }
             }
             catch (FormatException)
             {
-                MessageBox.Show("Phải nhập đầy đủ thông tin!");
+                //MessageBox.Show("Phải nhập đầy đủ thông tin!");
             }
         }
 
@@ -113,6 +137,12 @@ namespace MotelRoomManagement
             txtCmnd.Text = "";
             txtQuequan.Text = "";
             txtNghenghiep.Text = "";
+        }
+
+        private void frmDKPhong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }
