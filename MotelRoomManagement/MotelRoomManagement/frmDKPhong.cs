@@ -70,7 +70,7 @@ namespace MotelRoomManagement
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnGui_Click(object sender, EventArgs e)
@@ -137,6 +137,12 @@ namespace MotelRoomManagement
             txtCmnd.Text = "";
             txtQuequan.Text = "";
             txtNghenghiep.Text = "";
+        }
+
+        private void frmDKPhong_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát chương trình?", "Cảnh báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                e.Cancel = true;
         }
     }
 }

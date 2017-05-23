@@ -55,6 +55,7 @@
             this.cbKhuVuc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.dtiNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtHo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -62,7 +63,6 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dtiNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.groupPanel3.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.groupPanel4.SuspendLayout();
@@ -505,6 +505,14 @@
             this.groupPanel1.TabIndex = 1;
             this.groupPanel1.Text = "Thông tin khách";
             // 
+            // dtiNgaySinh
+            // 
+            this.dtiNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtiNgaySinh.Location = new System.Drawing.Point(124, 56);
+            this.dtiNgaySinh.Name = "dtiNgaySinh";
+            this.dtiNgaySinh.Size = new System.Drawing.Size(200, 29);
+            this.dtiNgaySinh.TabIndex = 12;
+            // 
             // txtHo
             // 
             // 
@@ -595,14 +603,6 @@
             this.labelX1.TabIndex = 6;
             this.labelX1.Text = "Họ và tên:";
             // 
-            // dtiNgaySinh
-            // 
-            this.dtiNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtiNgaySinh.Location = new System.Drawing.Point(124, 56);
-            this.dtiNgaySinh.Name = "dtiNgaySinh";
-            this.dtiNgaySinh.Size = new System.Drawing.Size(200, 29);
-            this.dtiNgaySinh.TabIndex = 12;
-            // 
             // frmDKPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,6 +612,7 @@
             this.MaximizeBox = false;
             this.Name = "frmDKPhong";
             this.Text = "Thông tin đăng ký";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmDKPhong_FormClosing);
             this.Load += new System.EventHandler(this.frmDKPhong_Load);
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
