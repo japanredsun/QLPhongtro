@@ -59,6 +59,11 @@
     <Compile Include="AccountInformation.Designer.cs">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSPhong.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPhong.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSThuTien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,6 +105,12 @@
     </Compile>
     <Compile Include="frmDKPhong.Designer.cs">
       <DependentUpon>frmDKPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSPhongReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSPhongReport.Designer.cs">
+      <DependentUpon>frmDSPhongReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHireRoom.cs">
       <SubType>Form</SubType>
@@ -198,9 +209,16 @@
     <Compile Include="TrangThai.Designer.cs">
       <DependentUpon>TrangThai.cs</DependentUpon>
     </Compile>
+    <Compile Include="TraPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TraPhong.Designer.cs">
+      <DependentUpon>TraPhong.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DSPhongReport.rdlc" />
     <EmbeddedResource Include="DSThuTien.resx">
       <DependentUpon>DSThuTien.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDKPhong.resx">
       <DependentUpon>frmDKPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSPhongReport.resx">
+      <DependentUpon>frmDSPhongReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHireRoom.resx">
       <DependentUpon>frmHireRoom.cs</DependentUpon>
@@ -279,8 +300,22 @@
     <EmbeddedResource Include="TrangThai.resx">
       <DependentUpon>TrangThai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TraPhong.resx">
+      <DependentUpon>TraPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPhong.xsc">
+      <DependentUpon>DSPhong.xsd</DependentUpon>
+    </None>
+    <None Include="DSPhong.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPhong.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPhong.xss">
+      <DependentUpon>DSPhong.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

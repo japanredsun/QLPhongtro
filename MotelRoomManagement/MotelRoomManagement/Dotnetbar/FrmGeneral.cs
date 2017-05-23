@@ -232,5 +232,17 @@ namespace MotelRoomManagement
             AccountInformation frm = new AccountInformation(USER, PASS);
             frm.Show();
         }
+
+        private void buttonItem24_Click(object sender, EventArgs e)
+        {
+            frmCustomerReport frm = new frmCustomerReport();
+            frm.Show();
+        }
+
+        private void buttonItem25_Click(object sender, EventArgs e)
+        {
+            frmDSPhongReport frm = new frmDSPhongReport();
+            frm.Show();
+        }
     }
 }
