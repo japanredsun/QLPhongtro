@@ -90,10 +90,6 @@
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem2 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem3 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.quickBar = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.searchBar = new DevComponents.DotNetBar.SideBarPanelItem();
-            this.buttonItem14 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabItem4 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
@@ -146,9 +142,9 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.CaptionVisible = true;
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,6 +206,7 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
             // 
             // ribbonBar5
             // 
@@ -332,10 +329,10 @@
             this.ribbonPanel2.Controls.Add(this.ribbonBar3);
             this.ribbonPanel2.Controls.Add(this.ribbonBar2);
             this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(1211, 155);
+            this.ribbonPanel2.Size = new System.Drawing.Size(1211, 102);
             // 
             // 
             // 
@@ -370,7 +367,7 @@
             this.buttonItem22});
             this.ribbonBar3.Location = new System.Drawing.Point(311, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(393, 152);
+            this.ribbonBar3.Size = new System.Drawing.Size(393, 99);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 1;
             this.ribbonBar3.Text = "Khách trọ";
@@ -433,7 +430,7 @@
             this.buttonItem19});
             this.ribbonBar2.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(308, 152);
+            this.ribbonBar2.Size = new System.Drawing.Size(308, 99);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 0;
             this.ribbonBar2.Text = "Phòng trọ";
@@ -484,10 +481,10 @@
             this.ribbonPanel1.Controls.Add(this.ribbonBar10);
             this.ribbonPanel1.Controls.Add(this.ribbonBar1);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(1211, 155);
+            this.ribbonPanel1.Size = new System.Drawing.Size(1211, 102);
             // 
             // 
             // 
@@ -501,7 +498,6 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = false;
             // 
             // ribbonBar12
             // 
@@ -522,7 +518,7 @@
             this.ribbonBar12.Location = new System.Drawing.Point(732, 0);
             this.ribbonBar12.Name = "ribbonBar12";
             this.ribbonBar12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ribbonBar12.Size = new System.Drawing.Size(136, 152);
+            this.ribbonBar12.Size = new System.Drawing.Size(136, 99);
             this.ribbonBar12.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar12.TabIndex = 2;
             // 
@@ -564,7 +560,7 @@
             this.buttonItem35});
             this.ribbonBar10.Location = new System.Drawing.Point(252, 0);
             this.ribbonBar10.Name = "ribbonBar10";
-            this.ribbonBar10.Size = new System.Drawing.Size(480, 152);
+            this.ribbonBar10.Size = new System.Drawing.Size(480, 99);
             this.ribbonBar10.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar10.TabIndex = 1;
             this.ribbonBar10.Text = "Thao tác";
@@ -618,6 +614,7 @@
             this.buttonItem35.Name = "buttonItem35";
             this.buttonItem35.SubItemsExpandWidth = 14;
             this.buttonItem35.Text = "<div align =\"center\" width=\'100\'>Tính tiền phòng</div>";
+            this.buttonItem35.Click += new System.EventHandler(this.buttonItem35_Click);
             // 
             // ribbonBar1
             // 
@@ -637,7 +634,7 @@
             this.btnDSTT});
             this.ribbonBar1.Location = new System.Drawing.Point(3, 0);
             this.ribbonBar1.Name = "ribbonBar1";
-            this.ribbonBar1.Size = new System.Drawing.Size(249, 152);
+            this.ribbonBar1.Size = new System.Drawing.Size(249, 99);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar1.TabIndex = 0;
             this.ribbonBar1.Text = "Theo dõi";
@@ -1065,6 +1062,7 @@
             // 
             // ribbonTabItem1
             // 
+            this.ribbonTabItem1.Checked = true;
             this.ribbonTabItem1.Name = "ribbonTabItem1";
             this.ribbonTabItem1.Panel = this.ribbonPanel1;
             this.ribbonTabItem1.Text = "Bảng điều khiển";
@@ -1077,96 +1075,9 @@
             // 
             // ribbonTabItem3
             // 
-            this.ribbonTabItem3.Checked = true;
             this.ribbonTabItem3.Name = "ribbonTabItem3";
             this.ribbonTabItem3.Panel = this.ribbonPanel3;
-            this.ribbonTabItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.quickBar,
-            this.searchBar});
             this.ribbonTabItem3.Text = "Thống kê";
-            // 
-            // quickBar
-            // 
-            this.quickBar.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.quickBar.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.quickBar.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.quickBar.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.quickBar.FontBold = true;
-            this.quickBar.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.quickBar.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.quickBar.HeaderHotStyle.GradientAngle = 90;
-            this.quickBar.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.quickBar.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.quickBar.HeaderSideHotStyle.GradientAngle = 90;
-            this.quickBar.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(220)))), ((int)(((byte)(248)))));
-            this.quickBar.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
-            this.quickBar.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.quickBar.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.quickBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.quickBar.HeaderSideStyle.GradientAngle = 90;
-            this.quickBar.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.quickBar.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.quickBar.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.quickBar.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.quickBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.quickBar.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.quickBar.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.quickBar.HeaderStyle.GradientAngle = 90;
-            this.quickBar.Image = global::MotelRoomManagement.Properties.Resources.lightning_icon;
-            this.quickBar.Name = "quickBar";
-            this.quickBar.Text = "TRUY CẬP NHANH";
-            this.quickBar.Click += new System.EventHandler(this.quickBar_Click);
-            // 
-            // searchBar
-            // 
-            this.searchBar.BackgroundStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.searchBar.BackgroundStyle.BackColor2.Color = System.Drawing.Color.White;
-            this.searchBar.BackgroundStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.searchBar.BackgroundStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.searchBar.FontBold = true;
-            this.searchBar.HeaderHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.searchBar.HeaderHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.searchBar.HeaderHotStyle.GradientAngle = 90;
-            this.searchBar.HeaderSideHotStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.searchBar.HeaderSideHotStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.searchBar.HeaderSideHotStyle.GradientAngle = 90;
-            this.searchBar.HeaderSideStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(220)))), ((int)(((byte)(248)))));
-            this.searchBar.HeaderSideStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(137)))), ((int)(((byte)(207)))));
-            this.searchBar.HeaderSideStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.searchBar.HeaderSideStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.searchBar.HeaderSideStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Left | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.searchBar.HeaderSideStyle.GradientAngle = 90;
-            this.searchBar.HeaderStyle.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(236)))), ((int)(((byte)(254)))));
-            this.searchBar.HeaderStyle.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(171)))), ((int)(((byte)(228)))));
-            this.searchBar.HeaderStyle.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.searchBar.HeaderStyle.BorderColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(97)))), ((int)(((byte)(156)))));
-            this.searchBar.HeaderStyle.BorderSide = ((DevComponents.DotNetBar.eBorderSide)(((DevComponents.DotNetBar.eBorderSide.Right | DevComponents.DotNetBar.eBorderSide.Top)
-                        | DevComponents.DotNetBar.eBorderSide.Bottom)));
-            this.searchBar.HeaderStyle.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.searchBar.HeaderStyle.ForeColor.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
-            this.searchBar.HeaderStyle.GradientAngle = 90;
-            this.searchBar.Image = global::MotelRoomManagement.Properties.Resources.search_icon;
-            this.searchBar.Name = "searchBar";
-            this.searchBar.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem14,
-            this.buttonItem15});
-            // 
-            // buttonItem14
-            // 
-            this.buttonItem14.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem14.Name = "buttonItem14";
-            this.buttonItem14.Symbol = "";
-            this.buttonItem14.Text = "Khách trọ";
-            // 
-            // buttonItem15
-            // 
-            this.buttonItem15.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem15.Name = "buttonItem15";
-            this.buttonItem15.Symbol = "";
-            this.buttonItem15.Text = "Phòng trọ";
             // 
             // ribbonTabItem4
             // 
@@ -1630,10 +1541,6 @@
         private DevComponents.DotNetBar.RadialMenuItem radialMenuItem11;
         private DevComponents.DotNetBar.RadialMenuItem radialMenuItem12;
         private DevComponents.DotNetBar.RadialMenuItem radialMenuItem13;
-        private DevComponents.DotNetBar.SideBarPanelItem quickBar;
-        private DevComponents.DotNetBar.SideBarPanelItem searchBar;
-        private DevComponents.DotNetBar.ButtonItem buttonItem14;
-        private DevComponents.DotNetBar.ButtonItem buttonItem15;
         private DevComponents.DotNetBar.ExpandablePanel rightPN;
         private DevComponents.DotNetBar.TabControl tabMain;
         private DevComponents.DotNetBar.Controls.Line line1;
