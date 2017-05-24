@@ -45,7 +45,6 @@
             this.lvDV = new System.Windows.Forms.ListView();
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.txtTDT = new System.Windows.Forms.TextBox();
             this.txtTTT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +61,6 @@
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
-
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,7 +193,7 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Ngày thu";
+            this.columnHeader3.Text = "Ngày lập";
             this.columnHeader3.Width = 108;
             // 
             // columnHeader4
@@ -308,8 +306,7 @@
             // 
             this.lvDV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
+            this.columnHeader8});
             this.lvDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvDV.Location = new System.Drawing.Point(15, 6);
             this.lvDV.Name = "lvDV";
@@ -321,17 +318,12 @@
             // columnHeader7
             // 
             this.columnHeader7.Text = "Tiền điện";
-            this.columnHeader7.Width = 100;
+            this.columnHeader7.Width = 171;
             // 
             // columnHeader8
             // 
             this.columnHeader8.Text = "Tiền nước";
-            this.columnHeader8.Width = 100;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Tiền dịch vụ khác";
-            this.columnHeader9.Width = 144;
+            this.columnHeader8.Width = 172;
             // 
             // txtTDT
             // 
@@ -475,7 +467,6 @@
         private System.Windows.Forms.ListView lvDV;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.TextBox txtTDT;
         private System.Windows.Forms.TextBox txtTTT;
         private System.Windows.Forms.Label label1;

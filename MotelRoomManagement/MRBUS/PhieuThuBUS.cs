@@ -31,5 +31,17 @@ namespace MRBUS
             double id_pt = table.Rows.Count + 1;            
             return id_pt;
         }
+        public int XNDongTien(string id)
+        {
+            try
+            {
+                return (new PhieuThuDAO().XNDongTien(id));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

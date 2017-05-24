@@ -40,5 +40,19 @@ namespace MRDAO
                 throw ex;
             }
         }
+        public int XNDongTien(string id)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@ID", id));
+            try
+            {
+                return (dp.IExecuteNonQuery("DongTien", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
