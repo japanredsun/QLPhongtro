@@ -315,6 +315,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DSPhong.xsc">
       <DependentUpon>DSPhong.xsd</DependentUpon>
     </None>
