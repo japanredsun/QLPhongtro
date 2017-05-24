@@ -81,6 +81,22 @@ namespace MRDAO
             
         }
 
+        public DataTable GetDataChung(string sql)
+        {
+            try
+            {
+                DataTable result = new DataTable();
+                dp.Connect();
+                result = dp.GetData(sql);
+                return result;
+            }
+            catch (SqlException ex)
+            {
+                
+                throw ex;
+            }
+        }
+
         public int Insert(string sql, KhachThue kt)
         {
 

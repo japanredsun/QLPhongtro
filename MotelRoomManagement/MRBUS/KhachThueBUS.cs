@@ -31,7 +31,21 @@ namespace MRBUS
         {
             try
             {
-                DataTable result = new KhachThueDAO().GetData(maphong);
+                DataTable result = new KhachThueDAO().GetDataChung(maphong);
+                return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public DataTable GetKhachTheoMaPhong(string sql)
+        {
+            try
+            {
+                DataTable result = new KhachThueDAO().GetDataChung(sql);
                 return result;
             }
             catch (SqlException ex)

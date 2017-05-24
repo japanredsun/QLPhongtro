@@ -51,6 +51,45 @@ namespace MRBUS
             }
         }
 
+        public int Update_TraPhong(string sql)
+        {
+            try
+            {
+                return new ThongTinThuePhongDAO().Update(sql, "Trống");
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public int Delete(string sql, string maphong)
+        {
+            try
+            {
+                return new ThongTinThuePhongDAO().Delete(sql, maphong);
+            }
+            catch (SqlException ex)
+            {
+                
+                throw ex;
+            }
+        }
+
+        public int Insert_Tra_phong(string sql, TraPhong tp)
+        {
+            try
+            {
+                return new ThongTinThuePhongDAO().Insert_Tra_phong(sql, tp);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public string newID()
         {
             var table = new PhongDAO().GetDataPhong("SELECT * From ThongTinKhach");
@@ -64,6 +103,22 @@ namespace MRBUS
             }
             return idkhach;
         }
+
+        public int newID_traphong()
+        {
+            ThongTinDKBUS ttdk = new ThongTinDKBUS();
+            var table = ttdk.GetThongTinDK("SELECT * FROM TraPhong");
+            table.PrimaryKey = new DataColumn[] { table.Columns["Id"] };
+            int id = table.Rows.Count + 1;
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                if (table.Rows.Find(i) == null)
+                    return i;
+            }
+            return id;
+        }
+
+        
     }
 
    
