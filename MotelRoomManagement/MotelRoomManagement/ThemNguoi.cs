@@ -17,7 +17,7 @@ namespace MotelRoomManagement
         string ho, ten, gioitinh, cmnd, quequan, nghenghiep, maphong, ghichu;
         DateTime ngaysinh;
         string makhach;
-        //double tiendatcoc;
+        int tiendatcoc;
 
         public ThemNguoi()
         {
@@ -160,15 +160,12 @@ namespace MotelRoomManagement
             nghenghiep = txtNgheNghiep.Text.Trim();
             maphong = lbMaPhong.Text.Trim();
             ghichu = "1";
-            //tiendatcoc = (int)txtTienDatCoc.Text.Trim();
+            tiendatcoc = Convert.ToInt32(txtTienDatCoc.Text);
 
             //Lay thong tin ThongTinThuePhong
-            PhongBUS tttp = new PhongBUS();
-            string sql = "SELECT * From ThongTinThuePhong";
-            int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
-            string idtttp = id_tttp.ToString();
+            string idtttp = new ThongTinThuePhongBUS().newID_tttp().ToString();
             string select_maphong = lbMaPhong.Text;
-            string ngaythue = dtpNgayThue.Text;
+            DateTime ngaythue = dtpNgayThue.Value;
 
             if (MessageBox.Show("Bạn có muốn lưu?", "Mã khách trọ: " + makhach, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -178,9 +175,9 @@ namespace MotelRoomManagement
                 int j = new KhachThueBUS().Insert(sqlAddKhachInfo, kt);
 
                 //Them vao bang ThongTinThuePhong             
-
-                string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
-                int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
+                ThongTinThue ttp = new ThongTinThue(idtttp,makhach,maphong,ngaythue,tiendatcoc);
+                string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue,TienDatCoc) VALUES(@id, @makhachtro,@maphong,@ngaythue,@tiendatcoc)";
+                int i = new ThongTinThuePhongBUS().Insert(sqlinsert, ttp);
 
                 //Cap nhat trang thai phong
                 ThongTinThuePhongBUS update = new ThongTinThuePhongBUS();

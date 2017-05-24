@@ -11,11 +11,11 @@ namespace MRBUS
 {
     public class ThongTinThuePhongBUS
     {
-        public int Insert(string sql, string tttp, string khachtro, string maphong, string ngaythue)
+        public int Insert(string sql, ThongTinThue ttp)
         {
             try
             {
-                return new ThongTinThuePhongDAO().Insert(sql, tttp, khachtro, maphong, ngaythue);
+                return new ThongTinThuePhongDAO().Insert(sql, ttp);
             }
             catch (SqlException ex)
             {
@@ -109,6 +109,20 @@ namespace MRBUS
             ThongTinDKBUS ttdk = new ThongTinDKBUS();
             var table = ttdk.GetThongTinDK("SELECT * FROM TraPhong");
             table.PrimaryKey = new DataColumn[] { table.Columns["Id"] };
+            int id = table.Rows.Count + 1;
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                if (table.Rows.Find(i) == null)
+                    return i;
+            }
+            return id;
+        }
+
+        public int newID_tttp()
+        {
+            PhongBUS tttp = new PhongBUS();
+            var table=tttp.GetThongTinThuePhong("SELECT * From ThongTinThuePhong");
+            table.PrimaryKey = new DataColumn[] { table.Columns["MaHD"] };
             int id = table.Rows.Count + 1;
             for (int i = 0; i < table.Rows.Count; i++)
             {

@@ -16,7 +16,7 @@ namespace MotelRoomManagement
     public partial class SapPhong : UserControl
     {
         int kiemtra;
-        //double tiendatcoc;
+        private int tiendatcoc;
         public SapPhong()
         {
             InitializeComponent();
@@ -187,28 +187,30 @@ namespace MotelRoomManagement
 
                         //Them vao bang ThongTinThuePhong
                         //Lay thong tin
-                        PhongBUS tttp = new PhongBUS();
-                        string sql = "SELECT * From ThongTinThuePhong";
-                        int id_tttp = tttp.GetThongTinThuePhong(sql).Rows.Count + 1;
-                        string idtttp = id_tttp.ToString();
+                        string idtttp = new ThongTinThuePhongBUS().newID_tttp().ToString();
                         string select_maphong = lbMaPhong.Text;
-                        string ngaythue = dtpNgayThue.Text;
+                        DateTime ngaythue = dtpNgayThue.Value;
+                        tiendatcoc = Convert.ToInt32(txtTienDatCoc.Text);
+                        
                         //INSERT vao bang
-                        string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue) VALUES(@id, @makhachtro,@maphong,@ngaythue)";
-                        int i = new ThongTinThuePhongBUS().Insert(sqlinsert, idtttp, makhach, maphong, ngaythue);
+                        ThongTinThue ttp = new ThongTinThue(idtttp, makhach, maphong, ngaythue, tiendatcoc);
+                        string sqlinsert = "INSERT INTO ThongTinThuePhong(MaHD, MaKhachTro, MaPhong, NgayThue,TienDatCoc) VALUES(@id, @makhachtro,@maphong,@ngaythue,@tiendatcoc)";
+                        int i = new ThongTinThuePhongBUS().Insert(sqlinsert, ttp);
 
                         //Cap nhat trang thai phong
                         ThongTinThuePhongBUS update = new ThongTinThuePhongBUS();
                         string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + select_maphong + "'";
                         update.Update(sqlupdate);
                         //Xoa Khach tu DS Dang Ky
-                        int id_kdk = Convert.ToInt32(listKDK.SelectedItems[0]);
+                        ListViewItem item = listKDK.SelectedItems[0];
+                        int id_kdk = Convert.ToInt32(item.Text);
                         string sqlxoa="DELETE From ThongTinDangKyPhong Where Id="+id_kdk;
-                        int z = new ThongTinDKBUS().XoaKDK(sql);
+                        int z = new ThongTinDKBUS().XoaKDK(sqlxoa);
 
                         //Refresh Form
                         lvPhong.Items.Clear();
                         LoadData_ListPhong();
+                        Load_ListKDK();
                         MessageBox.Show("Đã thêm thành công!");
                     }
                 }
@@ -263,14 +265,6 @@ namespace MotelRoomManagement
         {
 
         }
-
-       
-
-   
-
-
-      
-
-        
+ 
     }
 }
