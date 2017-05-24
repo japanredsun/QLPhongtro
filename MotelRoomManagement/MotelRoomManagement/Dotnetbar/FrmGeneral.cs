@@ -250,5 +250,11 @@ namespace MotelRoomManagement
             TinhTienThang uc = new TinhTienThang();
             addNewTab("Lập hóa đơn", uc, 5);
         }
+
+        private void buttonItem23_Click(object sender, EventArgs e)
+        {
+            DoanhThu uc = new DoanhThu();
+            addNewTab("Doanh thu", uc, 4);
+        }
     }
 }
