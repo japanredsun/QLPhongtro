@@ -28,71 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.label2 = new System.Windows.Forms.Label();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lvThang = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lvHD = new System.Windows.Forms.ListView();
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.lvTP = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.lvDV = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtTDT = new System.Windows.Forms.TextBox();
+            this.txtTTT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTTP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panelEx1.SuspendLayout();
+            this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.groupPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.groupPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelEx1
-            // 
-            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.label6);
-            this.panelEx1.Controls.Add(this.textBox3);
-            this.panelEx1.Controls.Add(this.label5);
-            this.panelEx1.Controls.Add(this.label4);
-            this.panelEx1.Controls.Add(this.label3);
-            this.panelEx1.Controls.Add(this.label1);
-            this.panelEx1.Controls.Add(this.textBox2);
-            this.panelEx1.Controls.Add(this.textBox1);
-            this.panelEx1.Controls.Add(this.groupPanel4);
-            this.panelEx1.Controls.Add(this.groupPanel3);
-            this.panelEx1.Controls.Add(this.groupPanel2);
-            this.panelEx1.Controls.Add(this.groupPanel1);
-            this.panelEx1.Controls.Add(this.label2);
-            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEx1.Location = new System.Drawing.Point(0, 0);
-            this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(858, 473);
-            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 0;
-           
-            // 
+
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(227, 0);
+            this.label2.Location = new System.Drawing.Point(240, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(405, 62);
             this.label2.TabIndex = 2;
@@ -102,11 +77,11 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.dataGridView1);
+            this.groupPanel1.Controls.Add(this.lvThang);
             this.groupPanel1.Location = new System.Drawing.Point(21, 65);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupPanel1.Size = new System.Drawing.Size(110, 291);
+            this.groupPanel1.Size = new System.Drawing.Size(99, 291);
             // 
             // 
             // 
@@ -138,22 +113,35 @@
             this.groupPanel1.TabIndex = 3;
             this.groupPanel1.Text = "Tháng";
             // 
-            // dataGridView1
+            // lvThang
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 13);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(78, 241);
-            this.dataGridView1.TabIndex = 0;
+            this.lvThang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvThang.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.lvThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvThang.FullRowSelect = true;
+            this.lvThang.Location = new System.Drawing.Point(5, 8);
+            this.lvThang.Name = "lvThang";
+            this.lvThang.Size = new System.Drawing.Size(76, 254);
+            this.lvThang.TabIndex = 0;
+            this.lvThang.UseCompatibleStateImageBehavior = false;
+            this.lvThang.View = System.Windows.Forms.View.Details;
+            this.lvThang.Click += new System.EventHandler(this.lvThang_Click);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tháng";
+            this.columnHeader1.Width = 78;
             // 
             // groupPanel2
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.dataGridView2);
-            this.groupPanel2.Location = new System.Drawing.Point(150, 65);
+            this.groupPanel2.Controls.Add(this.lvHD);
+            this.groupPanel2.Location = new System.Drawing.Point(138, 65);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(305, 290);
+            this.groupPanel2.Size = new System.Drawing.Size(305, 291);
             // 
             // 
             // 
@@ -185,22 +173,44 @@
             this.groupPanel2.TabIndex = 4;
             this.groupPanel2.Text = "Danh sách hóa đơn";
             // 
-            // dataGridView2
+            // lvHD
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(21, 17);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(257, 229);
-            this.dataGridView2.TabIndex = 0;
+            this.lvHD.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.lvHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvHD.FullRowSelect = true;
+            this.lvHD.Location = new System.Drawing.Point(9, 11);
+            this.lvHD.Name = "lvHD";
+            this.lvHD.Size = new System.Drawing.Size(278, 250);
+            this.lvHD.TabIndex = 0;
+            this.lvHD.UseCompatibleStateImageBehavior = false;
+            this.lvHD.View = System.Windows.Forms.View.Details;
+            this.lvHD.Click += new System.EventHandler(this.lvHD_Click);
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mã HD";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Ngày thu";
+            this.columnHeader3.Width = 108;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Mã phòng";
+            this.columnHeader4.Width = 104;
             // 
             // groupPanel3
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel3.Controls.Add(this.dataGridView3);
-            this.groupPanel3.Location = new System.Drawing.Point(469, 65);
+            this.groupPanel3.Controls.Add(this.lvTP);
+            this.groupPanel3.Location = new System.Drawing.Point(458, 65);
             this.groupPanel3.Name = "groupPanel3";
-            this.groupPanel3.Size = new System.Drawing.Size(386, 110);
+            this.groupPanel3.Size = new System.Drawing.Size(386, 111);
             // 
             // 
             // 
@@ -232,20 +242,35 @@
             this.groupPanel3.TabIndex = 5;
             this.groupPanel3.Text = "Tiền phòng";
             // 
-            // dataGridView3
+            // lvTP
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(22, 19);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(342, 53);
-            this.dataGridView3.TabIndex = 0;
+            this.lvTP.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.lvTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvTP.Location = new System.Drawing.Point(15, 11);
+            this.lvTP.Name = "lvTP";
+            this.lvTP.Size = new System.Drawing.Size(351, 71);
+            this.lvTP.TabIndex = 0;
+            this.lvTP.UseCompatibleStateImageBehavior = false;
+            this.lvTP.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Mã phòng";
+            this.columnHeader5.Width = 171;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Giá tiền";
+            this.columnHeader6.Width = 174;
             // 
             // groupPanel4
             // 
             this.groupPanel4.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel4.Controls.Add(this.dataGridView4);
-            this.groupPanel4.Location = new System.Drawing.Point(469, 181);
+            this.groupPanel4.Controls.Add(this.lvDV);
+            this.groupPanel4.Location = new System.Drawing.Point(458, 182);
             this.groupPanel4.Name = "groupPanel4";
             this.groupPanel4.Size = new System.Drawing.Size(386, 174);
             // 
@@ -279,29 +304,50 @@
             this.groupPanel4.TabIndex = 6;
             this.groupPanel4.Text = "Tiền dịch vụ";
             // 
-            // dataGridView4
+            // lvDV
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(22, 8);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(342, 122);
-            this.dataGridView4.TabIndex = 0;
+            this.lvDV.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9});
+            this.lvDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvDV.Location = new System.Drawing.Point(15, 6);
+            this.lvDV.Name = "lvDV";
+            this.lvDV.Size = new System.Drawing.Size(350, 137);
+            this.lvDV.TabIndex = 0;
+            this.lvDV.UseCompatibleStateImageBehavior = false;
+            this.lvDV.View = System.Windows.Forms.View.Details;
             // 
-            // textBox1
+            // columnHeader7
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(22, 428);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 26);
-            this.textBox1.TabIndex = 7;
+            this.columnHeader7.Text = "Tiền điện";
+            this.columnHeader7.Width = 100;
             // 
-            // textBox2
+            // columnHeader8
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(260, 428);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 26);
-            this.textBox2.TabIndex = 8;
+            this.columnHeader8.Text = "Tiền nước";
+            this.columnHeader8.Width = 100;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "Tiền dịch vụ khác";
+            this.columnHeader9.Width = 144;
+            // 
+            // txtTDT
+            // 
+            this.txtTDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTDT.Location = new System.Drawing.Point(22, 428);
+            this.txtTDT.Name = "txtTDT";
+            this.txtTDT.Size = new System.Drawing.Size(180, 26);
+            this.txtTDT.TabIndex = 7;
+            // 
+            // txtTTT
+            // 
+            this.txtTTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTTT.Location = new System.Drawing.Point(260, 428);
+            this.txtTTT.Name = "txtTTT";
+            this.txtTTT.Size = new System.Drawing.Size(213, 26);
+            this.txtTTT.TabIndex = 8;
             // 
             // label1
             // 
@@ -331,9 +377,8 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(479, 392);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 24);
+            this.label4.Size = new System.Drawing.Size(0, 24);
             this.label4.TabIndex = 11;
-            this.label4.Text = "label4";
             // 
             // label5
             // 
@@ -346,13 +391,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Tổng tiền phòng";
             // 
-            // textBox3
+            // txtTTP
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(588, 428);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 26);
-            this.textBox3.TabIndex = 13;
+            this.txtTTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTTP.Location = new System.Drawing.Point(588, 428);
+            this.txtTTP.Name = "txtTTP";
+            this.txtTTP.Size = new System.Drawing.Size(213, 26);
+            this.txtTTP.TabIndex = 13;
             // 
             // label6
             // 
@@ -360,9 +405,38 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(755, 392);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 24);
+            this.label6.Size = new System.Drawing.Size(0, 24);
             this.label6.TabIndex = 14;
-            this.label6.Text = "label6";
+            // 
+            // panelEx1
+            // 
+            this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.label6);
+            this.panelEx1.Controls.Add(this.txtTTP);
+            this.panelEx1.Controls.Add(this.label5);
+            this.panelEx1.Controls.Add(this.label4);
+            this.panelEx1.Controls.Add(this.label3);
+            this.panelEx1.Controls.Add(this.label1);
+            this.panelEx1.Controls.Add(this.txtTTT);
+            this.panelEx1.Controls.Add(this.txtTDT);
+            this.panelEx1.Controls.Add(this.groupPanel4);
+            this.panelEx1.Controls.Add(this.groupPanel3);
+            this.panelEx1.Controls.Add(this.groupPanel2);
+            this.panelEx1.Controls.Add(this.groupPanel1);
+            this.panelEx1.Controls.Add(this.label2);
+            this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEx1.Location = new System.Drawing.Point(0, 0);
+            this.panelEx1.Name = "panelEx1";
+            this.panelEx1.Size = new System.Drawing.Size(864, 473);
+            this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
+            this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.panelEx1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
+            this.panelEx1.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.panelEx1.Style.GradientAngle = 90;
+            this.panelEx1.TabIndex = 0;
             // 
             // DoanhThu
             // 
@@ -370,41 +444,47 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelEx1);
             this.Name = "DoanhThu";
-            this.Size = new System.Drawing.Size(858, 473);
+            this.Size = new System.Drawing.Size(864, 473);
             this.Load += new System.EventHandler(this.DoanhThu_Load);
+            this.groupPanel1.ResumeLayout(false);
+            this.groupPanel2.ResumeLayout(false);
+            this.groupPanel3.ResumeLayout(false);
+            this.groupPanel4.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
             this.panelEx1.PerformLayout();
-            this.groupPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.groupPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.PanelEx panelEx1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        private System.Windows.Forms.ListView lvThang;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
+        private System.Windows.Forms.ListView lvHD;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
+        private System.Windows.Forms.ListView lvTP;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel4;
+        private System.Windows.Forms.ListView lvDV;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.TextBox txtTDT;
+        private System.Windows.Forms.TextBox txtTTT;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTTP;
+        private System.Windows.Forms.Label label6;
+        private DevComponents.DotNetBar.PanelEx panelEx1;
+
     }
 }

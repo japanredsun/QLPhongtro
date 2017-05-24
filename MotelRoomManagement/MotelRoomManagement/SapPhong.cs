@@ -259,6 +259,11 @@ namespace MotelRoomManagement
            
         }
 
+        private void panelEx1_Click(object sender, EventArgs e)
+        {
+
+        }
+
        
 
    
