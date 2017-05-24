@@ -86,7 +86,7 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 0;
-            this.panelEx1.Click += new System.EventHandler(this.panelEx1_Click);
+           
             // 
             // label2
             // 

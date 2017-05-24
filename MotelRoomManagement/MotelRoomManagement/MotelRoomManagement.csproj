@@ -59,6 +59,12 @@
     <Compile Include="AccountInformation.Designer.cs">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoanhThu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DoanhThu.Designer.cs">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSPhong.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -218,6 +224,9 @@
     <EmbeddedResource Include="AccountInformation.resx">
       <DependentUpon>AccountInformation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoanhThu.resx">
+      <DependentUpon>DoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DSPhongReport.rdlc" />
     <EmbeddedResource Include="DSThuTien.resx">
       <DependentUpon>DSThuTien.cs</DependentUpon>
@@ -306,6 +315,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DSPhong.xsc">
       <DependentUpon>DSPhong.xsd</DependentUpon>
     </None>
