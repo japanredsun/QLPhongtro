@@ -9,7 +9,8 @@ namespace MRDTO
     {
         public double MaPhieu { get; set; }
         public string MaPhong { get; set; }
-        public DateTime NgayLap { get; set; }      
+        public DateTime NgayLap { get; set; }
+        public DateTime NgayThu { get; set; }  
         public int TienNha { get; set; }
         public int SoKiDien { get; set; }
         public int TienDien { get; set; }

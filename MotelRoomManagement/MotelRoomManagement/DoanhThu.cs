@@ -25,7 +25,7 @@ namespace MotelRoomManagement
         private void DoanhThu_Load(object sender, EventArgs e)
         {
             LoadThang();
-            string sql = "SELECT SUM(TongTien) AS tongtienn FROM PhieuThu";
+            string sql = "SELECT SUM(TongTien) AS tongtienn FROM PhieuThu WHERE TrangThai = N'Đã thu'";
             DataTable table = new Room().GetDataPhong(sql);
             txtTDT.Text = table.Rows[0][0].ToString().TrimEnd();
         }
@@ -33,7 +33,7 @@ namespace MotelRoomManagement
         private void LoadThang()
         {
             List<string> list= new List<string>();
-            string sql = "SELECT Cast(MONTH(NgayThu) as nvarchar) + '/' + Cast(YEAR(NgayThu) as nvarchar) AS thang from PhieuThu ORDER BY NgayThu asc";
+            string sql = "SELECT Cast(MONTH(NgayLap) as nvarchar) + '/' + Cast(YEAR(NgayLap) as nvarchar) AS thang from PhieuThu ORDER BY NgayLap asc";
             DataTable table = new Room().GetDataPhong(sql);
             for (int i = 0; i < table.Rows.Count; i++)
             {
@@ -51,7 +51,7 @@ namespace MotelRoomManagement
             ListViewItem item = lvThang.SelectedItems[0];
             string thang = item.Text;
             label4.Text = thang;
-            string sql = "SELECT MaPT, NgayThu, MaPhong FROM PhieuThu WHERE Cast(MONTH(NgayThu) as nvarchar) + '/' + Cast(YEAR(NgayThu) as nvarchar) = '" + thang + "'";
+            string sql = "SELECT MaPT, NgayLap, MaPhong FROM PhieuThu WHERE Cast(MONTH(NgayLap) as nvarchar) + '/' + Cast(YEAR(NgayLap) as nvarchar) = '" + thang + "' AND TrangThai = N'Đã thu'";
             DataTable table = new Room().GetDataPhong(sql);
             for (int i = 0; i < table.Rows.Count; i++)
             {
@@ -62,7 +62,7 @@ namespace MotelRoomManagement
             }
 
 
-            string sql1 = "SELECT SUM(TongTien) AS tongtienn FROM PhieuThu WHERE Cast(MONTH(NgayThu) as nvarchar) + '/' + Cast(YEAR(NgayThu) as nvarchar) = '" + thang + "'";
+            string sql1 = "SELECT SUM(TongTien) AS tongtienn FROM PhieuThu WHERE Cast(MONTH(NgayLap) as nvarchar) + '/' + Cast(YEAR(NgayLap) as nvarchar) = '" + thang + "' AND TrangThai = N'Đã thu'";
             DataTable table1 = new Room().GetDataPhong(sql1);
             txtTTT.Text = table1.Rows[0][0].ToString().TrimEnd();
         }
@@ -73,7 +73,7 @@ namespace MotelRoomManagement
             lvTP.Items.Clear();
             ListViewItem item = lvHD.SelectedItems[0];
             string thang = item.Text;
-            string sql = "SELECT c.MaPhong, DonGia FROM PhieuThu c, Phong p, LoaiPhong l WHERE c.MaPT = '" + thang + "' AND p.MaLoaiPhong = l.MaLoaiPhong AND c.MaPhong = p.MaPhong";
+            string sql = "SELECT MaPhong, TienNha FROM PhieuThu WHERE MaPT = '" + thang + "'";
             DataTable table = new Room().GetDataPhong(sql);
             for (int i = 0; i < table.Rows.Count; i++)
             {
@@ -84,17 +84,16 @@ namespace MotelRoomManagement
             }
 
             lvDV.Items.Clear();
-            string sql1 = "SELECT TienDien, TienNuoc, TienDichVuKhac FROM PhieuThu WHERE MaPT = '" + thang + "'";
+            string sql1 = "SELECT TienDien, TienNuoc FROM PhieuThu WHERE MaPT = '" + thang + "'";
             DataTable table1 = new Room().GetDataPhong(sql1);
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 ListViewItem items1 = new ListViewItem(table1.Rows[i][0].ToString().TrimEnd());
                 items1.SubItems.Add(table1.Rows[i][1].ToString().TrimEnd());
-                items1.SubItems.Add(table1.Rows[i][2].ToString().TrimEnd());
                 lvDV.Items.Add(items1);
             }
 
-            string sql12 = "SELECT TongTien FROM PhieuThu WHERE MaPT = '" + thang + "'";
+            string sql12 = "SELECT TongTien FROM PhieuThu WHERE MaPT = '" + thang + "' AND TrangThai = N'Đã thu'";
             DataTable table12 = new Room().GetDataPhong(sql12);
             txtTTP.Text = table12.Rows[0][0].ToString().TrimEnd();
         }
