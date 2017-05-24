@@ -45,6 +45,7 @@
     <Compile Include="KhachDangKy.cs" />
     <Compile Include="KhachThue.cs" />
     <Compile Include="LoaiPhong.cs" />
+    <Compile Include="PhieuThu.cs" />
     <Compile Include="Phong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ThongTinThue.cs" />

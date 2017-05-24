@@ -62,6 +62,7 @@
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
+
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
