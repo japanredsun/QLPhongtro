@@ -118,12 +118,6 @@
     <Compile Include="frmDSPhongReport.Designer.cs">
       <DependentUpon>frmDSPhongReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHireRoom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHireRoom.Designer.cs">
-      <DependentUpon>frmHireRoom.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,9 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSPhongReport.resx">
       <DependentUpon>frmDSPhongReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmHireRoom.resx">
-      <DependentUpon>frmHireRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInformation.resx">
       <DependentUpon>frmInformation.cs</DependentUpon>

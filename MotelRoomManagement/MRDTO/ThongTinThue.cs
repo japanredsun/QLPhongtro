@@ -11,16 +11,16 @@ namespace MRDTO
         public string MaKhachTro { get; set; }
         public string MaPhong { get; set; }
         public DateTime NgayThue { get; set; }
-        public string ghichu { get; set; }
+        public int TienDatCoc { get; set; }
+       
 
-        public ThongTinThue(string mahd,string makhachtro, string maphong, DateTime ngaythue, string ghichu)
+        public ThongTinThue(string mahd,string makhachtro, string maphong, DateTime ngaythue,int tiendatcoc)
         {
             this.MaHD=mahd;
             this.MaKhachTro=makhachtro;
             this.MaPhong=maphong;
             this.NgayThue=ngaythue;
-            this.ghichu=ghichu;
-
+            this.TienDatCoc = tiendatcoc;
         }
 
 

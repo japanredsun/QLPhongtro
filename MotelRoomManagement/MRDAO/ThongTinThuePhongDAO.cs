@@ -35,13 +35,14 @@ namespace MRDAO
             }
         }
 
-        public int Insert(string sql, string tttp, string khachtro, string maphong, string ngaythue)
+        public int Insert(string sql, ThongTinThue ttp)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
-            paras.Add(new SqlParameter("@id", tttp));
-            paras.Add(new SqlParameter("@makhachtro", khachtro));
-            paras.Add(new SqlParameter("@maphong", maphong));
-            paras.Add(new SqlParameter("@ngaythue", ngaythue));
+            paras.Add(new SqlParameter("@id", ttp.MaHD));
+            paras.Add(new SqlParameter("@makhachtro", ttp.MaKhachTro));
+            paras.Add(new SqlParameter("@maphong", ttp.MaPhong));
+            paras.Add(new SqlParameter("@ngaythue", ttp.NgayThue));
+            paras.Add(new SqlParameter("@tiendatcoc", ttp.TienDatCoc));
             try
             {
                 return(dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));
