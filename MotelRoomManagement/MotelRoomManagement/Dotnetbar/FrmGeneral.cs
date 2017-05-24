@@ -244,5 +244,23 @@ namespace MotelRoomManagement
             frmDSPhongReport frm = new frmDSPhongReport();
             frm.Show();
         }
+
+        private void buttonItem35_Click(object sender, EventArgs e)
+        {
+            TinhTienThang uc = new TinhTienThang();
+            addNewTab("Tính tiền phòng", uc, 2);
+        }
+
+        private void buttonItem23_Click(object sender, EventArgs e)
+        {
+            DoanhThu uc = new DoanhThu();
+            addNewTab("Doanh thu", uc, 6);
+        }
+
+        private void btnTraPhong_Click(object sender, EventArgs e)
+        {
+            TraPhong uc = new TraPhong();
+            addNewTab("Trả phòng", uc, 4);
+        }
     }
 }

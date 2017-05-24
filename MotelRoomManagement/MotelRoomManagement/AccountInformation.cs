@@ -26,7 +26,7 @@ namespace MotelRoomManagement
         private void AccountInformation_Load(object sender, EventArgs e)
         {
             label3.Text = USER;
-            for (int i = 0; i <= PASS.Length; i++)
+            for (int i = 0; i < PASS.Length; i++)
                 label5.Text += "*";
             label7.Text = "Đã kích hoạt";
         }

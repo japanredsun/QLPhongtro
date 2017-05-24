@@ -202,6 +202,9 @@ namespace MotelRoomManagement
                         string sqlupdate = "UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + select_maphong + "'";
                         update.Update(sqlupdate);
                         //Xoa Khach tu DS Dang Ky
+                        int id_kdk = Convert.ToInt32(listKDK.SelectedItems[0]);
+                        string sqlxoa="DELETE From ThongTinDangKyPhong Where Id="+id_kdk;
+                        int z = new ThongTinDKBUS().XoaKDK(sql);
 
                         //Refresh Form
                         lvPhong.Items.Clear();
@@ -254,6 +257,11 @@ namespace MotelRoomManagement
             lbPCK1.Text = tenphong.Rows[0][0].ToString();
 
            
+        }
+
+        private void panelEx1_Click(object sender, EventArgs e)
+        {
+
         }
 
        
