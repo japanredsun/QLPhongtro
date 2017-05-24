@@ -32,13 +32,17 @@ namespace MotelRoomManagement
 
         private void LoadThang()
         {
-            string sql = "SELECT DISTINCT Cast(MONTH(NgayThu) as nvarchar) + '/' + Cast(YEAR(NgayThu) as nvarchar) AS thang from PhieuThu";
+            List<string> list= new List<string>();
+            string sql = "SELECT Cast(MONTH(NgayThu) as nvarchar) + '/' + Cast(YEAR(NgayThu) as nvarchar) AS thang from PhieuThu ORDER BY NgayThu asc";
             DataTable table = new Room().GetDataPhong(sql);
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                ListViewItem item = new ListViewItem(table.Rows[i][0].ToString().TrimEnd());
-                lvThang.Items.Add(item);
+                string item = table.Rows[i][0].ToString().TrimEnd();
+                if (!list.Contains(item.ToString()))
+                    list.Add(item.ToString());
             }
+            foreach (string i in list)
+                lvThang.Items.Add(i);
         }
 
         private void lvThang_Click(object sender, EventArgs e)
