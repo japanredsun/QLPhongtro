@@ -13,6 +13,7 @@ namespace MotelRoomManagement
 {
     public partial class TraPhong : UserControl
     {
+        private int tiendatcoc;
         public TraPhong()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace MotelRoomManagement
         private void TraPhong_Load(object sender, EventArgs e)
         {
             Load_KV();
-            lbNgayHienTai.Text = DateTime.Today.ToString();
+            
         }
 
         public void Load_KV()
@@ -39,6 +40,10 @@ namespace MotelRoomManagement
         }
 
         private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load_listPhong();
+        }
+        private void Load_listPhong()
         {
             lvPhong.Items.Clear();
             string makv = cbKV.SelectedValue.ToString();
@@ -70,82 +75,95 @@ namespace MotelRoomManagement
                 item.SubItems.Add(sql.Rows[i][1].ToString() + " " + sql.Rows[i][2].ToString());
                 item.SubItems.Add(sql.Rows[i][3].ToString());
                 lvKhach.Items.Add(item);
-
-
-                //id = sql.Rows[i][0].ToString();
-                //load_khach_dau(id);
-                //load_thong_tin_thue(id);
             }
 
 
             id = sql.Rows[0][0].ToString();
             load_khach_dau(id);
-            load_thong_tin_thue(id);
+           
         }
+
+
 
         private void load_khach_dau(string id)
         {
             KhachThueBUS kt = new KhachThueBUS();
             var sqlkt = kt.GetKhachTheoMaPhong("SELECT * FROM ThongTinKhach WHERE MaKhachTro='" + id + "'");
             lbHoTen.Text = sqlkt.Rows[0][1] + " " + sqlkt.Rows[0][2];
-            lbNgaySinh.Text = sqlkt.Rows[0][5].ToString();
+            dtNgaySinh.Text = sqlkt.Rows[0][5].ToString();
             lbGioiTinh.Text = sqlkt.Rows[0][3].ToString();
             lbCMND.Text = sqlkt.Rows[0][6].ToString();
             lbQueQuan.Text = sqlkt.Rows[0][7].ToString();
             lbNgheNghiep.Text = sqlkt.Rows[0][8].ToString();
-        }
+            lbMaKhach.Text = sqlkt.Rows[0][0].ToString();
 
-        private void load_thong_tin_thue(string id)
-        {
             ThongTinThuePhongBUS ttt = new ThongTinThuePhongBUS();
             var sqlttt = ttt.GetKhach("SELECT * FROM ThongTinThuePhong WHERE MaKhachTro='" + id + "'");
             lbPhong.Text = sqlttt.Rows[0][2].ToString();
-            lbNgaythue.Text = sqlttt.Rows[0][3].ToString();
-            lbTienDatCoc.Text = sqlttt.Rows[0][4].ToString();
-
+            dtNgayThue.Text = sqlttt.Rows[0][3].ToString();            
+            tiendatcoc = Convert.ToInt32(sqlttt.Rows[0][4].ToString());
+            lbTienDatCoc.Text = string.Format("{0:#,##0}", tiendatcoc);
         }
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-            ListViewItem item = lvPhong.SelectedItems[0];
-            string maphong = item.Text;
+
+            string maphong = lbPhong.Text;
             ThongTinThuePhongBUS ttt = new ThongTinThuePhongBUS();
 
             //Id
-            ThongTinDKBUS ttdk = new ThongTinDKBUS();
-            var table = ttdk.GetThongTinDK("SELECT * FROM TraPhong");
-            table.PrimaryKey = new DataColumn[] { table.Columns["Id"] };
-            int id, k;
-            for (k = 1; k < table.Rows.Count; k++)
-            {
-                if (table.Rows.Find(k) == null)
-                {
-                    break;
-                }
-            }
-            id = k;
+            int id = new ThongTinThuePhongBUS().newID_traphong();
 
-            string ngaythue, ngaytra;
+            DateTime ngaythue, ngaytra;
+            string makhach = lbMaKhach.Text;
+            ngaythue = dtNgayThue.Value;
+            ngaytra = dtNgayTraPhong.Value;
+            string str_tdc = string.Format("{0:#,##0}",tiendatcoc);
 
-            ListViewItem ab = lvKhach.SelectedItems[0];
-            string makhach = item.Text;
-
-            //NgayThue
-            //var sql = ttt.GetKhach("SELECT NgayThue FROM ThongTinThuePhong WHERE MaKhachTro='" + lvKhach.SelectedItems[0] + "'");
-            //for(int i =0;i<sql.Rows.Count;i++)
-            //{
-                 
-            //}
-            ngaythue = lbNgaythue.Text;
-            ngaytra = lbNgayHienTai.Text;
             //Them vao bang TraPhong
             ThongTinThuePhongBUS tttTraphong = new ThongTinThuePhongBUS();
-            var sqlTraphong = tttTraphong.Insert_Tra_phong("INSERT INTO TraPhong(Id,MaPhong,MaKhachTro,NgayThue,NgayTraPhong) VALUES(@id,@maphong,@makhach,@ngaythue,@ngaytra)", id, maphong, makhach, ngaythue, ngaytra);
-            //Xoa ben ThongTinThue
-            var sqlttt = ttt.Delete("DELETE FROM ThongTinThuePhong WHERE MaPhong=@maphong", maphong);
-            //Sua trang thai
-            var update = ttt.Update_TraPhong("UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + maphong + "'");
-            MessageBox.Show("Đã trả phòng");
+            MRDTO.TraPhong tp = new MRDTO.TraPhong(id,makhach,maphong,ngaythue,ngaytra);
+
+            if (MessageBox.Show("Ngày thuê: "+ dtNgayThue.Text.ToString() + "\nTiền đặt cọc: "+str_tdc+" vnd", "Xác nhận trả phòng: " + maphong, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string sqlinsert = "INSERT INTO TraPhong(Id,MaPhong,MaKhachTro,NgayThue,NgayTraPhong) VALUES(@id,@maphong,@makhach,@ngaythue,@ngaytra)";
+                int insert = tttTraphong.Insert_Tra_phong(sqlinsert, tp);
+
+                //Xoa ben ThongTinThue
+                var sqlttt = ttt.Delete("DELETE FROM ThongTinThuePhong WHERE MaPhong=@maphong", maphong);
+
+                //Xoa khach thuoc phong vua tra
+                var xoakhachthue = ttt.Delete("DELETE FROM ThongTinKhach WHERE MaPhong=@maphong", maphong);
+
+                //Sua trang thai
+                var update = ttt.Update_TraPhong("UPDATE Phong SET TrangThai=@trangthai WHERE MaPhong='" + maphong + "'");
+                MessageBox.Show("Đã trả phòng");
+
+                //Refresh
+                Load_listPhong();
+                ClearAll();
+                lvKhach.Items.Clear();
+            }
+        }
+
+        //ClearAll
+        private void ClearAll()
+        {
+            dtNgaySinh.Value = DateTime.Today;
+            lbHoTen.Text = "";
+            lbCMND.Text = "";
+            lbGioiTinh.Text = "";
+            lbNgheNghiep.Text = "";
+            lbPhong.Text = "";
+            lbQueQuan.Text = "";
+            lbTienDatCoc.Text="";
+        }
+
+        private void lvKhach_Click(object sender, EventArgs e)
+        {
+            ListViewItem a = lvKhach.SelectedItems[0];
+            string makhach = a.Text;
+            load_khach_dau(makhach);
         }
     }
 }

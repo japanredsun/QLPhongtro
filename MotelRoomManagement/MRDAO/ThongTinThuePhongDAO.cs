@@ -16,14 +16,14 @@ namespace MRDAO
             dp = new DataProvider();
         }
 
-        public int Insert_Tra_phong(string sql, int id, string maphong, string makhach, string ngaythue, string ngaytra)
+        public int Insert_Tra_phong(string sql, TraPhong tp)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
-            paras.Add(new SqlParameter("@id", id));
-            paras.Add(new SqlParameter("@makhach", makhach));
-            paras.Add(new SqlParameter("@maphong", maphong));
-            paras.Add(new SqlParameter("@ngaythue", ngaythue));
-            paras.Add(new SqlParameter("@ngaytra", ngaytra));
+            paras.Add(new SqlParameter("@id", tp.id));
+            paras.Add(new SqlParameter("@makhach", tp.MaKhach));
+            paras.Add(new SqlParameter("@maphong", tp.MaPhong));
+            paras.Add(new SqlParameter("@ngaythue", tp.NgayThue));
+            paras.Add(new SqlParameter("@ngaytra", tp.NgayTra));
             try
             {
                 return (dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));
