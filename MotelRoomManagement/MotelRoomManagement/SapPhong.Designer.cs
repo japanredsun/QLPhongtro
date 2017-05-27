@@ -180,7 +180,7 @@
             this.labelX1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX1.Location = new System.Drawing.Point(8, 23);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(115, 22);
+            this.labelX1.Size = new System.Drawing.Size(124, 24);
             this.labelX1.TabIndex = 2;
             this.labelX1.Text = "Chọn khu vực: ";
             // 
@@ -398,7 +398,7 @@
             this.lvPhong.LargeImageList = this.phongimglist;
             this.lvPhong.Location = new System.Drawing.Point(0, 58);
             this.lvPhong.Name = "lvPhong";
-            this.lvPhong.Size = new System.Drawing.Size(371, 130);
+            this.lvPhong.Size = new System.Drawing.Size(371, 128);
             this.lvPhong.TabIndex = 61;
             this.lvPhong.UseCompatibleStateImageBehavior = false;
             this.lvPhong.Click += new System.EventHandler(this.lvPhong_Click);
@@ -478,9 +478,8 @@
             this.lbPCK1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPCK1.Location = new System.Drawing.Point(160, 8);
             this.lbPCK1.Name = "lbPCK1";
-            this.lbPCK1.Size = new System.Drawing.Size(43, 16);
+            this.lbPCK1.Size = new System.Drawing.Size(0, 16);
             this.lbPCK1.TabIndex = 58;
-            this.lbPCK1.Text = "name";
             // 
             // grTTKDK
             // 
@@ -726,7 +725,7 @@
             this.listKDK.LargeImageList = this.TwImgList;
             this.listKDK.Location = new System.Drawing.Point(0, 0);
             this.listKDK.Name = "listKDK";
-            this.listKDK.Size = new System.Drawing.Size(374, 175);
+            this.listKDK.Size = new System.Drawing.Size(374, 173);
             this.listKDK.SmallImageList = this.TwImgList;
             this.listKDK.TabIndex = 0;
             this.listKDK.UseCompatibleStateImageBehavior = false;

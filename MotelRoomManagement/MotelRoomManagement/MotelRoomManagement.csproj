@@ -179,6 +179,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLPT.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QuanLiPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiPhong.Designer.cs">
+      <DependentUpon>QuanLiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="SapPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -285,6 +291,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLiPhong.resx">
+      <DependentUpon>QuanLiPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SapPhong.resx">
       <DependentUpon>SapPhong.cs</DependentUpon>
     </EmbeddedResource>
