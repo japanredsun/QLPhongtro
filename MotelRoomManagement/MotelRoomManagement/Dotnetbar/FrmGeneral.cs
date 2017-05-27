@@ -262,5 +262,11 @@ namespace MotelRoomManagement
             TraPhong uc = new TraPhong();
             addNewTab("Trả phòng", uc, 4);
         }
+
+        private void buttonItem16_Click(object sender, EventArgs e)
+        {
+            QuanLiPhong uc = new QuanLiPhong();
+            addNewTab("Quản lí phòng", uc, 1);
+        }
     }
 }
