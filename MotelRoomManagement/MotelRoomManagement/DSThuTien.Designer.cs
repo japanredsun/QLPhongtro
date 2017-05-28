@@ -33,6 +33,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.grCTHD = new System.Windows.Forms.GroupBox();
+            this.lbTT = new System.Windows.Forms.Label();
             this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.lbTongTien = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -58,7 +59,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cbKhuVuc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbTT = new System.Windows.Forms.Label();
             this.grDSTT.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -167,6 +167,16 @@
             this.grCTHD.TabStop = false;
             this.grCTHD.Text = "Chi tiết hóa đơn số:";
             // 
+            // lbTT
+            // 
+            this.lbTT.AutoSize = true;
+            this.lbTT.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTT.ForeColor = System.Drawing.Color.Black;
+            this.lbTT.Location = new System.Drawing.Point(120, 389);
+            this.lbTT.Name = "lbTT";
+            this.lbTT.Size = new System.Drawing.Size(0, 23);
+            this.lbTT.TabIndex = 4;
+            // 
             // line1
             // 
             this.line1.Location = new System.Drawing.Point(6, 366);
@@ -208,9 +218,8 @@
             this.lbTienNuoc.ForeColor = System.Drawing.Color.Black;
             this.lbTienNuoc.Location = new System.Drawing.Point(243, 39);
             this.lbTienNuoc.Name = "lbTienNuoc";
-            this.lbTienNuoc.Size = new System.Drawing.Size(49, 16);
+            this.lbTienNuoc.Size = new System.Drawing.Size(0, 16);
             this.lbTienNuoc.TabIndex = 1;
-            this.lbTienNuoc.Text = "label12";
             // 
             // lbNuocSK
             // 
@@ -219,9 +228,8 @@
             this.lbNuocSK.ForeColor = System.Drawing.Color.Black;
             this.lbNuocSK.Location = new System.Drawing.Point(66, 39);
             this.lbNuocSK.Name = "lbNuocSK";
-            this.lbNuocSK.Size = new System.Drawing.Size(49, 16);
+            this.lbNuocSK.Size = new System.Drawing.Size(0, 16);
             this.lbNuocSK.TabIndex = 1;
-            this.lbNuocSK.Text = "label12";
             // 
             // label8
             // 
@@ -230,9 +238,9 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(21, 39);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 16);
+            this.label8.Size = new System.Drawing.Size(59, 16);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Số kí:";
+            this.label8.Text = "Số khối:";
             // 
             // label9
             // 
@@ -267,9 +275,8 @@
             this.lbTienDien.ForeColor = System.Drawing.Color.Black;
             this.lbTienDien.Location = new System.Drawing.Point(242, 39);
             this.lbTienDien.Name = "lbTienDien";
-            this.lbTienDien.Size = new System.Drawing.Size(49, 16);
+            this.lbTienDien.Size = new System.Drawing.Size(0, 16);
             this.lbTienDien.TabIndex = 1;
-            this.lbTienDien.Text = "label12";
             // 
             // lbDienSK
             // 
@@ -278,9 +285,8 @@
             this.lbDienSK.ForeColor = System.Drawing.Color.Black;
             this.lbDienSK.Location = new System.Drawing.Point(65, 39);
             this.lbDienSK.Name = "lbDienSK";
-            this.lbDienSK.Size = new System.Drawing.Size(49, 16);
+            this.lbDienSK.Size = new System.Drawing.Size(0, 16);
             this.lbDienSK.TabIndex = 1;
-            this.lbDienSK.Text = "label12";
             // 
             // label6
             // 
@@ -326,9 +332,8 @@
             this.lbTienPhong.ForeColor = System.Drawing.Color.Black;
             this.lbTienPhong.Location = new System.Drawing.Point(99, 53);
             this.lbTienPhong.Name = "lbTienPhong";
-            this.lbTienPhong.Size = new System.Drawing.Size(49, 16);
+            this.lbTienPhong.Size = new System.Drawing.Size(0, 16);
             this.lbTienPhong.TabIndex = 1;
-            this.lbTienPhong.Text = "label12";
             // 
             // lbLoaiphong
             // 
@@ -337,9 +342,8 @@
             this.lbLoaiphong.ForeColor = System.Drawing.Color.Black;
             this.lbLoaiphong.Location = new System.Drawing.Point(99, 23);
             this.lbLoaiphong.Name = "lbLoaiphong";
-            this.lbLoaiphong.Size = new System.Drawing.Size(49, 16);
+            this.lbLoaiphong.Size = new System.Drawing.Size(0, 16);
             this.lbLoaiphong.TabIndex = 1;
-            this.lbLoaiphong.Text = "label12";
             // 
             // label1
             // 
@@ -447,16 +451,6 @@
             this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Khu vực:";
-            // 
-            // lbTT
-            // 
-            this.lbTT.AutoSize = true;
-            this.lbTT.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTT.ForeColor = System.Drawing.Color.Black;
-            this.lbTT.Location = new System.Drawing.Point(120, 389);
-            this.lbTT.Name = "lbTT";
-            this.lbTT.Size = new System.Drawing.Size(0, 23);
-            this.lbTT.TabIndex = 4;
             // 
             // DSThuTien
             // 

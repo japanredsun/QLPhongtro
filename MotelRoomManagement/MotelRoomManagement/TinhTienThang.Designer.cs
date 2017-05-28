@@ -31,10 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TinhTienThang));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.gpLHD = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dtLapHoaDon = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnTinh = new DevComponents.DotNetBar.ButtonX();
+            this.line1 = new DevComponents.DotNetBar.Controls.Line();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.pSoNguoi = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -71,6 +73,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnLuuHoaDon = new DevComponents.DotNetBar.ButtonX();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
@@ -86,11 +89,8 @@
             this.cbKV = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.lbKhuVuc = new DevComponents.DotNetBar.LabelItem();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.line1 = new DevComponents.DotNetBar.Controls.Line();
-            this.btnLuuHoaDon = new DevComponents.DotNetBar.ButtonX();
-            this.btnTinh = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
-            this.groupPanel1.SuspendLayout();
+            this.gpLHD.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.pSoNguoi.SuspendLayout();
@@ -108,7 +108,7 @@
             this.panelEx1.AutoScroll = true;
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx1.Controls.Add(this.groupPanel1);
+            this.panelEx1.Controls.Add(this.gpLHD);
             this.panelEx1.Controls.Add(this.panelEx2);
             this.panelEx1.Controls.Add(this.bar1);
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -124,50 +124,50 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 0;
             // 
-            // groupPanel1
+            // gpLHD
             // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.dtLapHoaDon);
-            this.groupPanel1.Controls.Add(this.label2);
-            this.groupPanel1.Controls.Add(this.groupBox4);
-            this.groupPanel1.Controls.Add(this.groupBox3);
-            this.groupPanel1.Controls.Add(this.groupBox2);
-            this.groupPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupPanel1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupPanel1.Location = new System.Drawing.Point(0, 130);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(1045, 443);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            this.gpLHD.CanvasColor = System.Drawing.SystemColors.Control;
+            this.gpLHD.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.gpLHD.Controls.Add(this.dtLapHoaDon);
+            this.gpLHD.Controls.Add(this.label2);
+            this.gpLHD.Controls.Add(this.groupBox4);
+            this.gpLHD.Controls.Add(this.groupBox3);
+            this.gpLHD.Controls.Add(this.groupBox2);
+            this.gpLHD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gpLHD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpLHD.Location = new System.Drawing.Point(0, 130);
+            this.gpLHD.Name = "gpLHD";
+            this.gpLHD.Size = new System.Drawing.Size(1045, 443);
             // 
             // 
             // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.gpLHD.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.gpLHD.Style.BackColorGradientAngle = 90;
+            this.gpLHD.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.gpLHD.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.gpLHD.Style.BorderBottomWidth = 1;
+            this.gpLHD.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.gpLHD.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.gpLHD.Style.BorderLeftWidth = 1;
+            this.gpLHD.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.gpLHD.Style.BorderRightWidth = 1;
+            this.gpLHD.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.gpLHD.Style.BorderTopWidth = 1;
+            this.gpLHD.Style.CornerDiameter = 4;
+            this.gpLHD.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.gpLHD.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.gpLHD.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.gpLHD.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
             // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 2;
-            this.groupPanel1.Text = "Lập hóa đơn";
+            this.gpLHD.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.gpLHD.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.gpLHD.TabIndex = 2;
+            this.gpLHD.Text = "Lập hóa đơn";
             // 
             // dtLapHoaDon
             // 
@@ -212,6 +212,27 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "DỊCH VỤ SỬ DỤNG";
+            // 
+            // btnTinh
+            // 
+            this.btnTinh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTinh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTinh.Location = new System.Drawing.Point(22, 329);
+            this.btnTinh.Name = "btnTinh";
+            this.btnTinh.Size = new System.Drawing.Size(101, 30);
+            this.btnTinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTinh.Symbol = "";
+            this.btnTinh.TabIndex = 8;
+            this.btnTinh.Text = "Tính";
+            this.btnTinh.Click += new System.EventHandler(this.btnTinh_Click);
+            // 
+            // line1
+            // 
+            this.line1.Location = new System.Drawing.Point(22, 286);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(399, 23);
+            this.line1.TabIndex = 7;
+            this.line1.Text = "line1";
             // 
             // groupBox6
             // 
@@ -629,6 +650,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN PHÒNG THUÊ";
             // 
+            // btnLuuHoaDon
+            // 
+            this.btnLuuHoaDon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLuuHoaDon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLuuHoaDon.Location = new System.Drawing.Point(16, 286);
+            this.btnLuuHoaDon.Name = "btnLuuHoaDon";
+            this.btnLuuHoaDon.Size = new System.Drawing.Size(165, 73);
+            this.btnLuuHoaDon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLuuHoaDon.Symbol = "";
+            this.btnLuuHoaDon.TabIndex = 4;
+            this.btnLuuHoaDon.Text = "Lưu Hóa Đơn";
+            this.btnLuuHoaDon.Click += new System.EventHandler(this.btnLuuHoaDon_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -803,40 +837,6 @@
             // 
             this.itemContainer1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // line1
-            // 
-            this.line1.Location = new System.Drawing.Point(22, 286);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(399, 23);
-            this.line1.TabIndex = 7;
-            this.line1.Text = "line1";
-            // 
-            // btnLuuHoaDon
-            // 
-            this.btnLuuHoaDon.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnLuuHoaDon.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLuuHoaDon.Location = new System.Drawing.Point(16, 286);
-            this.btnLuuHoaDon.Name = "btnLuuHoaDon";
-            this.btnLuuHoaDon.Size = new System.Drawing.Size(165, 73);
-            this.btnLuuHoaDon.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnLuuHoaDon.Symbol = "";
-            this.btnLuuHoaDon.TabIndex = 4;
-            this.btnLuuHoaDon.Text = "Lưu Hóa Đơn";
-            this.btnLuuHoaDon.Click += new System.EventHandler(this.btnLuuHoaDon_Click);
-            // 
-            // btnTinh
-            // 
-            this.btnTinh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTinh.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTinh.Location = new System.Drawing.Point(22, 329);
-            this.btnTinh.Name = "btnTinh";
-            this.btnTinh.Size = new System.Drawing.Size(101, 30);
-            this.btnTinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnTinh.Symbol = "";
-            this.btnTinh.TabIndex = 8;
-            this.btnTinh.Text = "Tính";
-            this.btnTinh.Click += new System.EventHandler(this.btnTinh_Click);
-            // 
             // TinhTienThang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -846,8 +846,8 @@
             this.Size = new System.Drawing.Size(1045, 653);
             this.Load += new System.EventHandler(this.TinhTienThang_Load);
             this.panelEx1.ResumeLayout(false);
-            this.groupPanel1.ResumeLayout(false);
-            this.groupPanel1.PerformLayout();
+            this.gpLHD.ResumeLayout(false);
+            this.gpLHD.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -878,7 +878,7 @@
         private DevComponents.DotNetBar.LabelItem labelItem1;
         private System.Windows.Forms.ListView lvPhong;
         private DevComponents.DotNetBar.ItemContainer itemContainer1;
-        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        private DevComponents.DotNetBar.Controls.GroupPanel gpLHD;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Panel pSoNguoi;

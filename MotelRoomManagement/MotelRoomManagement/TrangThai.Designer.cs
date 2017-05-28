@@ -269,9 +269,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(12, 117);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 19);
+            this.label5.Size = new System.Drawing.Size(81, 19);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Giá:";
+            this.label5.Text = "Giá (vnd):";
             // 
             // label1
             // 
@@ -511,13 +511,13 @@
             this.ctReturn.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_return});
             this.ctReturn.Name = "ctReturn";
-            this.ctReturn.Size = new System.Drawing.Size(157, 52);
+            this.ctReturn.Size = new System.Drawing.Size(134, 30);
             // 
             // btn_return
             // 
             this.btn_return.Image = global::MotelRoomManagement.Properties.Resources.return_home;
             this.btn_return.Name = "btn_return";
-            this.btn_return.Size = new System.Drawing.Size(156, 26);
+            this.btn_return.Size = new System.Drawing.Size(133, 26);
             this.btn_return.Text = "Trả phòng";
             this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 

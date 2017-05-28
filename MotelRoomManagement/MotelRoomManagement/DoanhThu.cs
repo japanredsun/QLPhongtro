@@ -27,7 +27,7 @@ namespace MotelRoomManagement
             LoadThang();
             string sql = "SELECT SUM(TongTien) AS tongtienn FROM PhieuThu WHERE TrangThai = N'Đã thu'";
             DataTable table = new Room().GetDataPhong(sql);
-            txtTDT.Text = table.Rows[0][0].ToString().TrimEnd();
+            txtTDT.Text = string.Format("{0:#,##0}",Int32.Parse(table.Rows[0][0].ToString().TrimEnd()));
         }
 
         private void LoadThang()
@@ -64,7 +64,7 @@ namespace MotelRoomManagement
 
             string sql1 = "SELECT SUM(TongTien) AS tongtienn FROM PhieuThu WHERE Cast(MONTH(NgayLap) as nvarchar) + '/' + Cast(YEAR(NgayLap) as nvarchar) = '" + thang + "' AND TrangThai = N'Đã thu'";
             DataTable table1 = new Room().GetDataPhong(sql1);
-            txtTTT.Text = table1.Rows[0][0].ToString().TrimEnd();
+            txtTTT.Text = string.Format("{0:#,##0}",Int32.Parse(table1.Rows[0][0].ToString().TrimEnd()));
         }
 
         private void lvHD_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace MotelRoomManagement
             {
                 ListViewItem items = new ListViewItem(table.Rows[i][0].ToString().TrimEnd());
                 label6.Text = table.Rows[i][0].ToString().TrimEnd();
-                items.SubItems.Add(table.Rows[i][1].ToString().TrimEnd());
+                items.SubItems.Add(string.Format("{0:#,##0}", Int32.Parse(table.Rows[i][1].ToString().TrimEnd())));
                 lvTP.Items.Add(items);
             }
 
@@ -88,14 +88,14 @@ namespace MotelRoomManagement
             DataTable table1 = new Room().GetDataPhong(sql1);
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                ListViewItem items1 = new ListViewItem(table1.Rows[i][0].ToString().TrimEnd());
-                items1.SubItems.Add(table1.Rows[i][1].ToString().TrimEnd());
+                ListViewItem items1 = new ListViewItem(string.Format("{0:#,##0}",Int32.Parse(table1.Rows[i][0].ToString().TrimEnd())));
+                items1.SubItems.Add(string.Format("{0:#,##0}",Int32.Parse(table1.Rows[i][1].ToString().TrimEnd())));
                 lvDV.Items.Add(items1);
             }
 
             string sql12 = "SELECT TongTien FROM PhieuThu WHERE MaPT = '" + thang + "' AND TrangThai = N'Đã thu'";
             DataTable table12 = new Room().GetDataPhong(sql12);
-            txtTTP.Text = table12.Rows[0][0].ToString().TrimEnd();
+            txtTTP.Text = string.Format("{0:#,##0}",Int32.Parse(table12.Rows[0][0].ToString().TrimEnd()));
         }
     }
 }

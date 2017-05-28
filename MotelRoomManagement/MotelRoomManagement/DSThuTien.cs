@@ -15,6 +15,8 @@ namespace MotelRoomManagement
 {
     public partial class DSThuTien : UserControl
     {
+        string maphong;
+        int idhoadon;
         public DSThuTien()
         {
             InitializeComponent();
@@ -49,7 +51,7 @@ namespace MotelRoomManagement
             {
                 ListViewItem item = new ListViewItem(loaiphong.Rows[i][0].ToString().TrimEnd());
                 item.SubItems.Add(loaiphong.Rows[i][1].ToString().TrimEnd());
-                item.SubItems.Add(loaiphong.Rows[i][2].ToString().TrimEnd());
+                item.SubItems.Add(string.Format("{0:#,##0}",Int32.Parse(loaiphong.Rows[i][2].ToString().TrimEnd())));
 
                 listHoaDon.Items.Add(item);
             }
@@ -58,31 +60,36 @@ namespace MotelRoomManagement
         {
             ListViewItem item = listHoaDon.SelectedItems[0];
             string thang = item.Text;
+            maphong = thang;
             string sql = "SELECT * FROM PhieuThu WHERE MaPT = '" + thang + "'";
             DataTable table = new Room().GetDataPhong(sql);
             for (int i = 0; i < table.Rows.Count; i++)
             {
                 grCTHD.Text = "Chi tiết hóa đơn số: " + table.Rows[i][0].ToString().TrimEnd();
                 lbLoaiphong.Text = table.Rows[i][1].ToString().TrimEnd();
-                lbTienPhong.Text = table.Rows[i][4].ToString().TrimEnd();
+                lbTienPhong.Text = string.Format("{0:#,##0}",Int32.Parse(table.Rows[i][4].ToString().TrimEnd()));
                 lbDienSK.Text = table.Rows[i][5].ToString().TrimEnd();
-                lbTienDien.Text = table.Rows[i][6].ToString().TrimEnd();
+                lbTienDien.Text = string.Format("{0:#,##0}",Int32.Parse(table.Rows[i][6].ToString().TrimEnd()));
                 lbNuocSK.Text = table.Rows[i][7].ToString().TrimEnd();
-                lbTienNuoc.Text = table.Rows[i][8].ToString().TrimEnd();
-                lbTT.Text = table.Rows[i][9].ToString().TrimEnd();
+                lbTienNuoc.Text = string.Format("{0:#,##0}",Int32.Parse(table.Rows[i][8].ToString().TrimEnd()));
+                lbTT.Text = string.Format("{0:#,##0}",Int32.Parse(table.Rows[i][9].ToString().TrimEnd())) + " vnd";
             }
+            idhoadon = Convert.ToInt32(table.Rows[0][0].ToString());
         }
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            ListViewItem item = listHoaDon.SelectedItems[0];
             string ngaythu = DateTime.Today.ToShortDateString();
-            string thang = item.Text;
-            string sql_xn = "UPDATE PhieuThu SET NgayThu='"+ngaythu+"',TrangThai=N'Đã thu' WHERE MaPT=@id";
-            int i = new PhieuThuBUS().XNDongTien(sql_xn,thang);
-            MessageBox.Show("Đã đóng thành công!");
-            listHoaDon.Items.Clear();
-            LoadList();
+            if (MessageBox.Show("Thời gian thu: " + ngaythu.ToString() + "\nMã Phòng: " + maphong, "Xác nhận thanh toán hóa đơn: "+idhoadon, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ListViewItem item = listHoaDon.SelectedItems[0];                
+                string thang = item.Text;
+                string sql_xn = "UPDATE PhieuThu SET NgayThu='" + ngaythu + "',TrangThai=N'Đã thu' WHERE MaPT=@id";
+                int i = new PhieuThuBUS().XNDongTien(sql_xn, thang);
+                MessageBox.Show("Đã đóng thành công!");
+                listHoaDon.Items.Clear();
+                LoadList();
+            }
         }
     }
 }
