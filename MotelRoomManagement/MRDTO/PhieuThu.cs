@@ -10,7 +10,6 @@ namespace MRDTO
         public double MaPhieu { get; set; }
         public string MaPhong { get; set; }
         public DateTime NgayLap { get; set; }
-        public DateTime NgayThu { get; set; }  
         public int TienNha { get; set; }
         public int SoKiDien { get; set; }
         public int TienDien { get; set; }
@@ -19,12 +18,11 @@ namespace MRDTO
         public int TongTien { get; set; }
         public string TrangThai { get; set; }
 
-        public PhieuThu(double maphieu, string maphong, DateTime ngaylap,DateTime ngaythu, int tiennha, int skdien, int tiendien, int sknuoc, int tiennuoc, int tongtien, string trangthai)
+        public PhieuThu(double maphieu, string maphong, DateTime ngaylap, int tiennha, int skdien, int tiendien, int sknuoc, int tiennuoc, int tongtien, string trangthai)
         {
             this.MaPhieu = maphieu;
             this.MaPhong = maphong;
             this.NgayLap = ngaylap;
-            this.NgayThu = ngaythu;
             this.TienNha = tiennha;
             this.SoKiDien = skdien;
             this.TienDien = tiendien;

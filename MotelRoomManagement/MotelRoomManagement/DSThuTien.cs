@@ -76,9 +76,9 @@ namespace MotelRoomManagement
         private void buttonX1_Click(object sender, EventArgs e)
         {
             ListViewItem item = listHoaDon.SelectedItems[0];
-            DateTime ngaythu = DateTime.Today.Date;
+            string ngaythu = DateTime.Today.ToShortDateString();
             string thang = item.Text;
-            string sql_xn = "UPDATE PhieuThu SET NgayThu=@ngaythu,TrangThai=N'Đã thu' WHERE MaPT=@id";
+            string sql_xn = "UPDATE PhieuThu SET NgayThu='"+ngaythu+"',TrangThai=N'Đã thu' WHERE MaPT=@id";
             int i = new PhieuThuBUS().XNDongTien(sql_xn,thang);
             MessageBox.Show("Đã đóng thành công!");
             listHoaDon.Items.Clear();

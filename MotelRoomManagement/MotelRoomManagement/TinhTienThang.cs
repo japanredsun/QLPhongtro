@@ -214,8 +214,7 @@ namespace MotelRoomManagement
             //Lay du lieu bang phieu thu
             double idPT = new PhieuThuBUS().newID();
             string maphong = txtMaPhong.Text;
-            DateTime ngaylap = dtLapHoaDon.Value;
-            DateTime ngaythu = dtLapHoaDon.Value;
+            DateTime ngaylap = dtLapHoaDon.Value;           
             string TrangThai = "Chưa thu";
             int sokidien = Convert.ToInt32(txtSoKi.Text);
             int PT_tiennuoc, sokhoinuoc;
@@ -234,12 +233,13 @@ namespace MotelRoomManagement
             if (MessageBox.Show("Thời gian lập hóa đơn: \n" + ngaylap.ToString() + "\nMã Phòng: "+maphong, "Xác nhận lập hóa đơn: " + idPT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             { 
                 //Insert vao bang phieu thu
-                PhieuThu pt = new PhieuThu(idPT, maphong, ngaylap,ngaythu, tiennha, sokidien, tiendien, sokhoinuoc, PT_tiennuoc, tongtien, TrangThai);
-                string sql = "INSERT INTO PhieuThu(MaPT,MaPhong,NgayLap,NgayThu,TienNha,SkDien,TienDien,SkNuoc,TienNuoc,TongTien,TrangThai) VALUES(@mapt,@maphong,@ngaylap,@ngaythu,@tiennha,@skdien,@tiendien,@sknuoc,@tiennuoc,@tongtien,@trangthai)";
+                PhieuThu pt = new PhieuThu(idPT, maphong, ngaylap, tiennha, sokidien, tiendien, sokhoinuoc, PT_tiennuoc, tongtien, TrangThai);
+                string sql = "INSERT INTO PhieuThu(MaPT,MaPhong,NgayLap,TienNha,SkDien,TienDien,SkNuoc,TienNuoc,TongTien,TrangThai) VALUES(@mapt,@maphong,@ngaylap,@tiennha,@skdien,@tiendien,@sknuoc,@tiennuoc,@tongtien,@trangthai)";
                 int i = new PhieuThuBUS().Insert(sql, pt);
                 if (i == 1)
                     MessageBox.Show("Lập hóa đơn thành công");
-                MessageBox.Show("Không thành công");
+                else
+                    MessageBox.Show("Không thành công");
                 
             }
             //Refresh
