@@ -22,7 +22,8 @@ namespace MRDAO
             List<SqlParameter> paras = new List<SqlParameter>();
             paras.Add(new SqlParameter("@mapt", pt.MaPhieu));
             paras.Add(new SqlParameter("@maphong", pt.MaPhong));
-            paras.Add(new SqlParameter("@ngaylap", pt.NgayLap));            
+            paras.Add(new SqlParameter("@ngaylap", pt.NgayLap));
+            paras.Add(new SqlParameter("@ngaythu", pt.NgayThu));  
             paras.Add(new SqlParameter("@tiennha", pt.TienNha));
             paras.Add(new SqlParameter("@skdien", pt.SoKiDien));
             paras.Add(new SqlParameter("@tiendien", pt.TienDien));
@@ -40,13 +41,14 @@ namespace MRDAO
                 throw ex;
             }
         }
-        public int XNDongTien(string id)
+        public int XNDongTien(string sql,string id,PhieuThu pt)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
             paras.Add(new SqlParameter("@ID", id));
+            paras.Add(new SqlParameter("@ngaythu", pt.NgayThu));
             try
             {
-                return (dp.IExecuteNonQuery("DongTien", System.Data.CommandType.StoredProcedure, paras));
+                return (dp.IExecuteNonQuery(sql, CommandType.Text, paras));
             }
             catch (SqlException ex)
             {

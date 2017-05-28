@@ -206,7 +206,7 @@ namespace MotelRoomManagement
         }
         private void buttonItem21_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Updating...");
         }
 
         private void buttonX2_Click(object sender, EventArgs e)
@@ -267,6 +267,36 @@ namespace MotelRoomManagement
         {
             QuanLiPhong uc = new QuanLiPhong();
             addNewTab("Quản lí phòng", uc, 1);
+        }
+
+        private void buttonItem18_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Updating...");
+        }
+
+        private void buttonItem19_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Updating...");
+        }
+
+        private void buttonItem22_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Updating...");
+        }
+
+        private void buttonItem26_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Updating...");
+        }
+
+        private void buttonItem27_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Updating...");
+        }
+
+        private void buttonItem31_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Updating...");
         }
     }
 }

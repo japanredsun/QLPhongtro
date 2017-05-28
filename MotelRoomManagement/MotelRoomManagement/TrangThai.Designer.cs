@@ -511,14 +511,15 @@
             this.ctReturn.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_return});
             this.ctReturn.Name = "ctReturn";
-            this.ctReturn.Size = new System.Drawing.Size(134, 30);
+            this.ctReturn.Size = new System.Drawing.Size(157, 52);
             // 
             // btn_return
             // 
             this.btn_return.Image = global::MotelRoomManagement.Properties.Resources.return_home;
             this.btn_return.Name = "btn_return";
-            this.btn_return.Size = new System.Drawing.Size(133, 26);
+            this.btn_return.Size = new System.Drawing.Size(156, 26);
             this.btn_return.Text = "Trả phòng";
+            this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
             // 
             // comboItem1
             // 

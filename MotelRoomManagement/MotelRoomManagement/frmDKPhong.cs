@@ -40,7 +40,7 @@ namespace MotelRoomManagement
             lstLoaiPhong.Items.Clear();
             string makv = cbKhuVuc.SelectedValue.ToString();
 
-            string sql = "SELECT lp.MaLoaiPhong, lp.TenLoaiPhong, lp.DienTichPhong, lp.DonGia, p.TrangThai FROM LoaiPhong lp, Phong p WHERE p.MaKhuVuc = N'" + makv + "' AND p.TrangThai = N'Trống' AND p.MaLoaiPhong = lp.MaLoaiPhong";
+            string sql = "SELECT DISTINCT lp.MaLoaiPhong, lp.TenLoaiPhong, lp.DienTichPhong, lp.DonGia, p.TrangThai FROM LoaiPhong lp, Phong p WHERE p.MaKhuVuc = N'" + makv + "' AND p.TrangThai = N'Trống' AND p.MaLoaiPhong = lp.MaLoaiPhong";
             Room ListLoai = new Room();
             var loaiphong = ListLoai.GetDataPhong(sql);
             for (int i = 0; i < loaiphong.Rows.Count; i++)
