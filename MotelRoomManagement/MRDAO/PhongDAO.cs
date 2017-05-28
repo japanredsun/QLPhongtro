@@ -118,6 +118,26 @@ namespace MRDAO
                 throw ex;
             }
         }
+
+        public int themloaiphong(string sql, string maloaiphong, string tenloaiphong, double dientich, double gia)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@maloaiphong", maloaiphong));
+            paras.Add(new SqlParameter("@tenloaiphong", tenloaiphong));
+            paras.Add(new SqlParameter("@dientich", dientich));
+            paras.Add(new SqlParameter("gia", gia));
+            try
+            {
+                return (dp.IExecuteNonQuery(sql, CommandType.Text, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
+
         public DataTable GetCBPhong(string makv)
         {
             DataTable result = new DataTable();
@@ -157,5 +177,7 @@ namespace MRDAO
                 dp.Disconnect();
             }
         }
+
+       
     }
 }

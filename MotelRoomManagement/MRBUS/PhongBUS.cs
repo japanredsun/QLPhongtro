@@ -85,6 +85,20 @@ namespace MRBUS
                 throw ex;
             }
         }
+
+        public int themloaiphong(string sql, string maloaiphong, string tenloaiphong, double dientich, double gia)
+        {
+            try
+            {
+                return (new PhongDAO().themloaiphong(sql, maloaiphong, tenloaiphong, dientich, gia));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public DataTable GetPhongTrong(string sql)
         {
             try

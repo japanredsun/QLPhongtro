@@ -37,11 +37,11 @@ namespace MotelRoomManagement
         }
 
         //Load Phòng chưa lập hóa đơn
-        private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
+        private void load_phong()
         {
             lvPhong.Items.Clear();
-            string makv = cbKV.SelectedValue.ToString();            
-            var phong = data.GetDataPhong("SELECT * From Phong WHERE MaPhong not in (Select MaPhong From PhieuThu) AND TrangThai=N'Đã thuê' AND MaKhuVuc='"+makv+"'");
+            string makv = cbKV.SelectedValue.ToString();
+            var phong = data.GetDataPhong("SELECT * From Phong WHERE MaPhong not in (Select MaPhong From PhieuThu) AND TrangThai=N'Đã thuê' AND MaKhuVuc='" + makv + "'");
 
             for (int i = 0; i < phong.Rows.Count; i++)
             {
@@ -49,7 +49,11 @@ namespace MotelRoomManagement
                 item.ImageIndex = 0;
                 lvPhong.Items.Add(item);
             }
+        }
 
+        private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            load_phong();
         }
 
         private void lvPhong_Click(object sender, EventArgs e)
@@ -211,22 +215,35 @@ namespace MotelRoomManagement
             double idPT = new PhieuThuBUS().newID();
             string maphong = txtMaPhong.Text;
             DateTime ngaylap = dtLapHoaDon.Value;
+            DateTime ngaythu = dtLapHoaDon.Value;
             string TrangThai = "Chưa thu";
             int sokidien = Convert.ToInt32(txtSoKi.Text);
-            int sokhoinuoc = Convert.ToInt32(txtSoKhoi.Text);
-            int PT_tiennuoc;
+            int PT_tiennuoc, sokhoinuoc;
             if (rdNuoc.Checked)
+            {
+                sokhoinuoc = Convert.ToInt32(txtSoKhoi.Text);
                 PT_tiennuoc = tiennuoc2;
-            PT_tiennuoc = tiennuoc;
+            }
+            else
+            {
+                sokhoinuoc = 0;
+                PT_tiennuoc = tiennuoc;
+            }
 
             //Xac Nhan
             if (MessageBox.Show("Thời gian lập hóa đơn: \n" + ngaylap.ToString() + "\nMã Phòng: "+maphong, "Xác nhận lập hóa đơn: " + idPT, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             { 
                 //Insert vao bang phieu thu
-                PhieuThu pt = new PhieuThu(idPT, maphong, ngaylap, tiennha, sokidien, tiendien, sokhoinuoc, PT_tiennuoc, tongtien, TrangThai);
-                string sql = "INSERT INTO PhieuThu(MaPT,MaPhong,NgayLap,TienNha,SkDien,TienDien,SkNuoc,TienNuoc,TongTien,TrangThai) VALUES(@mapt,@maphong,@ngaylap,@tiennha,@skdien,@tiendien,@sknuoc,@tiennuoc,@tongtien,@trangthai)";
+                PhieuThu pt = new PhieuThu(idPT, maphong, ngaylap,ngaythu, tiennha, sokidien, tiendien, sokhoinuoc, PT_tiennuoc, tongtien, TrangThai);
+                string sql = "INSERT INTO PhieuThu(MaPT,MaPhong,NgayLap,NgayThu,TienNha,SkDien,TienDien,SkNuoc,TienNuoc,TongTien,TrangThai) VALUES(@mapt,@maphong,@ngaylap,@ngaythu,@tiennha,@skdien,@tiendien,@sknuoc,@tiennuoc,@tongtien,@trangthai)";
                 int i = new PhieuThuBUS().Insert(sql, pt);
+                if (i == 1)
+                    MessageBox.Show("Lập hóa đơn thành công");
+                MessageBox.Show("Không thành công");
+                
             }
+            //Refresh
+            load_phong();          
         }
 
     }
