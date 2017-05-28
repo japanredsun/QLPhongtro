@@ -41,7 +41,9 @@ namespace MotelRoomManagement
         {
             lvPhong.Items.Clear();
             string makv = cbKV.SelectedValue.ToString();
-            var phong = data.GetDataPhong("SELECT * From Phong WHERE MaPhong not in (Select MaPhong From PhieuThu) AND TrangThai=N'Đã thuê' AND MaKhuVuc='" + makv + "'");
+            int thismonth = DateTime.Today.Month;
+            int thisyear = DateTime.Today.Year;
+            var phong = data.GetDataPhong("SELECT * From Phong WHERE MaPhong not in (Select MaPhong From PhieuThu Where MONTH(NgayLap)="+thismonth+" AND YEAR(NgayLap)="+thisyear+") AND TrangThai=N'Đã thuê' AND MaKhuVuc='" + makv + "'");
 
             for (int i = 0; i < phong.Rows.Count; i++)
             {
@@ -49,6 +51,8 @@ namespace MotelRoomManagement
                 item.ImageIndex = 0;
                 lvPhong.Items.Add(item);
             }
+
+            gpLHD.Text = "Lập hóa đơn tháng " + thismonth;
         }
 
         private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
@@ -118,13 +122,15 @@ namespace MotelRoomManagement
             pSoNguoi.Visible = true;
             if (rdSoNguoi.Checked)
             {
+                int songuoi=0;
                 //Load tien dich vu
                 Room data = new Room();
                 var dichvu = data.GetDataPhong("SELECT Gia From DichVu Where TenDichVu=N'Nước_2'");
                 txtSoNguoi.Text = txtSoluong.Text;
                 string str_songuoi = txtSoNguoi.Text;
                 int gia = Convert.ToInt32(dichvu.Rows[0][0].ToString());
-                int songuoi = Convert.ToInt32(str_songuoi);
+                if(txtSoNguoi.Text!="")
+                    songuoi = Convert.ToInt32(str_songuoi);
                 //Tinh
                 tiennuoc = songuoi * gia;
                 //Xuat
@@ -152,12 +158,14 @@ namespace MotelRoomManagement
 
         private void txtSoKi_TextChanged(object sender, EventArgs e)
         {
+            int soki = 0;
             //Load tien dich vu
             Room data = new Room();
             var dichvu = data.GetDataPhong("SELECT Gia From DichVu Where TenDichVu=N'Điện'");
             string str_soki = txtSoKi.Text;
             int gia = Convert.ToInt32(dichvu.Rows[0][0].ToString());
-            int soki = Convert.ToInt32(str_soki);
+            if (txtSoKi.Text != "") 
+                soki = Convert.ToInt32(str_soki);
             //Tinh
             tiendien = soki * gia;
             //Xuat
@@ -167,29 +175,21 @@ namespace MotelRoomManagement
 
         private void txtSoNguoi_TextChanged(object sender, EventArgs e)
         {
-            ////Load tien dich vu
-            //Room data = new Room();
-            //var dichvu = data.GetDataPhong("SELECT Gia From DichVu Where TenDichVu=N'Nước_2'");
-            //txtSoNguoi.Text = txtSoluong.Text;
-            //string str_songuoi = txtSoNguoi.Text;
-            //int gia = Convert.ToInt32(dichvu.Rows[0][0].ToString());
-            //int songuoi = Convert.ToInt32(str_songuoi);
-            ////Tinh
-            //tiennuoc = songuoi * gia;
-            ////Xuat
-            //txtTienNuoc2.Text = string.Format("{0:#,##0}", Int32.Parse(tiennuoc.ToString()));
+         
         }
 
         private void txtSoKhoi_TextChanged(object sender, EventArgs e)
         {
+            int sokhoi = 0;
             //Load tien dich vu
             Room data = new Room();
             var dichvu = data.GetDataPhong("SELECT Gia From DichVu Where TenDichVu=N'Nước'");
 
             string str_sokhoi = txtSoKhoi.Text;
             int gia = Convert.ToInt32(dichvu.Rows[0][0].ToString());
-            int sokhoi = Convert.ToInt32(str_sokhoi);
-            //Tinh
+            if(txtSoKhoi.Text!="")
+                sokhoi = Convert.ToInt32(str_sokhoi);
+            //Tinh            
             tiennuoc2 = sokhoi * gia;
             //Xuat
             txtTienNuoc.Text = string.Format("{0:#,##0}", Int32.Parse(tiennuoc2.ToString()));
@@ -243,8 +243,28 @@ namespace MotelRoomManagement
                 
             }
             //Refresh
-            load_phong();          
+            load_phong();
+            ClearAll();
         }
 
+        private void ClearAll()
+        {
+            txtMaPhong.Text = "";
+            txtTenPhong.Text = "";
+            dtNgayThue.Value = DateTime.Today;
+            txtSoluong.Text = "";
+            cbMaKhachThue.Text = "";
+            txtCMND.Text = "";
+            txtNN.Text = "";
+            txtNS.Text = "";
+            txtLoaiPhong.Text = "";
+            txtTienNha.Text = "";
+            txtSoKi.Text = "";
+            txtTienDien2.Text = "";
+            txtSoKhoi.Text = "";
+            txtTienNuoc.Text = ""; txtTienNuoc2.Text = ""; txtSoNguoi.Text = ""; txtTongCong.Text = "";
+            rdNuoc.Checked = true;
+           
+        }
     }
 }
