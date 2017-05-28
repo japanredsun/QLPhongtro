@@ -10,6 +10,8 @@ Thành viên:
 
 Đề tài: Quản lí nhà trọ
 
+Link Clip giới thiệu phần mềm: https://youtu.be/auxIRwXolJQ
+
 Tính năng:
 
      giúp quản lí thông tin người thuê nhà trọ (Thêm thông tin ng đăng kí nhà trọ, sửa , xóa khi có người chuyển đi,...)
@@ -24,4 +26,4 @@ Link tải dotnetbar v11: https://drive.google.com/file/d/0B9lRtMMLI7UwcUczRW9Qd
 
 Hướng dẫn cài đặt dotnetbar: https://www.youtube.com/watch?v=shvCBy9G4PU
 
-Link Clip: đang cập nhật....
+
