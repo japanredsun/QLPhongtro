@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 
-
+using MRBUS;
 
 namespace MotelRoomManagement
 {
@@ -29,6 +29,17 @@ namespace MotelRoomManagement
         {
             labelX2.Text = "Xin chào " + USER;
             TabTrangThai();
+            load_dichvu();
+        }
+
+        //Load Side Bar
+        private void load_dichvu()
+        {
+            string sql = "SELECT * From DichVu ";
+            var dichvu = new Room().GetDataPhong(sql);
+
+            txtGiaDien.Text = dichvu.Rows[0][2].ToString();
+            txtGiaNuoc.Text = dichvu.Rows[1][2].ToString();
         }
 
 
@@ -297,6 +308,31 @@ namespace MotelRoomManagement
         private void buttonItem31_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Updating...");
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            txtGiaDien.Enabled = true;
+            txtGiaNuoc.Enabled = true;
+            btnLuu.Visible = true;
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            int giadien, gianuoc;
+            giadien=Convert.ToInt32(txtGiaDien.Text);
+            gianuoc=Convert.ToInt32(txtGiaNuoc.Text);
+            string sql1 = "UPDATE DichVu Set Gia=" + giadien + "WHERE Id=@id", sql2 = "UPDATE DichVu Set Gia=" + gianuoc + "WHERE Id=@id";
+            int i = new PhieuThuBUS().XNDongTien(sql1, "1");
+            int j = new PhieuThuBUS().XNDongTien(sql2, "2");
+            if (i == 1 || j == 1)
+                MessageBox.Show("Cập nhật thành công!");
+            //
+            txtGiaDien.Enabled = false;
+            txtGiaNuoc.Enabled = false;
+            btnLuu.Visible = false;
+
         }
     }
 }

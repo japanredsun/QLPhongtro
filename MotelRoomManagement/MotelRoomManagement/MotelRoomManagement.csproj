@@ -185,6 +185,12 @@
     <Compile Include="QuanLiPhong.Designer.cs">
       <DependentUpon>QuanLiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\QuanLiKhach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resources\QuanLiKhach.Designer.cs">
+      <DependentUpon>QuanLiKhach.cs</DependentUpon>
+    </Compile>
     <Compile Include="SapPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>

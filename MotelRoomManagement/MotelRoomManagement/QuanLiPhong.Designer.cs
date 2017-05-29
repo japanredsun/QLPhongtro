@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvQLPhong = new DevComponents.DotNetBar.Controls.DataGridViewX();
@@ -44,6 +44,8 @@
             this.controlContainerItem2 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem3 = new DevComponents.DotNetBar.ControlContainerItem();
             this.textBoxItem4 = new DevComponents.DotNetBar.TextBoxItem();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLPhong)).BeginInit();
@@ -115,36 +117,36 @@
             this.dgvQLPhong.AllowUserToAddRows = false;
             this.dgvQLPhong.AllowUserToDeleteRows = false;
             this.dgvQLPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLPhong.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvQLPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvQLPhong.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvQLPhong.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvQLPhong.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvQLPhong.EnableHeadersVisualStyles = false;
             this.dgvQLPhong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.dgvQLPhong.Location = new System.Drawing.Point(0, 0);
             this.dgvQLPhong.Name = "dgvQLPhong";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvQLPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvQLPhong.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvQLPhong.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dgvQLPhong.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvQLPhong.Size = new System.Drawing.Size(1191, 553);
@@ -162,6 +164,8 @@
             // 
             this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonBar1.ContainerControlProcessDialogKey = true;
+            this.ribbonBar1.Controls.Add(this.btnSearch);
+            this.ribbonBar1.Controls.Add(this.txtSearch);
             this.ribbonBar1.Controls.Add(this.btnF5);
             this.ribbonBar1.Controls.Add(this.buttonX1);
             this.ribbonBar1.Controls.Add(this.btnThemPhong);
@@ -271,6 +275,25 @@
             this.textBoxItem4.Name = "textBoxItem4";
             this.textBoxItem4.WatermarkColor = System.Drawing.SystemColors.GrayText;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(609, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(178, 27);
+            this.txtSearch.TabIndex = 4;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearch.Location = new System.Drawing.Point(794, 9);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(109, 27);
+            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearch.Symbol = "";
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Tìm kiếm ";
+            // 
             // QuanLiPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +306,7 @@
             this.groupPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLPhong)).EndInit();
             this.ribbonBar1.ResumeLayout(false);
+            this.ribbonBar1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +326,7 @@
         private DevComponents.DotNetBar.ButtonX btnF5;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.ControlContainerItem controlContainerItem3;
+        private DevComponents.DotNetBar.ButtonX btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }
