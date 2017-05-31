@@ -34,7 +34,7 @@ namespace MotelRoomManagement
             
         }
 
-        private void Load_datagrid()
+        private void Load_datagrid(string sql)
         {
             dgvQLPhong.Rows.Clear();
 
@@ -49,7 +49,6 @@ namespace MotelRoomManagement
             
 
             string makv = cbKV.SelectedValue.ToString();
-            string sql = "select p.MaPhong, TenLoaiPhong, p.Day, TenPhong,TrangThai, DienTichPhong, DonGia from Phong p ,LoaiPhong lp where lp.MaLoaiPhong=p.MaLoaiPhong and  MaKhuVuc='" + makv + "'";
             var dsphong = new Room().GetDataPhong(sql);
 
             for (int i = 0; i < dsphong.Rows.Count; i++)
@@ -78,10 +77,16 @@ namespace MotelRoomManagement
             cbKV.DataSource = kv;
         }
 
-        private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
+        private void Load_Default()
         {
             string makv = cbKV.SelectedValue.ToString();
-            Load_datagrid();
+            string sql = "select p.MaPhong, TenLoaiPhong, p.Day, TenPhong,TrangThai, DienTichPhong, DonGia from Phong p ,LoaiPhong lp where lp.MaLoaiPhong=p.MaLoaiPhong and  MaKhuVuc='" + makv + "'";
+            Load_datagrid(sql);
+        }
+
+        private void cbKV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Load_Default();
             
         }
 
@@ -93,7 +98,16 @@ namespace MotelRoomManagement
 
         private void btnF5_Click(object sender, EventArgs e)
         {
-            Load_datagrid();
+            Load_Default();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string makv = cbKV.SelectedValue.ToString();
+            string word = txtSearch.Text;
+            string sql = "SELECT p.MaPhong,lp.TenLoaiPhong,p.Day,p.TenPhong,p.TrangThai,lp.DienTichPhong,lp.DonGia From Phong p, LoaiPhong lp WHERE p.MaLoaiPhong=lp.MaLoaiPhong AND MaKhuVuc='" + makv + "'AND (p.MaPhong LIKE '%" + word + "%' OR p.TenPhong LIKE N'%" + word + "%')";
+            Load_datagrid(sql);
+
         }
 
       
