@@ -35,6 +35,8 @@
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.dgvQLPhong = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnF5 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.btnThemPhong = new DevComponents.DotNetBar.ButtonX();
@@ -44,8 +46,6 @@
             this.controlContainerItem2 = new DevComponents.DotNetBar.ControlContainerItem();
             this.controlContainerItem3 = new DevComponents.DotNetBar.ControlContainerItem();
             this.textBoxItem4 = new DevComponents.DotNetBar.TextBoxItem();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.panelEx1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQLPhong)).BeginInit();
@@ -190,6 +190,26 @@
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearch.Location = new System.Drawing.Point(794, 9);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(109, 27);
+            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearch.Symbol = "";
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "Tìm kiếm ";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(609, 9);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(178, 27);
+            this.txtSearch.TabIndex = 4;
+            // 
             // btnF5
             // 
             this.btnF5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -274,25 +294,6 @@
             // 
             this.textBoxItem4.Name = "textBoxItem4";
             this.textBoxItem4.WatermarkColor = System.Drawing.SystemColors.GrayText;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(609, 9);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(178, 27);
-            this.txtSearch.TabIndex = 4;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearch.Location = new System.Drawing.Point(794, 9);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(109, 27);
-            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearch.Symbol = "";
-            this.btnSearch.TabIndex = 5;
-            this.btnSearch.Text = "Tìm kiếm ";
             // 
             // QuanLiPhong
             // 
