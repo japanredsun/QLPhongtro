@@ -22,7 +22,8 @@ Tính năng:
 
 Project cần cài DOTNETBAR v11 để chạy được một số chức năng. 
 
-Link tải dotnetbar v11: https://drive.google.com/file/d/0B9lRtMMLI7UwcUczRW9QdXp1czg/view?usp=sharing
+Link tải dotnetbar v11: https://drive.google.com/uc?id=0B8MJDmV605FdZlYyOXFRLUxtTlk 
+                        hoặc                                                                                                                                       https://drive.google.com/file/d/0B9lRtMMLI7UwcUczRW9QdXp1czg/view?usp=sharing
 
 Hướng dẫn cài đặt dotnetbar: https://www.youtube.com/watch?v=shvCBy9G4PU
 
