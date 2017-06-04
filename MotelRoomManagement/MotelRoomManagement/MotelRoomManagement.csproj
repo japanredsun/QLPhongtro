@@ -136,29 +136,11 @@
     <Compile Include="frmLoginOption.Designer.cs">
       <DependentUpon>frmLoginOption.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMySoftware.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMySoftware.Designer.cs">
       <DependentUpon>frmMySoftware.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmReportOption.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmReportOption.Designer.cs">
-      <DependentUpon>frmReportOption.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRoomManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRoomManagement.Designer.cs">
-      <DependentUpon>frmRoomManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSoftInfo.cs">
       <SubType>Form</SubType>
@@ -166,18 +148,18 @@
     <Compile Include="frmSoftInfo.Designer.cs">
       <DependentUpon>frmSoftInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTinhTien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTinhTien.Designer.cs">
-      <DependentUpon>frmTinhTien.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLPT.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QLPT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLiKhach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuanLiKhach.Designer.cs">
+      <DependentUpon>QuanLiKhach.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLiPhong.cs">
       <SubType>UserControl</SubType>
@@ -268,23 +250,11 @@
     <EmbeddedResource Include="frmLoginOption.resx">
       <DependentUpon>frmLoginOption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMySoftware.resx">
       <DependentUpon>frmMySoftware.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReportOption.resx">
-      <DependentUpon>frmReportOption.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRoomManagement.resx">
-      <DependentUpon>frmRoomManagement.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSoftInfo.resx">
       <DependentUpon>frmSoftInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTinhTien.resx">
-      <DependentUpon>frmTinhTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KhachTroReport.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -297,6 +267,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuanLiKhach.resx">
+      <DependentUpon>QuanLiKhach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLiPhong.resx">
       <DependentUpon>QuanLiPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +381,7 @@
     <None Include="Resources\Actions-tool-node-editor-icon.png" />
     <None Include="Resources\Actions-user-group-new-icon.png" />
     <None Include="Resources\2.png" />
+    <None Include="Resources\Actions-bookmark-new-list-icon.png" />
     <Content Include="Resources\Age-Child-Female-Light-icon.png" />
     <Content Include="Resources\Age-Child-Male-Light-icon.png" />
     <None Include="Resources\Alarm-Plus-icon.png" />
@@ -430,6 +404,7 @@
     <None Include="Resources\Misc-Graphics-icon.png" />
     <None Include="Resources\image %282%29 22323.jpg" />
     <None Include="Resources\lightning-icon.png" />
+    <None Include="Resources\price-tag-icon.png" />
     <Content Include="Resources\return-home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
