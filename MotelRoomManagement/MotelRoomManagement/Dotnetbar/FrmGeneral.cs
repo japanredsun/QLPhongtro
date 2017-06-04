@@ -334,5 +334,11 @@ namespace MotelRoomManagement
             btnLuu.Visible = false;
 
         }
+
+        private void btnDSKhach_Click(object sender, EventArgs e)
+        {
+            QuanLiKhach uc = new QuanLiKhach();
+            addNewTab("Quản lí khách trọ", uc, 5);
+        }
     }
 }
