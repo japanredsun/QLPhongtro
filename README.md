@@ -10,7 +10,7 @@ Thành viên:
 
 Đề tài: Quản lí nhà trọ
 
-Link Clip giới thiệu phần mềm: https://youtu.be/auxIRwXolJQ
+Link Clip giới thiệu phần mềm: https://www.youtube.com/watch?v=3K31LUkPueY
 
 Tính năng:
 
