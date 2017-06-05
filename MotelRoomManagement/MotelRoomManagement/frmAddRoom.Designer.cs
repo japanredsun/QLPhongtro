@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbLoaiPhong = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.cbKV = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.label5 = new System.Windows.Forms.Label();
             this.btHuy = new System.Windows.Forms.Button();
             this.btThem = new System.Windows.Forms.Button();
@@ -40,22 +42,8 @@
             this.txtDay = new System.Windows.Forms.TextBox();
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbKV = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.cbLoaiPhong = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtMLP = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtTenLP = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtDT = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtGia = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +65,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(572, 239);
             this.panel1.TabIndex = 6;
+            // 
+            // cbLoaiPhong
+            // 
+            this.cbLoaiPhong.DisplayMember = "Text";
+            this.cbLoaiPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiPhong.FormattingEnabled = true;
+            this.cbLoaiPhong.ItemHeight = 27;
+            this.cbLoaiPhong.Location = new System.Drawing.Point(461, 12);
+            this.cbLoaiPhong.Name = "cbLoaiPhong";
+            this.cbLoaiPhong.Size = new System.Drawing.Size(94, 33);
+            this.cbLoaiPhong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbLoaiPhong.TabIndex = 5;
+            // 
+            // cbKV
+            // 
+            this.cbKV.DisplayMember = "Text";
+            this.cbKV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbKV.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbKV.FormattingEnabled = true;
+            this.cbKV.ItemHeight = 27;
+            this.cbKV.Location = new System.Drawing.Point(161, 71);
+            this.cbKV.Name = "cbKV";
+            this.cbKV.Size = new System.Drawing.Size(131, 33);
+            this.cbKV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbKV.TabIndex = 5;
             // 
             // label5
             // 
@@ -187,145 +201,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Thêm Phòng";
             // 
-            // cbKV
-            // 
-            this.cbKV.DisplayMember = "Text";
-            this.cbKV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbKV.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbKV.FormattingEnabled = true;
-            this.cbKV.ItemHeight = 27;
-            this.cbKV.Location = new System.Drawing.Point(161, 71);
-            this.cbKV.Name = "cbKV";
-            this.cbKV.Size = new System.Drawing.Size(131, 33);
-            this.cbKV.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbKV.TabIndex = 5;
-            // 
-            // cbLoaiPhong
-            // 
-            this.cbLoaiPhong.DisplayMember = "Text";
-            this.cbLoaiPhong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbLoaiPhong.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLoaiPhong.FormattingEnabled = true;
-            this.cbLoaiPhong.ItemHeight = 27;
-            this.cbLoaiPhong.Location = new System.Drawing.Point(461, 12);
-            this.cbLoaiPhong.Name = "cbLoaiPhong";
-            this.cbLoaiPhong.Size = new System.Drawing.Size(94, 33);
-            this.cbLoaiPhong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cbLoaiPhong.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.LightBlue;
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.btnHuy);
-            this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.txtGia);
-            this.panel2.Controls.Add(this.txtDT);
-            this.panel2.Controls.Add(this.txtTenLP);
-            this.panel2.Controls.Add(this.txtMLP);
-            this.panel2.Location = new System.Drawing.Point(15, 330);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(572, 239);
-            this.panel2.TabIndex = 7;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.Red;
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(322, 185);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(196, 42);
-            this.btnHuy.TabIndex = 3;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.Lime;
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.Location = new System.Drawing.Point(67, 185);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(196, 42);
-            this.btnThem.TabIndex = 3;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 16);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(185, 29);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Mã loại phòng:";
-            // 
-            // txtMLP
-            // 
-            this.txtMLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMLP.Location = new System.Drawing.Point(236, 10);
-            this.txtMLP.Name = "txtMLP";
-            this.txtMLP.Size = new System.Drawing.Size(317, 35);
-            this.txtMLP.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 54);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(196, 29);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Tên loại phòng:";
-            // 
-            // txtTenLP
-            // 
-            this.txtTenLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenLP.Location = new System.Drawing.Point(236, 48);
-            this.txtTenLP.Name = "txtTenLP";
-            this.txtTenLP.Size = new System.Drawing.Size(317, 35);
-            this.txtTenLP.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 93);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 29);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Diện tích:";
-            // 
-            // txtDT
-            // 
-            this.txtDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDT.Location = new System.Drawing.Point(236, 87);
-            this.txtDT.Name = "txtDT";
-            this.txtDT.Size = new System.Drawing.Size(317, 35);
-            this.txtDT.TabIndex = 0;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 134);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 29);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Giá:";
-            // 
-            // txtGia
-            // 
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(236, 128);
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(317, 35);
-            this.txtGia.TabIndex = 0;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -341,9 +216,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(599, 575);
+            this.ClientSize = new System.Drawing.Size(599, 328);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "frmAddRoom";
@@ -351,8 +225,6 @@
             this.Load += new System.EventHandler(this.frmAddRoom_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -374,17 +246,6 @@
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbLoaiPhong;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbKV;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.TextBox txtDT;
-        private System.Windows.Forms.TextBox txtTenLP;
-        private System.Windows.Forms.TextBox txtMLP;
         private System.Windows.Forms.Label label11;
 
     }

@@ -60,20 +60,5 @@ namespace MotelRoomManagement
             Close();
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            string sql = "INSERT INTO LoaiPhong (MaLoaiPhong,TenLoaiPhong,DienTich,Gia) VALUES(@maloaiphong,@tenloaiphong,@dientich,@gia)";            
-            string maloaiphong = txtMLP.Text.ToString(),
-                    tenloaiphong = txtTenLP.Text.ToString();
-            double dientich = Convert.ToDouble(txtDT.Text),
-                    gia = Convert.ToDouble(txtGia.Text);
-                    
-            int i = new PhongBUS().themloaiphong(sql, maloaiphong, tenloaiphong, dientich, gia);
-            if (i == 1)
-            {
-                MessageBox.Show("Đã thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            MessageBox.Show("Không thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
     }
 }

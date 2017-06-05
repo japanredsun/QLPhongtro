@@ -99,6 +99,19 @@ namespace MRBUS
             }
         }
 
+        public int themdichvu(string sql, string id, string tendichvu, double gia)
+        {
+            try
+            {
+                return(new PhongDAO().themdichvu(sql,id,tendichvu,gia));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         public DataTable GetPhongTrong(string sql)
         {
             try
@@ -119,6 +132,18 @@ namespace MRBUS
             {
                 DataTable result = new PhongDAO().GetDataPhong(sql);
                 return result;
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+        public int XoaLoaiPhong(string sql)
+        {
+            try
+            {
+                return new PhongDAO().XoaLoaiPhong(sql);
             }
             catch (SqlException ex)
             {

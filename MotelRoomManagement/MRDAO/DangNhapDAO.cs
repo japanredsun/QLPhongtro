@@ -107,6 +107,21 @@ namespace MRDAO
                 throw ex;
             }
         }
+        public int ThemTK(string sql, DangNhap dn)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@ID", dn.ID));
+            paras.Add(new SqlParameter("@pass", dn.PassWord));
+            try
+            {
+                return (dp.IExecuteNonQuery(sql, System.Data.CommandType.Text, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 
 }
