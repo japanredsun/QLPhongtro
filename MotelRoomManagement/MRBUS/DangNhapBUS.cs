@@ -72,5 +72,17 @@ namespace MRBUS
                 throw ex;
             }
         }
+        public int ThemTK(string sql, DangNhap dn)
+        {
+            try
+            {
+                return (new DangNhapDAO().ThemTK(sql, dn));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

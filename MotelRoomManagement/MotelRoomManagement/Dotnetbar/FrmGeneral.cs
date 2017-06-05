@@ -250,12 +250,6 @@ namespace MotelRoomManagement
             frm.Show();
         }
 
-        private void buttonItem25_Click(object sender, EventArgs e)
-        {
-            frmDSPhongReport frm = new frmDSPhongReport();
-            frm.Show();
-        }
-
         private void buttonItem35_Click(object sender, EventArgs e)
         {
             TinhTienThang uc = new TinhTienThang();
@@ -277,7 +271,7 @@ namespace MotelRoomManagement
         private void buttonItem16_Click(object sender, EventArgs e)
         {
             QuanLiPhong uc = new QuanLiPhong();
-            addNewTab("Quản lí phòng", uc, 1);
+            addNewTab("Quản lí phòng", uc, 8);
         }
 
         private void buttonItem18_Click(object sender, EventArgs e)
@@ -287,7 +281,8 @@ namespace MotelRoomManagement
 
         private void buttonItem19_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Updating...");
+            QLLoaiPhong form = new QLLoaiPhong();
+            form.Show();
         }
 
         private void buttonItem22_Click(object sender, EventArgs e)
@@ -338,7 +333,29 @@ namespace MotelRoomManagement
         private void btnDSKhach_Click(object sender, EventArgs e)
         {
             QuanLiKhach uc = new QuanLiKhach();
-            addNewTab("Quản lí khách trọ", uc, 5);
+            addNewTab("Quản lí khách trọ", uc, 7);
+        }
+
+        private void btnBackUp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("updating...");
+        }
+
+        private void btnRestore_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("updating...");
+        }
+
+        private void btnDichVu_Click(object sender, EventArgs e)
+        {
+            QLDichVu form = new QLDichVu();
+            form.Show();
+        }
+
+        private void btnThemTK_Click(object sender, EventArgs e)
+        {
+            ThemTK frm = new ThemTK();
+            frm.Show();
         }
     }
 }

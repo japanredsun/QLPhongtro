@@ -137,6 +137,23 @@ namespace MRDAO
             }
         }
 
+        public int themdichvu(string sql, string id, string tendichvu, double gia)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@id", id));
+            paras.Add(new SqlParameter("@tendichvu", tendichvu));
+            paras.Add(new SqlParameter("@gia", gia));
+            try
+            {
+                return (dp.IExecuteNonQuery(sql, CommandType.Text, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
         public DataTable GetCBPhong(string makv)
         {
@@ -178,6 +195,18 @@ namespace MRDAO
             }
         }
 
+        public int XoaLoaiPhong(string sql)
+        {
+            try
+            {
+                return dp.DExecuteNonQuery(sql, CommandType.Text);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
        
     }
 }
