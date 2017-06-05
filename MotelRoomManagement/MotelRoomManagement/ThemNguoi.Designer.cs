@@ -334,9 +334,8 @@
             this.lbGia.ForeColor = System.Drawing.Color.Red;
             this.lbGia.Location = new System.Drawing.Point(57, 37);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(22, 19);
+            this.lbGia.Size = new System.Drawing.Size(0, 19);
             this.lbGia.TabIndex = 52;
-            this.lbGia.Text = "lb";
             // 
             // label11
             // 
@@ -367,9 +366,8 @@
             this.lbSoNguoi.ForeColor = System.Drawing.Color.Red;
             this.lbSoNguoi.Location = new System.Drawing.Point(492, 6);
             this.lbSoNguoi.Name = "lbSoNguoi";
-            this.lbSoNguoi.Size = new System.Drawing.Size(22, 19);
+            this.lbSoNguoi.Size = new System.Drawing.Size(0, 19);
             this.lbSoNguoi.TabIndex = 50;
-            this.lbSoNguoi.Text = "lb";
             // 
             // lbTenPhong
             // 
@@ -378,9 +376,8 @@
             this.lbTenPhong.ForeColor = System.Drawing.Color.Red;
             this.lbTenPhong.Location = new System.Drawing.Point(240, 4);
             this.lbTenPhong.Name = "lbTenPhong";
-            this.lbTenPhong.Size = new System.Drawing.Size(22, 19);
+            this.lbTenPhong.Size = new System.Drawing.Size(0, 19);
             this.lbTenPhong.TabIndex = 50;
-            this.lbTenPhong.Text = "lb";
             // 
             // lbMaPhong
             // 
@@ -389,9 +386,8 @@
             this.lbMaPhong.ForeColor = System.Drawing.Color.Red;
             this.lbMaPhong.Location = new System.Drawing.Point(92, 4);
             this.lbMaPhong.Name = "lbMaPhong";
-            this.lbMaPhong.Size = new System.Drawing.Size(22, 19);
+            this.lbMaPhong.Size = new System.Drawing.Size(0, 19);
             this.lbMaPhong.TabIndex = 47;
-            this.lbMaPhong.Text = "lb";
             // 
             // label14
             // 
