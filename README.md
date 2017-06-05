@@ -18,7 +18,7 @@ Tính năng:
      hỗ trợ đăng kí phòng trọ (kiểm tra phòng trống,...)
      hỗ trợ tính toán tiền thuê hàng tháng (bao gồm tiền điện, tiền nước, tiền nhà trọ)
     lập báo cáo thống kê doanh thu theo từng tháng
-    cung cấp các dịch vụ cho người thuê nhà trọ (xem hóa đơn hàng tháng, đăng kí chuyển phòng, đổi phòng, báo cáo,....)
+    
 
 Project cần cài DOTNETBAR v11 để chạy được một số chức năng. 
 
